@@ -39,7 +39,7 @@ namespace AfishA
     public partial class main : Form
     {
         public static Ivent[] sobytia = new Ivent[2];
-        //SoundPlayer player = null;
+        SoundPlayer player = null;
 
         public main()
         {
@@ -130,22 +130,34 @@ namespace AfishA
 
         public static void button3_Click(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < 2; i = i + 1)
+            {
+                if (((PictureBox)sender).Image == sobytia[i].picB.Image)
+                {
+                    sobytie f = new sobytie(sobytia[i]);
+                    f.Show();
+                }
+            }
         }
 
         private void main_Load(object sender, EventArgs e)
         {
-            //player = new SoundPlayer();
+            player = new SoundPlayer();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                player.SoundLocation = ("../../kartinochki/Driving.wav.wav");
+                player.Play();
+            }
+            catch(Exception) { }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            player.Stop();
         }
     }
 }

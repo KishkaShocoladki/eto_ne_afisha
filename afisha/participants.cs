@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace AfishA
 {
     public partial class participants : Form
-    { 
+    {
         Participants parts;
         public participants(Participants part1)
         {
@@ -23,10 +23,13 @@ namespace AfishA
             {
                 pictureBox1.Load("../../kartinochki/" + parts.name +".jpg");
                 label1.Text = parts.name;
+                label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+                label2.Text = parts.genre;
+                textBox1.Text = parts.descript;
             }
             catch (Exception) { }
             int x = 10;
-            int y = 270;
+            int y = 430;
             foreach (Ivent sob in main.sobytia)
             {
                 if (sob.name == parts.sobytia)
@@ -51,7 +54,7 @@ namespace AfishA
                     Controls.Add(but);
 
                     x = x + 160;
-                    if (x + 160 > Width)
+                    if (x + 160 > 500)
                     {
                         x = 10;
                         y = y + 155;

@@ -43,12 +43,12 @@
             "США",
             "ВЕЛИКОБРИТАНИЯ",
             "РОССИЯ",
-            "УКРАИНА",
             "ЯПОНИЯ"});
             this.comboBox1.Location = new System.Drawing.Point(652, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(144, 28);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 

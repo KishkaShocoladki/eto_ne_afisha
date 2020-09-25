@@ -38,9 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -53,7 +53,7 @@
             "ПИТЕР",
             "ЛЕС"});
             this.comboBox1.Location = new System.Drawing.Point(242, 5);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(311, 33);
             this.comboBox1.TabIndex = 0;
@@ -67,7 +67,7 @@
             "КИНОФЕСТИВАЛЬ",
             "ВЫБОРЫ ПРЕЗИДЕНТА"});
             this.comboBox2.Location = new System.Drawing.Point(242, 41);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(311, 33);
             this.comboBox2.TabIndex = 1;
@@ -81,7 +81,7 @@
             "ЧТО-ТО В ЕВРОПЕ",
             "ЧТО-ТО В АМЕРИКЕ"});
             this.comboBox4.Location = new System.Drawing.Point(301, 77);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(252, 33);
             this.comboBox4.TabIndex = 3;
@@ -165,36 +165,47 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(728, 39);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 11;
-            // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(728, 302);
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(836, 5);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 33);
+            this.button3.Size = new System.Drawing.Size(58, 33);
             this.button3.TabIndex = 12;
             this.button3.Text = "PLAY";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button4_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(853, 302);
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(898, 5);
             this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 33);
+            this.button4.Size = new System.Drawing.Size(58, 33);
             this.button4.TabIndex = 13;
             this.button4.Text = "STOP";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.Location = new System.Drawing.Point(727, 36);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(229, 73);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "тут должен быть календарь но я не умею им пользоваться(";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // main
             // 
@@ -203,9 +214,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(962, 488);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -237,9 +248,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 

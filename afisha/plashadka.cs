@@ -35,38 +35,7 @@ namespace AfishA
         public plashadka()
         {
             InitializeComponent();
-               /* if ((Convert.ToString(comboBox1.SelectedItem)) == "США")
-                {
-                    comboBox2.Items.Clear();
-                    comboBox2.Items.Add("ВАШИНГТОН");
-                    comboBox2.Items.Add("АЙОВА");
-                    comboBox2.Items.Add("МАССАЧУСЕТС");
-                    comboBox2.Items.Add("НЕВАДА");
-                }
-                else if ((Convert.ToString(comboBox1.SelectedItem)) == "ВЕЛИКОБРИТАНИЯ")
-                {
-                    comboBox2.Items.Clear();
-                    comboBox2.Items.Add("ЛОНДОН");
-                    comboBox2.Items.Add("ЛЕСТЕРШИР");
-                    comboBox2.Items.Add("БОСТОН");
-                    comboBox2.Items.Add("ГЛАЗГО");
-                }
-                else if ((Convert.ToString(comboBox1.SelectedItem)) == "РОССИЯ")
-                {
-                    comboBox2.Items.Clear();
-                    comboBox2.Items.Add("МОСКВА");
-                    comboBox2.Items.Add("САНКТ-ПЕТЕРБУРГ");
-                    comboBox2.Items.Add("КАЗАНЬ");
-                    comboBox2.Items.Add("ЕКАТЕРИНБУРГ");
-                }
-                else if ((Convert.ToString(comboBox1.SelectedItem)) == "ЯПОНИЯ")
-                {
-                    comboBox2.Items.Clear();
-                    comboBox2.Items.Add("ОСАКА");
-                    comboBox2.Items.Add("ТОКИО");
-                    comboBox2.Items.Add("НАЭБА");
-                    comboBox2.Items.Add("ТИБА");
-                }*/
+               
 
             
 
@@ -157,6 +126,42 @@ namespace AfishA
         private void plashadka_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((Convert.ToString(comboBox1.SelectedItem)) == "США")
+            {
+                comboBox2.Items.Clear();
+                comboBox2.Items.Add("ВАШИНГТОН");
+                comboBox2.Items.Add("АЙОВА");
+                comboBox2.Items.Add("МАССАЧУСЕТС");
+                comboBox2.Items.Add("НЕВАДА");
+            }
+            else if ((Convert.ToString(comboBox1.SelectedItem)) == "ВЕЛИКОБРИТАНИЯ")
+            {
+                comboBox2.Items.Clear();
+                comboBox2.Items.Add("ЛОНДОН");
+                comboBox2.Items.Add("ЛЕСТЕРШИР");
+                comboBox2.Items.Add("БОСТОН");
+                comboBox2.Items.Add("ГЛАЗГО");
+            }
+            else if ((Convert.ToString(comboBox1.SelectedItem)) == "РОССИЯ")
+            {
+                comboBox2.Items.Clear();
+                comboBox2.Items.Add("МОСКВА");
+                comboBox2.Items.Add("САНКТ-ПЕТЕРБУРГ");
+                comboBox2.Items.Add("КАЗАНЬ");
+                comboBox2.Items.Add("ЕКАТЕРИНБУРГ");
+            }
+            else if ((Convert.ToString(comboBox1.SelectedItem)) == "ЯПОНИЯ")
+            {
+                comboBox2.Items.Clear();
+                comboBox2.Items.Add("ОСАКА");
+                comboBox2.Items.Add("ТОКИО");
+                comboBox2.Items.Add("НАЭБА");
+                comboBox2.Items.Add("ТИБА");
+            }
         }
     }
 }

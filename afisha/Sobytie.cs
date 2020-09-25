@@ -15,14 +15,16 @@ namespace AfishA
         public string name;
         public string descript;
         public string sobytia;
+        public string genre;
         public Label labeI;
         public PictureBox picB;
 
-        public Participants(string name1, string descript1, string sobytia1)
+        public Participants(string name1, string descript1, string sobytia1, string genre1)
         {
             name = name1;
             descript = descript1;
             sobytia = sobytia1;
+            genre = genre1;
             labeI = new Label();
             picB = new PictureBox();
         }
@@ -37,14 +39,14 @@ namespace AfishA
             InitializeComponent();
             Text = "Информация о " + sob.name;
 
-            part[0] = new Participants("SLIPKNOT", "тип описание", "PARK LIVE 2021");
-            part[1] = new Participants("MY CHEMICAL ROMANCE", "тип описание", "PARK LIVE 2021");
-            part[2] = new Participants("GORILLAZ", "тип описание", "PARK LIVE 2021");
-            part[3] = new Participants("PLACEBO", "тип описание", "PARK LIVE 2021");
-            part[4] = new Participants("BLACK VEIL BRIDES", "тип описание", "DOWNLOAD FESTIVAL");
-            part[5] = new Participants("FUNERAL FOR A FRIEND", "тип описание", "DOWNLOAD FESTIVAL");
-            part[6] = new Participants("KISS", "тип описание", "DOWNLOAD FESTIVAL");
-            part[7] = new Participants("SYSTEM OF A DOWN", "тип описание", "DOWNLOAD FESTIVAL");
+            part[0] = new Participants("SLIPKNOT", "тип описание", "PARK LIVE 2021", "НЮ-МЕТАЛ");
+            part[1] = new Participants("MY CHEMICAL ROMANCE", "тип описание", "PARK LIVE 2021", "ПАНК-РОК");
+            part[2] = new Participants("GORILLAZ", "тип описание", "PARK LIVE 2021", "ТРИП-ХОП");
+            part[3] = new Participants("PLACEBO", "тип описание", "PARK LIVE 2021", "ИНДИ-РОК");
+            part[4] = new Participants("BLACK VEIL BRIDES", "тип описание", "DOWNLOAD FESTIVAL", "МЕТАЛКОР");
+            part[5] = new Participants("FUNERAL FOR A FRIEND", "тип описание", "DOWNLOAD FESTIVAL", "ПОСТ-ХАРДКОР");
+            part[6] = new Participants("KISS", "тип описание", "DOWNLOAD FESTIVAL", "ГЛЭМ-РОК");
+            part[7] = new Participants("SYSTEM OF A DOWN", "тип описание", "DOWNLOAD FESTIVAL", "НЮ-МЕТАЛ");
 
             int x = 510;
             int y = 323;
