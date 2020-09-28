@@ -31,26 +31,42 @@ namespace AfishA
     }
     public partial class sobytie : Form
     {
-        public static Participants[] part = new Participants[8];
+        public static List<Participants> part = new List<Participants>();
         Ivent sob;
+        public static void fillsob()
+        {
+            string[] lines = System.IO.File.ReadAllLines("участнеки.txt");
+            foreach (string str in lines)
+            {
+                string[] parts = str.Split(new string[] { "/ " }, StringSplitOptions.None);
+                part.Add(new Participants(parts[0], parts[1], parts[2], parts[3]));
+            }
+        }
+
         public sobytie(Ivent sobytie1)
         {
             sob = sobytie1;
             InitializeComponent();
             Text = "Информация о " + sob.name;
 
-            part[0] = new Participants("SLIPKNOT", "тип описание", "PARK LIVE 2021", "НЮ-МЕТАЛ");
-            part[1] = new Participants("MY CHEMICAL ROMANCE", "тип описание", "PARK LIVE 2021", "ПАНК-РОК");
-            part[2] = new Participants("GORILLAZ", "тип описание", "PARK LIVE 2021", "ТРИП-ХОП");
-            part[3] = new Participants("PLACEBO", "тип описание", "PARK LIVE 2021", "ИНДИ-РОК");
-            part[4] = new Participants("BLACK VEIL BRIDES", "тип описание", "DOWNLOAD FESTIVAL", "МЕТАЛКОР");
-            part[5] = new Participants("FUNERAL FOR A FRIEND", "тип описание", "DOWNLOAD FESTIVAL", "ПОСТ-ХАРДКОР");
-            part[6] = new Participants("KISS", "тип описание", "DOWNLOAD FESTIVAL", "ГЛЭМ-РОК");
-            part[7] = new Participants("SYSTEM OF A DOWN", "тип описание", "DOWNLOAD FESTIVAL", "НЮ-МЕТАЛ");
+            try
+            {
+                label1.Text = sob.name;
+                label2.Text = sob.area;
+                label3.Text = sob.agelimit;
+                pictureBox1.Load("../../kartinochki/" + sob.name + ".jpg");
+                pictureBox2.Load("../../kartinochki/" + sob.name + "2" + ".jpg");
+                pictureBox3.Load("../../kartinochki/" + sob.name + "3" + ".jpg");
+                pictureBox4.Load("../../kartinochki/" + sob.name + "4" + ".jpg");
+                pictureBox4.Tag = sob.name;
+                textBox1.Text = sob.descript;
+                //System.IO.File.ReadAllLines("../../Pictures/" + sob.name + "Б1" + ".txt");
+            }
+            catch (Exception) { }
 
             int x = 510;
             int y = 323;
-            for (int i = 0; i < 8; i = i + 1)
+            for (int i = 0; i < part.Count; i = i + 1)
             {
                 if (sob.name == part[i].sobytia)
                 {
@@ -85,29 +101,10 @@ namespace AfishA
                 Controls.Add(part.labeI);
                 Controls.Add(part.picB);
             }
-
-            try
-            {
-                label1.Text = sob.name;
-                label2.Text = sob.area;
-                //label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-               // label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-                label3.Text = sob.agelimit;
-                //label3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                //label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-                pictureBox1.Load("../../kartinochki/" + sob.name + ".jpg");
-                pictureBox2.Load("../../kartinochki/" + sob.name + "2" + ".jpg");
-                pictureBox3.Load("../../kartinochki/" + sob.name + "3" + ".jpg");
-                pictureBox4.Load("../../kartinochki/" + sob.name + "4" + ".jpg");
-                pictureBox4.Tag = sob.name;
-                textBox1.Text = sob.descript;
-                //System.IO.File.ReadAllLines("../../Pictures/" + sob.name + "Б1" + ".txt");
-            }
-            catch (Exception) { }
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 8; i = i + 1)
+            for (int i = 0; i < part.Count; i = i + 1)
             {
                 if (((PictureBox)sender).Image == part[i].picB.Image)
                 {

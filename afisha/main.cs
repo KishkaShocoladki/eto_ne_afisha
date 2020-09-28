@@ -38,19 +38,20 @@ namespace AfishA
     }
     public partial class main : Form
     {
-        public static Ivent[] sobytia = new Ivent[2];
+        public static List<Ivent> sobytia = new List<Ivent>();
         SoundPlayer player = null;
-
-        public main()
+        public static void fillsob()
         {
-            InitializeComponent();
-
-            sobytia[0] = new Ivent("PARK LIVE 2021", "ТИП ЕГО ОПИСАНИЕ", "МОСКВА", "РОССИЯ", "ФЕСТИВАЛЬ", "ЛУЖНИКИ ПАРК", "16+");
-            sobytia[1] = new Ivent("DOWNLOAD FESTIVAL", "А ГДЕ", "ЛЕСТЕРШИР", "ВЕЛИКОБРИТАНИЯ", "ФЕСТИВАЛЬ", "ДОНИНГТОН-ПАРК", "16+");
-
+            string[] lines = System.IO.File.ReadAllLines("ивентеки.txt");
+            foreach (string str in lines)
+            {
+                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
+                sobytia.Add(new Ivent(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
+            }
+            
             int x = 10;
-            int y = 100;
-            for (int i = 0; i < 2; i = i + 1)
+            int y = 120;
+            for (int i = 0; i < sobytia.Count; i = i + 1)
             {
                 sobytia[i].picB.Location = new Point(x, y);
                 sobytia[i].picB.Size = new Size(250, 200);
@@ -59,7 +60,7 @@ namespace AfishA
                 sobytia[i].picB.Click += new EventHandler(button3_Click);
                 try
                 {
-                    sobytia[i].picB.Load("../../kartinochki/" + sobytia[i].name + ".jpg");
+                 sobytia[i].picB.Load("../../kartinochki/" + sobytia[i].name + ".jpg");
                 }
                 catch (Exception) { }
 
@@ -68,15 +69,20 @@ namespace AfishA
                 sobytia[i].labeI.Text = sobytia[i].name;
                 sobytia[i].labeI.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                 sobytia[i].labeI.ForeColor = System.Drawing.SystemColors.ButtonFace;
+                sobytia[i].labeI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
                 x = x + 270;
-                if (x + 270 > Width)
+                if (x + 270 > 1000)
                 {
                     x = 10;
                     y = y + 210;
                 }
             }
-
+        }
+        public main()
+        {
+            InitializeComponent();
+            fillsob();
             foreach (Ivent iv in sobytia)
             {
                 Controls.Add(iv.labeI);
@@ -92,7 +98,7 @@ namespace AfishA
         {
             int x = 10;
             int y = 100;
-            for (int i = 0; i < 2; i = i + 1)
+            for (int i = 0; i < sobytia.Count; i = i + 1)
             {
                 sobytia[i].labeI.Visible = false;
                 sobytia[i].picB.Visible = false;
@@ -130,7 +136,7 @@ namespace AfishA
 
         public static void button3_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 2; i = i + 1)
+            for (int i = 0; i < sobytia.Count; i = i + 1)
             {
                 if (((PictureBox)sender).Image == sobytia[i].picB.Image)
                 {
@@ -139,7 +145,6 @@ namespace AfishA
                 }
             }
         }
-
         private void main_Load(object sender, EventArgs e)
         {
             player = new SoundPlayer();
@@ -152,13 +157,19 @@ namespace AfishA
                 player.SoundLocation = ("../../kartinochki/Driving.wav.wav");
                 player.Play();
             }
-            catch(Exception) { }
+            catch (Exception) { }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             player.Stop();
         }
+      /*  private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime date = dateTimePicker1.Value;
+            int year = new Year();
+
+        }*/
     }
 }
 

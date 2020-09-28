@@ -187,7 +187,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(12, 1025);
+            this.button2.Location = new System.Drawing.Point(12, 992);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(282, 58);
             this.button2.TabIndex = 17;

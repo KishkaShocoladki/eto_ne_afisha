@@ -21,7 +21,7 @@ namespace AfishA
 
             try
             {
-                pictureBox1.Load("../../kartinochki/" + parts.name +".jpg");
+                pictureBox1.Load("../../kartinochki/" + parts.name + ".jpg");
                 label1.Text = parts.name;
                 label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
                 label2.Text = parts.genre;
@@ -64,3 +64,4 @@ namespace AfishA
         }
     }
 }
+

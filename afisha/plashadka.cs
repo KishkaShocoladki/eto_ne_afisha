@@ -29,48 +29,49 @@ namespace AfishA
             picB = new PictureBox();
         }
     }
-        public partial class plashadka : Form
+    public partial class plashadka : Form
+    {
+        public static List<Ploshadka> ploshka = new List<Ploshadka>();
+        public static void fillplosh()
         {
-            public static Ploshadka[] ploshka = new Ploshadka[2];
+            string[] lines = System.IO.File.ReadAllLines("площадеки.txt");
+            foreach (string str in lines)
+            {
+                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
+                ploshka.Add(new Ploshadka(parts[0], parts[1], Convert.ToInt32(parts[2]), parts[3]));
+            }
+                int x = 10;
+                int y = 80;
+                for (int i = 0; i < ploshka.Count; i = i + 1)
+                {
+                    ploshka[i].picB.Location = new Point(x, y);
+                    ploshka[i].picB.Size = new Size(250, 200);
+                    ploshka[i].picB.Text = ploshka[i].name;
+                    ploshka[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
+                    ploshka[i].picB.Click += new EventHandler(button3_Click);
+                    try
+                    {
+                        ploshka[i].picB.Load("../../kartinochki/" + ploshka[i].name + ".jpg");
+                    }
+                    catch (Exception) { }
+
+                    ploshka[i].labeI.Location = new Point(x, y + 200);
+                    ploshka[i].labeI.Size = new Size(250, 60);
+                    ploshka[i].labeI.Text = ploshka[i].name;
+                    ploshka[i].labeI.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    ploshka[i].labeI.ForeColor = System.Drawing.SystemColors.ButtonFace;
+
+                    x = x + 270;
+                    if (x + 270 > 550)
+                    {
+                        x = 10;
+                        y = y + 210;
+                    }
+                }
+            }
         public plashadka()
         {
             InitializeComponent();
-               
-
-            
-
-            ploshka[0] = new Ploshadka("ЛУЖНИКИ ПАРК", "ОПИСАНИЕ ПЛОЩАДКИ(КАК ДОБРАТЬсЯ И ПРОЧЕЕ)", 120000, "МОСКВА");
-            ploshka[1] = new Ploshadka("ДОНИНГТОН-ПАРК", "ОПИСАНИЕ ПЛОЩАДКИ(КАК ДОБРАТЬсЯ И ПРОЧЕЕ ага)", 300000, "ЛЕСТЕРШИР");
-
-            int x = 10;
-            int y = 80;
-            for (int i = 0; i < 2; i = i + 1)
-            {
-                ploshka[i].picB.Location = new Point(x, y);
-                ploshka[i].picB.Size = new Size(250, 200);
-                ploshka[i].picB.Text = ploshka[i].name;
-                ploshka[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
-                ploshka[i].picB.Click += new EventHandler(button3_Click);
-                try
-                {
-                    ploshka[i].picB.Load("../../kartinochki/" + ploshka[i].name + ".jpg");
-                }
-                catch (Exception) { }
-
-                ploshka[i].labeI.Location = new Point(x, y + 200);
-                ploshka[i].labeI.Size = new Size(250, 60);
-                ploshka[i].labeI.Text = ploshka[i].name;
-                ploshka[i].labeI.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                ploshka[i].labeI.ForeColor = System.Drawing.SystemColors.ButtonFace;
-
-                x = x + 270;
-                if (x + 270 > 550)
-                {
-                    x = 10;
-                    y = y + 210;
-                }
-            }
-
             foreach (Ploshadka pl in ploshka)
             {
                 Controls.Add(pl.labeI);
@@ -86,12 +87,12 @@ namespace AfishA
         {
             int x = 10;
             int y = 80;
-            for (int i = 0; i < 2; i = i + 1)
+            for (int i = 0; i < ploshka.Count; i = i + 1)
             {
                 ploshka[i].labeI.Visible = false;
                 ploshka[i].picB.Visible = false;
-                bool show = true;             
-                    
+                bool show = true;
+
                 if (comboBox2.Text != "" && ploshka[i].city != comboBox2.Text)
                 {
                     show = false;
@@ -111,9 +112,9 @@ namespace AfishA
                 }
             }
         }
-        private void button3_Click(object sender, EventArgs e)
+        private static void button3_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 2; i = i + 1)
+            for (int i = 0; i < ploshka.Count; i = i + 1)
             {
                 if (((PictureBox)sender).Image == ploshka[i].picB.Image)
                 {
@@ -122,12 +123,6 @@ namespace AfishA
                 }
             }
         }
-
-        private void plashadka_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if ((Convert.ToString(comboBox1.SelectedItem)) == "США")

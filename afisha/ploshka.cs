@@ -23,6 +23,7 @@ namespace AfishA
             {
                 label1.Text = plosh.name;
                 label2.Text = plosh.city;
+                label4.Text = "Вместимость: " + plosh.vmestimost;
                 pictureBox1.Load("../../kartinochki/" + plosh.name + ".jpg");
                 pictureBox2.Load("../../kartinochki/" + plosh.name + "2" + ".jpg");
                 pictureBox3.Load("../../kartinochki/" + plosh.name + "3" + ".jpg");
@@ -68,6 +69,11 @@ namespace AfishA
         }
 
         private void ploshka_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

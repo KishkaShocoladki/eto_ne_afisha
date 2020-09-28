@@ -43,6 +43,7 @@
             "США",
             "ВЕЛИКОБРИТАНИЯ",
             "РОССИЯ",
+            "УКРАИНА",
             "ЯПОНИЯ"});
             this.comboBox1.Location = new System.Drawing.Point(652, 12);
             this.comboBox1.Name = "comboBox1";
@@ -113,7 +114,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "plashadka";
             this.Text = "ПЛОЩАДОЧКИ";
-            this.Load += new System.EventHandler(this.plashadka_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
