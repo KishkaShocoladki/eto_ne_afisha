@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using MySql.Data.MySqlClient;
+using System.Data.Common;
 
 namespace AfishA
 {
@@ -19,11 +21,11 @@ namespace AfishA
         public string country;
         public string type;
         public string area;
-        public string agelimit;
+       // public string agelimit;
         public Label labeI;
         public PictureBox picB;
 
-        public Ivent(string name1, string descript1, string city1, string country1, string type1, string area1, string agelimit1)
+        public Ivent(string name1, string descript1, string city1, string country1, string type1, string area1)
         {
             name = name1;
             descript = descript1;
@@ -31,7 +33,7 @@ namespace AfishA
             country = country1;
             type = type1;
             area = area1;
-            agelimit = agelimit1;
+            //agelimit = agelimit1;
             labeI = new Label();
             picB = new PictureBox();
         }
@@ -39,15 +41,42 @@ namespace AfishA
     public partial class main : Form
     {
         public static List<Ivent> sobytia = new List<Ivent>();
+        public static void fills()
+        {
+            String connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
+                    + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
+            MySqlConnection conn = new MySqlConnection(connString);
+            conn.Open();
+
+            List<string> result = new List<string>();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `participants`, conn");
+            DbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string name = reader.GetString(0);
+                string descript = reader.GetString(1);
+                string city = reader.GetString(2);
+                string country = reader.GetString(3);
+                string type = reader.GetString(4);
+                string area = reader.GetString(5);
+                //DateTime dt = reader.GetDateTime(7);
+                // reader.GetValue.ToString
+                sobytia.Add(new Ivent(name, descript, city, country, type, area));
+                result.Add(name);
+            }
+            reader.Close();
+            conn.Close();
+        }
         SoundPlayer player = null;
         public static void fillsob()
         {
-            string[] lines = System.IO.File.ReadAllLines("ивентеки.txt");
+           /* string[] lines = System.IO.File.ReadAllLines("ивентеки.txt");
             foreach (string str in lines)
             {
                 string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
                 sobytia.Add(new Ivent(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
-            }
+            }*/
             
             int x = 10;
             int y = 120;
