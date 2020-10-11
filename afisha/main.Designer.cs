@@ -48,8 +48,9 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "РОССИЯ",
-            "КАКОЙ-НИБУДЬ ШТАТ",
+            "США",
             "ВЕЛИКОБРИТАНИЯ",
+            "ЯПОНИЯ",
             "ПИТЕР",
             "ЛЕС"});
             this.comboBox1.Location = new System.Drawing.Point(242, 5);
@@ -63,9 +64,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "ФЕСТИВАЛЬ",
-            "СОЛО КОНЦЕРТ",
-            "КИНОФЕСТИВАЛЬ",
-            "ВЫБОРЫ ПРЕЗИДЕНТА"});
+            "СОЛО КОНЦЕРТ"});
             this.comboBox2.Location = new System.Drawing.Point(242, 41);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox2.Name = "comboBox2";

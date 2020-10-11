@@ -50,7 +50,7 @@ namespace AfishA
 
             List<string> result = new List<string>();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `participants`, conn");
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `ivents`", conn);
             DbDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -71,13 +71,13 @@ namespace AfishA
         SoundPlayer player = null;
         public static void fillsob()
         {
-           /* string[] lines = System.IO.File.ReadAllLines("ивентеки.txt");
-            foreach (string str in lines)
-            {
-                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
-                sobytia.Add(new Ivent(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
-            }*/
-            
+            /* string[] lines = System.IO.File.ReadAllLines("ивентеки.txt");
+             foreach (string str in lines)
+             {
+                 string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
+                 sobytia.Add(new Ivent(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
+             }*/
+            fills();
             int x = 10;
             int y = 120;
             for (int i = 0; i < sobytia.Count; i = i + 1)
@@ -89,7 +89,7 @@ namespace AfishA
                 sobytia[i].picB.Click += new EventHandler(button3_Click);
                 try
                 {
-                 sobytia[i].picB.Load("../../kartinochki/" + sobytia[i].name + ".jpg");
+                    sobytia[i].picB.Load("../../kartinochki/" + sobytia[i].name + ".jpg");
                 }
                 catch (Exception) { }
 
@@ -167,10 +167,21 @@ namespace AfishA
         {
             for (int i = 0; i < sobytia.Count; i = i + 1)
             {
-                if (((PictureBox)sender).Image == sobytia[i].picB.Image)
+                if (sobytia[i].type == "ФЕСТИВАЛЬ")
                 {
-                    sobytie f = new sobytie(sobytia[i]);
-                    f.Show();
+                    if (((PictureBox)sender).Image == sobytia[i].picB.Image)
+                    {
+                        sobytie f = new sobytie(sobytia[i]);
+                        f.Show();
+                    }
+                }
+                else if (sobytia[i].type == "СОЛО КОНЦЕРТ")
+                {
+                    if (((PictureBox)sender).Image == sobytia[i].picB.Image)
+                    {
+                        solnyk f = new solnyk(sobytia[i]);
+                        f.Show();
+                    }
                 }
             }
         }
