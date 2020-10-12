@@ -40,44 +40,26 @@ namespace AfishA
     }
     public partial class main : Form
     {
-        public static List<Ivent> sobytia = new List<Ivent>();
-        public static void fills()
+        public static MySqlConnection conn;
+        public static List<string> Select(string Text)
         {
-            String connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
-                    + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
-            MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
-
-            List<string> result = new List<string>();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `ivents`", conn);
-            DbDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            List<string> results = new List<string>();
+            MySqlCommand command = new MySqlCommand(Text, conn);
+            DbDataReader read = command.ExecuteReader();
+            while (read.Read())
             {
-                string name = reader.GetString(0);
-                string descript = reader.GetString(1);
-                string city = reader.GetString(2);
-                string country = reader.GetString(3);
-                string type = reader.GetString(4);
-                string area = reader.GetString(5);
-                //DateTime dt = reader.GetDateTime(7);
-                // reader.GetValue.ToString
-                sobytia.Add(new Ivent(name, descript, city, country, type, area));
-                result.Add(name);
+                for (int i = 0; i < read.FieldCount; i++)
+                    results.Add(read.GetValue(i).ToString());
             }
-            reader.Close();
+            read.Close();
             conn.Close();
+            return results;
         }
+        public static List<Ivent> sobytia = new List<Ivent>();
         SoundPlayer player = null;
         public static void fillsob()
-        {
-            /* string[] lines = System.IO.File.ReadAllLines("ивентеки.txt");
-             foreach (string str in lines)
-             {
-                 string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
-                 sobytia.Add(new Ivent(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
-             }*/
-            fills();
+        { 
             int x = 10;
             int y = 120;
             for (int i = 0; i < sobytia.Count; i = i + 1)
@@ -111,7 +93,22 @@ namespace AfishA
         public main()
         {
             InitializeComponent();
+            string connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
+                    + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
+            conn = new MySqlConnection(connString);
+            List<string> results = Select("SELECT * FROM `ivents`");
+            for (int i = 0; i < results.Count; i = i + 12)
+            {
+                string name = results[i];
+                string descript = results[i + 1];
+                string city = results[i + 2];
+                string country = results[i + 3];
+                string type = results[i + 4];
+                string area = results[i + 5];
+                sobytia.Add(new Ivent(name, descript, city, country, type, area));
+            }
             fillsob();
+
             foreach (Ivent iv in sobytia)
             {
                 Controls.Add(iv.labeI);
