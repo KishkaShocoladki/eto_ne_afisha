@@ -40,22 +40,6 @@ namespace AfishA
     }
     public partial class main : Form
     {
-        public static MySqlConnection conn;
-        public static List<string> Select(string Text)
-        {
-            conn.Open();
-            List<string> results = new List<string>();
-            MySqlCommand command = new MySqlCommand(Text, conn);
-            DbDataReader read = command.ExecuteReader();
-            while (read.Read())
-            {
-                for (int i = 0; i < read.FieldCount; i++)
-                    results.Add(read.GetValue(i).ToString());
-            }
-            read.Close();
-            conn.Close();
-            return results;
-        }
         public static List<Ivent> sobytia = new List<Ivent>();
         SoundPlayer player = null;
         public static void fillsob()
@@ -93,10 +77,10 @@ namespace AfishA
         public main()
         {
             InitializeComponent();
-            string connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
-                    + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
-            conn = new MySqlConnection(connString);
-            List<string> results = Select("SELECT * FROM `ivents`");
+          //  string connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
+           //         + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
+          //  conn = new MySqlConnection(connString);
+            List<string> results = Program.Select("SELECT * FROM `ivents`");
             for (int i = 0; i < results.Count; i = i + 12)
             {
                 string name = results[i];
