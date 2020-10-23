@@ -53,7 +53,7 @@ namespace AfishA
             {
                 label1.Text = sob.name;
                 label2.Text = sob.area;
-                label3.Text = sob.agelimit;
+                //label3.Text = sob.agelimit;
                 pictureBox1.Load("../../kartinochki/" + sob.name + ".jpg");
                 pictureBox2.Load("../../kartinochki/" + sob.name + "2" + ".jpg");
                 pictureBox3.Load("../../kartinochki/" + sob.name + "3" + ".jpg");

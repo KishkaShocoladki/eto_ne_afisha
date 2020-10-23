@@ -160,8 +160,8 @@ namespace AfishA
                 {
                     if (((PictureBox)sender).Image == sobytia[i].picB.Image)
                     {
-                        solnyk f = new solnyk(sobytia[i]);
-                        f.Show();
+                        //solnyk f = new solnyk(sobytia[i]);
+                        //f.Show();
                     }
                 }
             }
