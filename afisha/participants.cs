@@ -13,6 +13,20 @@ namespace AfishA
     public partial class participants : Form
     {
         Participants parts;
+        string name;
+
+        public participants(string nm)
+        {
+            name = nm;
+            InitializeComponent();
+            label1.Text = name;
+
+            List<string> info = Program.Select("SELECT name, descript, genre FROM participants WHERE name = '" + name + "'");
+            label1.ForeColor = SystemColors.ButtonFace;
+
+            textBox1.Text = info[1];
+            label2.Text = info[2];
+        }
         public participants(Participants part1)
         {
             parts = part1;
@@ -61,6 +75,11 @@ namespace AfishA
                     }
                 }
             }
+        }
+
+        private void participants_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
