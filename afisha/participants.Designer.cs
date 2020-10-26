@@ -55,7 +55,7 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 32);
+            this.label1.Size = new System.Drawing.Size(0, 27);
             this.label1.TabIndex = 1;
             // 
             // label2
@@ -66,7 +66,7 @@
             this.label2.Location = new System.Drawing.Point(16, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.Size = new System.Drawing.Size(0, 14);
             this.label2.TabIndex = 2;
             // 
             // textBox1
@@ -88,7 +88,7 @@
             this.label3.Location = new System.Drawing.Point(17, 400);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(357, 20);
+            this.label3.Size = new System.Drawing.Size(298, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "СОБЫТИЯ, В КОТОРЫХ УЧАСТВУЕТ:";
             // 
@@ -100,13 +100,13 @@
             this.label4.Location = new System.Drawing.Point(667, 400);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(537, 20);
+            this.label4.Size = new System.Drawing.Size(448, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "тут должна быть музычка но wav много веситб(";
             // 
             // participants
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -122,6 +122,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "participants";
             this.Text = "participants";
+            this.Load += new System.EventHandler(this.participants_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

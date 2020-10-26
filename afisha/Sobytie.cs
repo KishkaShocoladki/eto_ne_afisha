@@ -47,6 +47,22 @@ namespace AfishA
         {
             sob = sobytie1;
             InitializeComponent();
+
+            List<string> parts = Program.Select("SELECT part FROM `tipasvyaznaverno` WHERE ivent='" + sob.name + "'");
+
+            for (int i = 0; i < parts.Count; i = i + 1)
+            {
+                Label lbl = new Label();
+                lbl.ForeColor = Color.White;
+                lbl.Text = parts[i];
+                lbl.Size = new Size(200, 30);
+                lbl.AutoSize = false;
+                lbl.Location = new Point(10, 10 + 30 * i);
+                lbl.Click += new EventHandler(button2_Click);
+                panel1.Controls.Add(lbl);
+            }
+
+
             Text = "Информация о " + sob.name;
 
             try
@@ -104,14 +120,17 @@ namespace AfishA
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < part.Count; i = i + 1)
+            Label lbl = (Label)sender;
+            participants f = new participants(lbl.Text);
+            f.Show();
+            /*for (int i = 0; i < part.Count; i = i + 1)
             {
                 if (((PictureBox)sender).Image == part[i].picB.Image)
                 {
                     participants f = new participants(part[i]);
                     f.Show();
                 }
-            }
+            }*/
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
