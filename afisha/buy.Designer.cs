@@ -58,13 +58,13 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(18, 12);
+            this.button1.Location = new System.Drawing.Point(56, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(383, 72);
+            this.button1.Size = new System.Drawing.Size(306, 72);
             this.button1.TabIndex = 2;
-            this.button1.Text = "тут должен быть переход на выбор мест, платежную систему и прочее но нет";
+            this.button1.Text = "тут должна была бы быть оплата и прочее но я сказал нет| ヾ( `—´)シφ__ |";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // buy

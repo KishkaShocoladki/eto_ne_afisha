@@ -49,6 +49,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adding.Designer.cs">
+      <DependentUpon>adding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addPart.Designer.cs">
+      <DependentUpon>addPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addPlosh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addPlosh.Designer.cs">
+      <DependentUpon>addPlosh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addSob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addSob.Designer.cs">
+      <DependentUpon>addSob.cs</DependentUpon>
+    </Compile>
     <Compile Include="cacaгеo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +109,18 @@
     <Compile Include="ploshka.Designer.cs">
       <DependentUpon>ploshka.cs</DependentUpon>
     </Compile>
+    <Compile Include="reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reg.Designer.cs">
+      <DependentUpon>reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rewievs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rewievs.Designer.cs">
+      <DependentUpon>rewievs.cs</DependentUpon>
+    </Compile>
     <Compile Include="sobytie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +129,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="solo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="solo.Designer.cs">
+      <DependentUpon>solo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adding.resx">
+      <DependentUpon>adding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addPart.resx">
+      <DependentUpon>addPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addPlosh.resx">
+      <DependentUpon>addPlosh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addSob.resx">
+      <DependentUpon>addSob.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cacaгеo.resx">
       <DependentUpon>cacaгеo.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +165,12 @@
     <EmbeddedResource Include="ploshka.resx">
       <DependentUpon>ploshka.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reg.resx">
+      <DependentUpon>reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rewievs.resx">
+      <DependentUpon>rewievs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sobytie.resx">
       <DependentUpon>sobytie.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +184,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="solo.resx">
+      <DependentUpon>solo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

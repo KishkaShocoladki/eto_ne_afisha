@@ -45,7 +45,7 @@ namespace AfishA
         public static void fillsob()
         { 
             int x = 10;
-            int y = 120;
+            int y = 140;
             for (int i = 0; i < sobytia.Count; i = i + 1)
             {
                 sobytia[i].picB.Location = new Point(x, y);
@@ -53,33 +53,28 @@ namespace AfishA
                 sobytia[i].picB.Text = sobytia[i].name;
                 sobytia[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
                 sobytia[i].picB.Click += new EventHandler(button3_Click);
-                try
-                {
-                    sobytia[i].picB.Load("../../kartinochki/" + sobytia[i].name + ".jpg");
-                }
-                catch (Exception) { }
 
                 sobytia[i].labeI.Location = new Point(x, y + 200);
                 sobytia[i].labeI.Size = new Size(250, 60);
                 sobytia[i].labeI.Text = sobytia[i].name;
-                sobytia[i].labeI.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                sobytia[i].labeI.ForeColor = System.Drawing.SystemColors.ButtonFace;
-                sobytia[i].labeI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                sobytia[i].labeI.Font = new Font("Lucida Console", 18F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                sobytia[i].labeI.ForeColor = SystemColors.ButtonFace;
+                sobytia[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
 
                 x = x + 270;
                 if (x + 270 > 1000)
                 {
                     x = 10;
-                    y = y + 210;
+                    y = y + 280;
                 }
             }
         }
         public main()
         {
             InitializeComponent();
-          //  string connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
-           //         + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
-          //  conn = new MySqlConnection(connString);
+            //  string connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
+            //         + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
+            //  conn = new MySqlConnection(connString);
             List<string> results = Program.Select("SELECT * FROM `ivents`");
             for (int i = 0; i < results.Count; i = i + 12)
             {
@@ -89,12 +84,18 @@ namespace AfishA
                 string country = results[i + 3];
                 string type = results[i + 4];
                 string area = results[i + 5];
-                sobytia.Add(new Ivent(name, descript, city, country, type, area));
+                Ivent iv = new Ivent(name, descript, city, country, type, area);
+                sobytia.Add(iv);
             }
             fillsob();
 
             foreach (Ivent iv in sobytia)
             {
+                try 
+                {
+                    iv.picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + iv.name + "'");
+                }
+                catch(Exception) { }
                 Controls.Add(iv.labeI);
                 Controls.Add(iv.picB);
             }
@@ -107,7 +108,7 @@ namespace AfishA
         private void button2_Click(object sender, EventArgs e)
         {
             int x = 10;
-            int y = 100;
+            int y = 140;
             for (int i = 0; i < sobytia.Count; i = i + 1)
             {
                 sobytia[i].labeI.Visible = false;
@@ -160,8 +161,8 @@ namespace AfishA
                 {
                     if (((PictureBox)sender).Image == sobytia[i].picB.Image)
                     {
-                        //solnyk f = new solnyk(sobytia[i]);
-                        //f.Show();
+                        solo f = new solo(sobytia[i]);
+                        f.Show();
                     }
                 }
             }
@@ -185,12 +186,46 @@ namespace AfishA
         {
             player.Stop();
         }
-      /*  private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            DateTime date = dateTimePicker1.Value;
-            int year = new Year();
 
-        }*/
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Button lbl = (Button)sender;
+            reg f = new reg(lbl.Text);
+            f.Show();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Button lbl = (Button)sender;
+            reg f = new reg(lbl.Text);
+            f.ShowDialog();
+
+            if (Program.user == "admin")
+            {
+                button7.Visible = true;
+            }
+            else
+            {
+                button7.Visible = false;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            adding f = new adding();
+            f.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //button7.Visible = (Program.user == "admin");
+        }
+        /*  private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+{
+DateTime date = dateTimePicker1.Value;
+int year = new Year();
+
+}*/
     }
 }
 
