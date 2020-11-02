@@ -46,6 +46,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -172,6 +173,8 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(722, 5);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -179,11 +182,13 @@
             this.button3.Size = new System.Drawing.Size(58, 33);
             this.button3.TabIndex = 12;
             this.button3.Text = "PLAY";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button4_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(825, 5);
             this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -191,7 +196,7 @@
             this.button4.Size = new System.Drawing.Size(58, 33);
             this.button4.TabIndex = 13;
             this.button4.Text = "STOP";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button5_Click);
             // 
             // dateTimePicker1
@@ -255,6 +260,21 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button8.Location = new System.Drawing.Point(811, 48);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(72, 26);
+            this.button8.TabIndex = 19;
+            this.button8.Text = "ВЫЙТИ";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -262,6 +282,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(905, 594);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -307,6 +328,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button8;
     }
 }
 

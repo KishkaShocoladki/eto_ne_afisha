@@ -59,25 +59,5 @@ namespace AfishA.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Nh4q6HLzGww {
-            get {
-                object obj = ResourceManager.GetObject("Nh4q6HLzGww", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap v8AsBKIWXhc {
-            get {
-                object obj = ResourceManager.GetObject("v8AsBKIWXhc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

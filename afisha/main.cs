@@ -199,6 +199,9 @@ namespace AfishA
             Button lbl = (Button)sender;
             reg f = new reg(lbl.Text);
             f.ShowDialog();
+            button5.Visible = false;
+            button6.Visible = false;
+            button8.Visible = true;
 
             if (Program.user == "admin")
             {
@@ -219,6 +222,16 @@ namespace AfishA
         private void timer1_Tick(object sender, EventArgs e)
         {
             //button7.Visible = (Program.user == "admin");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            button5.Visible = true;
+            button6.Visible = true;
+            button7.Visible = false;
+            button8.Visible = false;
+
+            Program.user = "_";
         }
         /*  private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
 {

@@ -12,68 +12,49 @@ namespace AfishA
 {
     public partial class participants : Form
     {
-        Participants parts;
         string name;
-
         public participants(string nm)
         {
             name = nm;
             InitializeComponent();
+            Text = "Информация о " + name;
             label1.Text = name;
 
             List<string> info = Program.Select("SELECT name, descript, genre FROM participants WHERE name = '" + name + "'");
             label1.ForeColor = SystemColors.ButtonFace;
+            label1.Font = new Font("Lucida Console", 20F, FontStyle.Regular, GraphicsUnit.Point, (204));
 
             textBox1.Text = info[1];
             label2.Text = info[2];
-        }
-        public participants(Participants part1)
-        {
-            parts = part1;
-            InitializeComponent();
-            Text = "Информация о " + parts.name;
-
+            label2.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
             try
-            {
-                pictureBox1.Load("../../kartinochki/" + parts.name + ".jpg");
-                label1.Text = parts.name;
-                label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-                label2.Text = parts.genre;
-                textBox1.Text = parts.descript;
+            {          
+                pictureBox1.Image = Program.SelectImage("SELECT kartinochka FROM participants WHERE name = '" + name + "'");
             }
             catch (Exception) { }
-            int x = 10;
-            int y = 430;
-            foreach (Ivent sob in main.sobytia)
+            List<string> parts = Program.Select("SELECT ivent FROM `tipasvyaznaverno` WHERE part='" + name + "'");
+
+            for (int i = 0; i < parts.Count; i = i + 1)
             {
-                if (sob.name == parts.sobytia)
+                Label lbl = new Label();
+                lbl.ForeColor = Color.White;
+                lbl.Text = parts[i];
+                lbl.Size = new Size(120, 30);
+                lbl.AutoSize = false;
+                lbl.Location = new Point(10, 120 + 130 * i);
+                //lbl.Click += new EventHandler(button2_Click);
+                panel1.Controls.Add(lbl);
+
+                PictureBox picB = new PictureBox();
+                picB.Location = new Point(10, 5 + 130 * i);
+                picB.Size = new Size(120, 120);
+                picB.SizeMode = PictureBoxSizeMode.Zoom;
+                try
                 {
-                    PictureBox pix = new PictureBox();
-                    Label but = new Label();
-
-                    pix.Text = sob.picB.Text;
-                    pix.Size = new Size(150, 130);
-                    pix.SizeMode = sob.picB.SizeMode;
-                    pix.Location = new Point(x, y);
-                    pix.Click += new EventHandler(main.button3_Click);
-                    pix.Image = sob.picB.Image;
-
-                    but.Location = new Point(x, y + 120);
-                    but.Size = new Size(150, 35);
-                    but.Text = sob.labeI.Text;
-                    but.TextAlign = ContentAlignment.MiddleCenter;
-                    but.Font = new Font("Lucida Console", 8);
-
-                    Controls.Add(pix);
-                    Controls.Add(but);
-
-                    x = x + 160;
-                    if (x + 160 > 500)
-                    {
-                        x = 10;
-                        y = y + 155;
-                    }
+                    picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + parts[i] + "'");
                 }
+                catch (Exception) { }
+                panel1.Controls.Add(picB);
             }
         }
 
