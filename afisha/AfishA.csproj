@@ -49,28 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adding.cs">
+    <Compile Include="Admin\adding.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adding.Designer.cs">
+    <Compile Include="Admin\adding.Designer.cs">
       <DependentUpon>adding.cs</DependentUpon>
     </Compile>
-    <Compile Include="addPart.cs">
+    <Compile Include="Admin\addPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addPart.Designer.cs">
+    <Compile Include="Admin\addPart.Designer.cs">
       <DependentUpon>addPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="addPlosh.cs">
+    <Compile Include="Admin\addPlosh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addPlosh.Designer.cs">
+    <Compile Include="Admin\addPlosh.Designer.cs">
       <DependentUpon>addPlosh.cs</DependentUpon>
     </Compile>
-    <Compile Include="addSob.cs">
+    <Compile Include="Admin\addSob.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addSob.Designer.cs">
+    <Compile Include="Admin\addSob.Designer.cs">
       <DependentUpon>addSob.cs</DependentUpon>
     </Compile>
     <Compile Include="cacaгеo.cs">
@@ -135,16 +135,16 @@
     <Compile Include="solo.Designer.cs">
       <DependentUpon>solo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="adding.resx">
+    <EmbeddedResource Include="Admin\adding.resx">
       <DependentUpon>adding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addPart.resx">
+    <EmbeddedResource Include="Admin\addPart.resx">
       <DependentUpon>addPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addPlosh.resx">
+    <EmbeddedResource Include="Admin\addPlosh.resx">
       <DependentUpon>addPlosh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addSob.resx">
+    <EmbeddedResource Include="Admin\addSob.resx">
       <DependentUpon>addSob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cacaгеo.resx">

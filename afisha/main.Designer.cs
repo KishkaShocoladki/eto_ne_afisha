@@ -225,7 +225,7 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "ВХОД";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            this.button5.Click += new System.EventHandler(this.AuthClick);
             // 
             // button6
             // 
@@ -239,7 +239,7 @@
             this.button6.TabIndex = 17;
             this.button6.Text = "РЕГИСТРАЦИЯ";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.RegisterClick);
             // 
             // button7
             // 
