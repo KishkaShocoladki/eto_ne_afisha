@@ -102,11 +102,6 @@ namespace AfishA
             participants f = new participants(lbl.Text);
             f.Show();
         }
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            cacaгеo f = new cacaгеo();
-            f.Show();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

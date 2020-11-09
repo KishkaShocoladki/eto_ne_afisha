@@ -118,11 +118,7 @@ namespace AfishA
                 }
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            plashadka form2 = new plashadka();
-            form2.Show();
-        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             int x = 10;

@@ -75,8 +75,9 @@ namespace AfishA
             //  string connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
             //         + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
             //  conn = new MySqlConnection(connString);
-            List<string> results = Program.Select("SELECT * FROM `ivents`");
-            for (int i = 0; i < results.Count; i = i + 12)
+            List<string> results = Program.Select(
+                "SELECT name, descript, city, country, type, area FROM ivents");
+            for (int i = 0; i < results.Count; i = i + 6)
             {
                 string name = results[i];
                 string descript = results[i + 1];
@@ -187,14 +188,14 @@ namespace AfishA
             player.Stop();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void RegisterClick(object sender, EventArgs e)
         {
             Button lbl = (Button)sender;
             reg f = new reg(lbl.Text);
             f.Show();
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void AuthClick(object sender, EventArgs e)
         {
             Button lbl = (Button)sender;
             reg f = new reg(lbl.Text);
@@ -203,14 +204,7 @@ namespace AfishA
             button6.Visible = false;
             button8.Visible = true;
 
-            if (Program.user == "admin")
-            {
-                button7.Visible = true;
-            }
-            else
-            {
-                button7.Visible = false;
-            }
+            button7.Visible = (Program.user == "admin");
         }
 
         private void button7_Click(object sender, EventArgs e)
