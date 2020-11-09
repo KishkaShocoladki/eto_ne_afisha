@@ -78,3 +78,14 @@ C:\Users\beavi\Downloads\git\eto_ne_afisha\afisha\obj\Debug\AfishA.csproj.CoreCo
 C:\Users\beavi\Downloads\git\eto_ne_afisha\afisha\obj\Debug\AfishA.csproj.CopyComplete
 C:\Users\beavi\Downloads\git\eto_ne_afisha\afisha\obj\Debug\AfishA.exe
 C:\Users\beavi\Downloads\git\eto_ne_afisha\afisha\obj\Debug\AfishA.pdb
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\bin\Debug\MySql.Data.dll
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.adding.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.addPart.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.addPlosh.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.addSob.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.browseBron.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.reg.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.rewievs.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.solo.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.user.resources
+C:\Users\i\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.csproj.CopyComplete

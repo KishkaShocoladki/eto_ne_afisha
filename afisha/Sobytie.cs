@@ -94,7 +94,7 @@ namespace AfishA
             {
                 Controls.Add(part.labeI);
                 Controls.Add(part.picB);
-            }
+            }           
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -110,8 +110,16 @@ namespace AfishA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            buy f = new buy(sob.name);
-            f.Show();
+            if (Program.user == "_")
+            {
+                MessageBox.Show("ЗАРЕГИСТРИРУЙТЕСЬ ИЛИ ВОЙДИТЕ В АККАУНТ, ЧТОБЫ КУПИТЬ БИЛЕТ  ┬┴┬┴┤(･_├┬┴┬┴");
+            }
+            else
+            {
+                buy f = new buy(sob.name);
+                f.Show();
+            }
+            
         }
 
         private void sobytie_Load(object sender, EventArgs e)

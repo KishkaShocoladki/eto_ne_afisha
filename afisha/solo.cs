@@ -70,8 +70,15 @@ namespace AfishA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            buy f = new buy(sob.name);
-            f.Show();
+            if (Program.user == "_")
+            {
+                MessageBox.Show("ЗАРЕГИСТРИРУЙТЕСЬ ИЛИ ВОЙДИТЕ В АККАУНТ, ЧТОБЫ КУПИТЬ БИЛЕТ  ┬┴┬┴┤(･_├┬┴┬┴");
+            }
+            else
+            {
+                buy f = new buy(sob.name);
+                f.Show();
+            }
         }
     }
 }

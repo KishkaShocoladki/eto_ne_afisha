@@ -35,7 +35,7 @@ namespace AfishA
         /// Соединение
         /// </summary>
         public static MySqlConnection conn;
-        public static string user = "user";
+        public static string user = "_";
 
         public static void Insert(string Text)
         {
