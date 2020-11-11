@@ -17,39 +17,33 @@ namespace AfishA
         {
             name = sobyt;
             InitializeComponent();
-            List<string> rews = Program.Select("SELECT login FROM `users` WHERE ivent='" + name + "'");
-            
-            for (int i = 0; i < rews.Count; i = i + 1)
+            Text = "ОТЗЫВЫ О " + name;
+            List<string> rews = Program.Select("SELECT `user`, `otzv`, `rat` FROM `tipacomments` WHERE ivent ='" + name + "'");
+            for (int i = 0; i < rews.Count; i = i + 3)
             {
-                Label lbl = new Label();
-                lbl.ForeColor = Color.White;
-                lbl.Text = rews[i];
-                lbl.Size = new Size(60, 30);
-                lbl.AutoSize = false;
-                lbl.Location = new Point(10, 30);// * i);
-
-                List<string> texts = Program.Select("SELECT pass FROM `users` WHERE login='" + rews[i] + "'");
-                TextBox textB = new TextBox();
-                textB.Location = new Point(70, 30);// * i);
-                textB.Size = new Size(60, 30);
-                textB.Multiline = true;
-                textB.BackColor = SystemColors.InactiveCaptionText;
-                textB.ForeColor = SystemColors.ButtonFace;
-                textB.ScrollBars = ScrollBars.Vertical;
-                try
-                {
-                    textB.Text = texts[i];
-                }
-                catch (Exception) { }
-
-                Controls.Add(lbl);
-                Controls.Add(textB);
+                string[] row = new string[3];
+                row[0] = rews[i];
+                row[1] = rews[i + 1];
+                row[2] = rews[i + 2];
+                dataGridView1.Rows.Add(row);
+            }
+            if (Program.user == "_")
+            {
+                textBox1.Enabled = false;
+                comboBox1.Enabled = false;
             }
         }
-
-        private void rewievs_Load(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
+            if (Program.user == "_")
+            {
+                MessageBox.Show("ВОЙДИТЕ ИЛИ ЗАРЕГИСТРИРУЙТЕСЬ, ЧТОБЫ ОТСТАВИТЬ СВОЙ ОТЗЫВ ┬┴┬┴┤(･_├┬┴┬┴");
+            }
+            else
+            {
+                Program.Insert("INSERT INTO tipacomments ( user, otzv, rat, ivent) VALUES ('" + Program.user + "', '" + textBox1.Text + "', '" + Convert.ToInt32(comboBox1.Text) + "', " + name + "')");
+                MessageBox.Show("ОТЗЫВ ДОБАВЛЕН");
+            }
         }
     }
 }

@@ -53,28 +53,33 @@ namespace AfishA
                 sobytia[i].picB.Text = sobytia[i].name;
                 sobytia[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
                 sobytia[i].picB.Click += new EventHandler(button3_Click);
+                
+               // sobytia[i].picB.BackgroundImage = Image.FromFile("C:/Users/User/Desktop/eto_ne_afisha-master/kartinochki/про щяй.jpg");
+               // sobytia[i].picB.BackgroundImageLayout = ImageLayout.Zoom;
 
-                sobytia[i].labeI.Location = new Point(x, y + 200);
+                sobytia[i].labeI.Location = new Point(x, y + 210);
                 sobytia[i].labeI.Size = new Size(250, 60);
                 sobytia[i].labeI.Text = sobytia[i].name;
                 sobytia[i].labeI.Font = new Font("Lucida Console", 18F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 sobytia[i].labeI.ForeColor = SystemColors.ButtonFace;
                 sobytia[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
 
-                x = x + 270;
-                if (x + 270 > 1000)
+                x = x + 260;
+                if (x + 260 > 1000)
                 {
                     x = 10;
-                    y = y + 280;
+                    y = y + 300;
                 }
             }
         }
         public main()
         {
             InitializeComponent();
-            //  string connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
-            //         + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
-            //  conn = new MySqlConnection(connString);
+            List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
+            comboBox1.DataSource = fillCountry;
+            List<string> fillType = Program.Select("SELECT DISTINCT type FROM ivents");
+            comboBox2.DataSource = fillType;
+
             List<string> results = Program.Select("SELECT * FROM `ivents`");
             for (int i = 0; i < results.Count; i = i + 12)
             {
@@ -144,16 +149,16 @@ namespace AfishA
                 }
             }
         }
-
         public static void button3_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < sobytia.Count; i = i + 1)
+           for (int i = 0; i < sobytia.Count; i = i + 1)//sobytia.Count
             {
                 if (sobytia[i].type == "ФЕСТИВАЛЬ")
                 {
                     if (((PictureBox)sender).Image == sobytia[i].picB.Image)
                     {
-                        sobytie f = new sobytie(sobytia[i]);
+                        PictureBox pic = (PictureBox)sender;
+                        sobytie f = new sobytie(pic.Text);
                         f.Show();
                     }
                 }
@@ -161,7 +166,8 @@ namespace AfishA
                 {
                     if (((PictureBox)sender).Image == sobytia[i].picB.Image)
                     {
-                        solo f = new solo(sobytia[i]);
+                        PictureBox pic = (PictureBox)sender;
+                        solo f = new solo(pic.Text);
                         f.Show();
                     }
                 }
@@ -206,33 +212,11 @@ namespace AfishA
                 button8.Visible = true;
                 button9.Visible = true;
             }
-
-            if (Program.user == "admin")
-            {
-                button7.Visible = true;
-            }
-            else
-            {
-                button7.Visible = false;
-            }
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            adding f = new adding();
-            f.Show();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //button7.Visible = (Program.user == "admin");
-        }
-
         private void button8_Click(object sender, EventArgs e)
         {
             button5.Visible = true;
             button6.Visible = true;
-            button7.Visible = false;
             button8.Visible = false;
             button9.Visible = false;
 
@@ -247,6 +231,21 @@ namespace AfishA
                 f.Show();
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<string> fillPlosh = Program.Select("SELECT DISTINCT area FROM ivents WHERE country ='" + Convert.ToString(comboBox1.SelectedItem) + "'");
+            comboBox4.DataSource = fillPlosh;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            parts f = new parts();
+            f.Show();
+        }
+
+
+
         /*  private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
 {
 DateTime date = dateTimePicker1.Value;

@@ -43,7 +43,7 @@ namespace AfishA
                 Controls.Add(btn);
 
                 x = x + 60;
-                if(x > 650)
+                if(x > 600)
                 {
                     x = 300;
                     y = y + 40;

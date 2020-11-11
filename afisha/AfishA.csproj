@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>AfishA</RootNamespace>
     <AssemblyName>AfishA</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,35 +50,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adding.cs">
+    <Compile Include="adminFs\adding.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adding.Designer.cs">
+    <Compile Include="adminFs\adding.Designer.cs">
       <DependentUpon>adding.cs</DependentUpon>
     </Compile>
-    <Compile Include="addPart.cs">
+    <Compile Include="adminFs\addPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addPart.Designer.cs">
+    <Compile Include="adminFs\addPart.Designer.cs">
       <DependentUpon>addPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="addPlosh.cs">
+    <Compile Include="adminFs\addPlosh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addPlosh.Designer.cs">
+    <Compile Include="adminFs\addPlosh.Designer.cs">
       <DependentUpon>addPlosh.cs</DependentUpon>
     </Compile>
-    <Compile Include="addSob.cs">
+    <Compile Include="adminFs\addSob.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addSob.Designer.cs">
+    <Compile Include="adminFs\addSob.Designer.cs">
       <DependentUpon>addSob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFs\allBrons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFs\allBrons.Designer.cs">
+      <DependentUpon>allBrons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFs\allIvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFs\allIvents.Designer.cs">
+      <DependentUpon>allIvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFs\allParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFs\allParts.Designer.cs">
+      <DependentUpon>allParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFs\allPloshks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFs\allPloshks.Designer.cs">
+      <DependentUpon>allPloshks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFs\allUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFs\allUsers.Designer.cs">
+      <DependentUpon>allUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFs\allOtzvs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminFs\allOtzvs.Designer.cs">
+      <DependentUpon>allOtzvs.cs</DependentUpon>
     </Compile>
     <Compile Include="browseBron.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="browseBron.Designer.cs">
       <DependentUpon>browseBron.cs</DependentUpon>
+    </Compile>
+    <Compile Include="browseOtzv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="browseOtzv.Designer.cs">
+      <DependentUpon>browseOtzv.cs</DependentUpon>
     </Compile>
     <Compile Include="cacaгеo.cs">
       <SubType>Form</SubType>
@@ -91,17 +134,35 @@
     <Compile Include="buy.Designer.cs">
       <DependentUpon>buy.cs</DependentUpon>
     </Compile>
+    <Compile Include="change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="change.Designer.cs">
+      <DependentUpon>change.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="notreg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notreg.Designer.cs">
+      <DependentUpon>notreg.cs</DependentUpon>
+    </Compile>
     <Compile Include="participants.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="participants.Designer.cs">
       <DependentUpon>participants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parts.Designer.cs">
+      <DependentUpon>parts.cs</DependentUpon>
     </Compile>
     <Compile Include="plashadka.cs">
       <SubType>Form</SubType>
@@ -147,20 +208,41 @@
     <Compile Include="user.Designer.cs">
       <DependentUpon>user.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="adding.resx">
+    <EmbeddedResource Include="adminFs\adding.resx">
       <DependentUpon>adding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addPart.resx">
+    <EmbeddedResource Include="adminFs\addPart.resx">
       <DependentUpon>addPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addPlosh.resx">
+    <EmbeddedResource Include="adminFs\addPlosh.resx">
       <DependentUpon>addPlosh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addSob.resx">
+    <EmbeddedResource Include="adminFs\addSob.resx">
       <DependentUpon>addSob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFs\allBrons.resx">
+      <DependentUpon>allBrons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFs\allIvents.resx">
+      <DependentUpon>allIvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFs\allOtzvs.resx">
+      <DependentUpon>allOtzvs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFs\allParts.resx">
+      <DependentUpon>allParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFs\allPloshks.resx">
+      <DependentUpon>allPloshks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFs\allUsers.resx">
+      <DependentUpon>allUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="browseBron.resx">
       <DependentUpon>browseBron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="browseOtzv.resx">
+      <DependentUpon>browseOtzv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cacaгеo.resx">
       <DependentUpon>cacaгеo.cs</DependentUpon>
@@ -168,11 +250,20 @@
     <EmbeddedResource Include="buy.resx">
       <DependentUpon>buy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="change.resx">
+      <DependentUpon>change.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="notreg.resx">
+      <DependentUpon>notreg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="participants.resx">
       <DependentUpon>participants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parts.resx">
+      <DependentUpon>parts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="plashadka.resx">
       <DependentUpon>plashadka.cs</DependentUpon>
@@ -224,5 +315,6 @@
   <ItemGroup>
     <None Include="Resources\Nh4q6HLzGww.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

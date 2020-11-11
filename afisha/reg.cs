@@ -21,11 +21,13 @@ namespace AfishA
             InitializeComponent();
             if (name == "ВХОД")
             {
+                Text = "ВХОД";
                 button1.Text = "ВОЙТИ";
                 button1.Click += new EventHandler(BUTT_Click);
             }
             else if (name == "РЕГИСТРАЦИЯ")
             {
+                Text = "РЕГИСТРАЦИЯ";
                 button1.Text = "ЗАРЕГИСТРИРОВАТЬСЯ";
                 button1.Click += new EventHandler(BUT_Click);
             }
@@ -33,13 +35,41 @@ namespace AfishA
 
         private void BUT_Click(object sender, EventArgs e)
         {
-            Program.Select("INSERT INTO `users` (login, pass)" +
-                           "VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "')");
-            MessageBox.Show("ВЫ ТИПА ЗАРЕГИСТРИРОВАЛИСЬ НО НЕТ");
+            int login = Convert.ToInt32(Program.Select("SELECT COUNT(login) FROM users WHERE login ='" + textBox1.Text + "' AND pass ='" + textBox2.Text + "'")[0]);
+            if (login == 0)
+            {
+                Program.Insert("INSERT INTO `users` (login, pass)" +
+                          "VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "')");
+                Program.user = textBox1.Text;
+                MessageBox.Show("ВЫ ТИПА ЗАРЕГИСТРИРОВАЛИСЬ");
+            }
+            else
+            {
+                Button but = (Button)sender;
+                notreg f = new notreg(but.Text);
+                f.Show();
+            }
         }
         private void BUTT_Click(object sender, EventArgs e)
         {
-            Program.user = textBox1.Text;
+            if (textBox1.Text != "" || textBox2.Text != "")
+            {
+                int login = Convert.ToInt32(Program.Select("SELECT COUNT(login) FROM users WHERE login ='" + textBox1.Text + "' AND pass ='" + textBox2.Text + "'")[0]);
+                if (login == 0)
+                {
+                    Button but = (Button)sender;
+                    notreg f = new notreg(but.Text);
+                    f.Show();
+                }
+                else
+                {
+                    Program.user = textBox1.Text;
+                }
+            }
+            else
+            {
+                MessageBox.Show("ЗАПОЛНИТЕ ОБА ПОЛЯ");
+            }
         }
 
         private void reg_Load(object sender, EventArgs e)

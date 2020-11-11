@@ -32,61 +32,58 @@ namespace AfishA
     public partial class sobytie : Form
     {
         public static List<Participants> part = new List<Participants>();
-        Ivent sob;
-       /* public static void fillsob()
-        {
-            string[] lines = System.IO.File.ReadAllLines("участнеки.txt");
-            foreach (string str in lines)
-            {
-                string[] parts = str.Split(new string[] { "/ " }, StringSplitOptions.None);
-                part.Add(new Participants(parts[0], parts[1], parts[2], parts[3]));
-            }
-        }*/
 
-        public sobytie(Ivent sobytie1)
+        string name;
+        public sobytie(string sob)
         {
-            sob = sobytie1;
+            name = sob;
             InitializeComponent();
 
-            List<string> parts = Program.Select("SELECT part FROM `tipasvyaznaverno` WHERE ivent='" + sob.name + "'");
-
+            List<string> parts = Program.Select("SELECT part FROM `tipasvyaznaverno` WHERE ivent='" + sob + "'");
+            int x = 5;
+            int y = 5;
             for (int i = 0; i < parts.Count; i = i + 1)
             {
                 PictureBox picB = new PictureBox();
-                picB.Location = new Point(10, 5 + 130 * i);
+                picB.Location = new Point(x, y);
                 picB.Size = new Size(120, 120);
-                picB.SizeMode = PictureBoxSizeMode.Zoom;
                 try
                 {
-                    picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + parts[i] + "'");
+                    picB.Image = Program.SelectImage("SELECT kartinochka FROM participants WHERE name = '" + parts[i] + "'");
                 }
                 catch (Exception) { }
+                picB.SizeMode = PictureBoxSizeMode.Zoom;
 
                 Label lbl = new Label();
-                lbl.ForeColor = Color.White;
-                lbl.Text = parts[i];
+                lbl.Location = new Point(x, y + 120);
                 lbl.Size = new Size(120, 30);
-                lbl.AutoSize = false;
-                lbl.Location = new Point(10, 120 + 130 * i);
+                lbl.Text = parts[i];
+                lbl.Font = new Font("Lucida Console", 8F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                lbl.ForeColor = SystemColors.ButtonFace;
+                lbl.TextAlign = ContentAlignment.MiddleCenter;
                 lbl.Click += new EventHandler(button2_Click);
-
-                button2.Tag = lbl.Text;
-                panel1.Controls.Add(lbl);
+                x = x + 130;
+                if (x + 130 > panel1.Width)
+                {
+                    x = 5;
+                    y = y + 150;
+                }
                 panel1.Controls.Add(picB);
+                panel1.Controls.Add(lbl);
             }
 
-            Text = "Информация о " + sob.name;
-            
+            Text = "Информация о " + sob;
+            List<string> info = Program.Select("SELECT area, descript FROM ivents WHERE name = '" + sob + "'");
+
             try
             {
-                label1.Text = sob.name;
-                label2.Text = sob.area;
-                pictureBox1.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + sob.name + "'");
-                pictureBox2.Image = Program.SelectImage("SELECT pic2 FROM ivents WHERE name = '" + sob.name + "'");
-                pictureBox3.Image = Program.SelectImage("SELECT pic3 FROM ivents WHERE name = '" + sob.name + "'");
-                pictureBox4.Image = Program.SelectImage("SELECT pic4 FROM ivents WHERE name = '" + sob.name + "'");
-                textBox1.Text = sob.descript;
-                //System.IO.File.ReadAllLines("../../Pictures/" + sob.name + "Б1" + ".txt");
+                label1.Text = sob;
+                label2.Text = info[0];
+                pictureBox1.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + sob + "'");
+                pictureBox2.Image = Program.SelectImage("SELECT pic2 FROM ivents WHERE name = '" + sob + "'");
+                pictureBox3.Image = Program.SelectImage("SELECT pic3 FROM ivents WHERE name = '" + sob + "'");
+                pictureBox4.Image = Program.SelectImage("SELECT pic4 FROM ivents WHERE name = '" + sob + "'");
+                textBox1.Text = info[1];
             }
             catch (Exception) { }
 
@@ -116,13 +113,24 @@ namespace AfishA
             }
             else
             {
-                buy f = new buy(sob.name);
+                buy f = new buy(name);
                 f.Show();
             }
             
         }
 
         private void sobytie_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            rewievs f = new rewievs(name);
+            f.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

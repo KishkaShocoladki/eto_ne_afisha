@@ -44,10 +44,10 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -63,8 +63,9 @@
             this.comboBox1.Location = new System.Drawing.Point(242, 5);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(311, 33);
+            this.comboBox1.Size = new System.Drawing.Size(311, 24);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -75,7 +76,7 @@
             this.comboBox2.Location = new System.Drawing.Point(242, 41);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(311, 33);
+            this.comboBox2.Size = new System.Drawing.Size(311, 24);
             this.comboBox2.TabIndex = 1;
             // 
             // comboBox4
@@ -86,10 +87,10 @@
             "ДОНИНГТОН-ПАРК",
             "ЧТО-ТО В ЕВРОПЕ",
             "ЧТО-ТО В АМЕРИКЕ"});
-            this.comboBox4.Location = new System.Drawing.Point(301, 77);
+            this.comboBox4.Location = new System.Drawing.Point(300, 80);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(252, 33);
+            this.comboBox4.Size = new System.Drawing.Size(253, 24);
             this.comboBox4.TabIndex = 3;
             // 
             // label1
@@ -100,7 +101,7 @@
             this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 26);
+            this.label1.Size = new System.Drawing.Size(162, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "СЕЛЕКТ КАУНТРИ";
             // 
@@ -113,7 +114,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(204, 26);
+            this.label2.Size = new System.Drawing.Size(140, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "СЕЛЕКТ ИВЕНТ";
             // 
@@ -125,7 +126,7 @@
             this.label3.Location = new System.Drawing.Point(717, 48);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 26);
+            this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "ДАТА:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -138,7 +139,7 @@
             this.label4.Location = new System.Drawing.Point(4, 86);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(284, 26);
+            this.label4.Size = new System.Drawing.Size(195, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "СЕЛЕКТ ПЛОЩАДОЧКУ";
             // 
@@ -148,12 +149,12 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(563, 5);
+            this.button1.Location = new System.Drawing.Point(561, 43);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 69);
+            this.button1.Size = new System.Drawing.Size(154, 36);
             this.button1.TabIndex = 9;
-            this.button1.Text = "ПОСМОТРЕТЬ ПЛОЩАДКИ";
+            this.button1.Text = "ПОСМОТРЕТЬ ВСЕ ПЛОЩАДКИ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -163,10 +164,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(563, 77);
+            this.button2.Location = new System.Drawing.Point(561, 80);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 33);
+            this.button2.Size = new System.Drawing.Size(154, 27);
             this.button2.TabIndex = 10;
             this.button2.Text = "ПОИСК";
             this.button2.UseVisualStyleBackColor = false;
@@ -211,7 +212,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker1.Location = new System.Drawing.Point(722, 83);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(161, 21);
             this.dateTimePicker1.TabIndex = 15;
             // 
             // button5
@@ -241,25 +242,6 @@
             this.button6.Text = "РЕГИСТРАЦИЯ";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Location = new System.Drawing.Point(772, 144);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(111, 22);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "ДОБАВИТЬ";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Visible = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button8
             // 
@@ -291,16 +273,31 @@
             this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button7.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button7.Location = new System.Drawing.Point(561, 5);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(154, 37);
+            this.button7.TabIndex = 21;
+            this.button7.Text = "ПОСМОТРЕТЬ ВСЕХ МУЗЫКАНТОВ";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(905, 594);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dateTimePicker1);
@@ -343,10 +340,10 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button7;
     }
 }
 

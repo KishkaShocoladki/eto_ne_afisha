@@ -69,7 +69,9 @@ namespace AfishA
         public plashadka()
         {
             InitializeComponent();
-         
+            List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
+            comboBox1.DataSource = fillCountry;
+    
             List<string> pls = Program.Select("SELECT * FROM `ploshki`");
             for (int i = 0; i < pls.Count; i = i + 7)
             {
@@ -126,7 +128,7 @@ namespace AfishA
         private void button2_Click(object sender, EventArgs e)
         {
             int x = 10;
-            int y = 80;
+            int y = 120;
             for (int i = 0; i < ploshk.Count; i = i + 1)
             {
                 ploshk[i].labeI.Visible = false;
@@ -165,38 +167,8 @@ namespace AfishA
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((Convert.ToString(comboBox1.SelectedItem)) == "США")
-            {
-                comboBox2.Items.Clear();
-                comboBox2.Items.Add("САКРАМЕНТО");
-                comboBox2.Items.Add("АЙОВА");
-                comboBox2.Items.Add("ОРЛАНДО");
-                comboBox2.Items.Add("НЕВАДА");
-            }
-            else if ((Convert.ToString(comboBox1.SelectedItem)) == "ВЕЛИКОБРИТАНИЯ")
-            {
-                comboBox2.Items.Clear();
-                comboBox2.Items.Add("ЛОНДОН");
-                comboBox2.Items.Add("ЛЕСТЕРШИР");
-                comboBox2.Items.Add("БОСТОН");
-                comboBox2.Items.Add("ГЛАЗГО");
-            }
-            else if ((Convert.ToString(comboBox1.SelectedItem)) == "РОССИЯ")
-            {
-                comboBox2.Items.Clear();
-                comboBox2.Items.Add("МОСКВА");
-                comboBox2.Items.Add("САНКТ-ПЕТЕРБУРГ");
-                comboBox2.Items.Add("КАЗАНЬ");
-                comboBox2.Items.Add("ЕКАТЕРИНБУРГ");
-            }
-            else if ((Convert.ToString(comboBox1.SelectedItem)) == "ЯПОНИЯ")
-            {
-                comboBox2.Items.Clear();
-                comboBox2.Items.Add("ОСАКА");
-                comboBox2.Items.Add("ТОКИО");
-                comboBox2.Items.Add("НАЭБА");
-                comboBox2.Items.Add("ТИБА");
-            }
+            List<string> fillPlosh = Program.Select("SELECT DISTINCT city FROM ivents WHERE country ='" + Convert.ToString(comboBox1.SelectedItem) + "'");
+            comboBox2.DataSource = fillPlosh;
         }
 
         private void plashadka_Load(object sender, EventArgs e)

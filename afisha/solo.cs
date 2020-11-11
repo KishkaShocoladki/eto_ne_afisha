@@ -12,25 +12,15 @@ namespace AfishA
 {
     public partial class solo : Form
     {
-        Ivent sob;
-        public solo(Ivent sobytie1)
+        string sob;
+        public solo(string name)
         {
-            sob = sobytie1;
+            sob = name;
             InitializeComponent();
-            List<string> parts = Program.Select("SELECT dt FROM `history` WHERE participant='" + sob.name + "'");
+            List<string> parts = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");
 
             for (int i = 0; i < parts.Count; i = i + 1)
             {
-              /*  PictureBox picB = new PictureBox();
-                picB.Location = new Point(10, 5 + 130 * i);
-                picB.Size = new Size(120, 120);
-                picB.SizeMode = PictureBoxSizeMode.Zoom;
-                try
-                {
-                    picB.Load("../../kartinochki/" + parts[i] + ".jpg");
-                }
-                catch (Exception) { }*/
-
                 Label lbl = new Label();
                 lbl.ForeColor = Color.White;
                 lbl.Text = parts[i];
@@ -38,36 +28,23 @@ namespace AfishA
                 lbl.AutoSize = false;
                 lbl.Location = new Point(10, 10 + 30 * i);
                 panel1.Controls.Add(lbl);
-                //panel1.Controls.Add(picB);
             }
 
-            Text = "Информация о " + sob.name;
-
+            Text = "Информация о " + name;
+            List<string> info = Program.Select("SELECT area, descript FROM ivents WHERE name = '" + name + "'");
             try
             {
-                label1.Text = sob.name;
-                label2.Text = sob.area;
+                label1.Text = name;
+                label2.Text = info[0];
                 //label3.Text = sob.agelimit;
-                pictureBox1.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + sob.name + "'");
-                pictureBox2.Image = Program.SelectImage("SELECT pic2 FROM ivents WHERE name = '" + sob.name + "'");
-                pictureBox3.Image = Program.SelectImage("SELECT pic3 FROM ivents WHERE name = '" + sob.name + "'");
-                textBox1.Text = sob.descript;
+                pictureBox1.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + name + "'");
+                pictureBox2.Image = Program.SelectImage("SELECT pic2 FROM ivents WHERE name = '" + name + "'");
+                pictureBox3.Image = Program.SelectImage("SELECT pic3 FROM ivents WHERE name = '" + name + "'");
+                textBox1.Text = info[1];
                 //System.IO.File.ReadAllLines("../../Pictures/" + sob.name + "Б1" + ".txt");
             }
             catch (Exception) { }
         }
-
-        private void solo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       /* private void button2_Click(object sender, EventArgs e)
-        {
-            rewievs f = new rewievs();
-            f.Show();
-        }*/
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (Program.user == "_")
@@ -76,9 +53,15 @@ namespace AfishA
             }
             else
             {
-                buy f = new buy(sob.name);
+                buy f = new buy(sob);
                 f.Show();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            rewievs f = new rewievs(sob);
+            f.Show();
         }
     }
 }

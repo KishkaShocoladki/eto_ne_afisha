@@ -22,8 +22,7 @@ namespace AfishA
                 row[0] = bron[i];
                 row[1] = bron[i + 1];
                 dataGridView1.Rows.Add(row);
-            }
-            
+            }     
         }
 
         private void browseBron_Load(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace AfishA
             if (e.ColumnIndex == 2)
             {
                 string delete = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                Program.Insert("DELETE FROM bron WHERE place ='" + delete + "'");
+                Program.Insert("DELETE FROM bron WHERE place ='" + delete + "' AND user ='" + Program.user + "'");
                 MessageBox.Show("УДАЛЕНО");
             }
         }
