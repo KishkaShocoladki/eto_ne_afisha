@@ -89,24 +89,28 @@
             // 
             this.col0.HeaderText = "ID";
             this.col0.Name = "col0";
+            this.col0.ReadOnly = true;
             this.col0.Width = 48;
             // 
             // col1
             // 
             this.col1.HeaderText = "ПОЛЬЗОВАТЕЛЬ";
             this.col1.Name = "col1";
+            this.col1.ReadOnly = true;
             this.col1.Width = 128;
             // 
             // col2
             // 
             this.col2.HeaderText = "ОТЗЫВ";
             this.col2.Name = "col2";
+            this.col2.ReadOnly = true;
             this.col2.Width = 72;
             // 
             // col5
             // 
             this.col5.HeaderText = "МЕРОПРИЯТИЕ";
             this.col5.Name = "col5";
+            this.col5.ReadOnly = true;
             this.col5.Width = 120;
             // 
             // col3
@@ -124,6 +128,7 @@
             this.ClientSize = new System.Drawing.Size(601, 280);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(617, 318);
             this.Name = "allOtzvs";
             this.Text = "ВСЕ ОТЗЫВЫ";
             this.Load += new System.EventHandler(this.allOtzvs_Load);

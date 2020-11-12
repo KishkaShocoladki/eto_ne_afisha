@@ -78,6 +78,11 @@ namespace AfishA
         {
 
         }
+
+        private void participants_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

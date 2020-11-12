@@ -270,6 +270,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(491, 368);
             this.Name = "addSob";
             this.Text = "ДОБАВИТЬ СОБЫТИЕ";
             this.Load += new System.EventHandler(this.addSob_Load);

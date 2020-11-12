@@ -230,6 +230,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(482, 336);
             this.Name = "addPart";
             this.Text = "ДОБАВИТЬ ИСПОЛНИТЕЛЯ";
             this.Load += new System.EventHandler(this.addPart_Load);

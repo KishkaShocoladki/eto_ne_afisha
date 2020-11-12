@@ -17,21 +17,15 @@ namespace AfishA
         public string name;
         public string descript;
         public string city;
-        public string kartinochka;
-        public string kartinochka2;
-        public string kartinochka3;
         public string vmest;
         public Label labeI;
         public PictureBox picB;
 
-        public PLOSH(string name1, string descript1, string city1, string kartinochka1, string kartinochka21, string kartinochka31, string vmest1)
+        public PLOSH(string name1, string descript1, string city1, string vmest1)
         {
             name = name1;
             descript = descript1;
             city = city1;
-            kartinochka = kartinochka1;
-            kartinochka2 = kartinochka21;
-            kartinochka3 = kartinochka31;
             vmest = vmest1;
             labeI = new Label();
             picB = new PictureBox();
@@ -40,32 +34,6 @@ namespace AfishA
     public partial class plashadka : Form
     {
         public static List<PLOSH> ploshk = new List<PLOSH>();
-        /*public static void fills()
-        {
-            String connString = "Server=VH287.spaceweb.ru; Database = beavisabra_afish;"
-                  + "port = 3306; User Id = beavisabra_afish; password = Beavis1989";
-            MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
-
-            List<string> result = new List<string>();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `ploshki`", conn);
-            DbDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                string name = reader.GetString(0);
-                string descript = reader.GetString(1);
-                string city = reader.GetString(2);
-                string kartinochka = reader.GetString(3);
-                string kartinochka2 = reader.GetString(4);
-                string kartinochka3 = reader.GetString(5);
-                string vmest = reader.GetString(6);
-                ploshk.Add(new PLOSH(name, descript, city, kartinochka, kartinochka2, kartinochka3, vmest));
-                result.Add(name);
-            }
-            reader.Close();
-            conn.Close();
-        }*/
         public plashadka()
         {
             InitializeComponent();
@@ -78,11 +46,8 @@ namespace AfishA
                 string name = pls[i];
                 string descript = pls[i + 1];
                 string city = pls[i + 2];
-                string kartinochka = pls[i + 3];
-                string kartinochka2 = pls[i + 4];
-                string kartinochka3 = pls[i + 5];
                 string vmest = pls[i + 6];
-                ploshk.Add(new PLOSH(name, descript, city, kartinochka, kartinochka2, kartinochka3, vmest));
+                ploshk.Add(new PLOSH(name, descript, city, vmest));
             }
 
             int x = 10;
@@ -103,9 +68,9 @@ namespace AfishA
                 ploshk[i].labeI.Location = new Point(x, y + 200);
                 ploshk[i].labeI.Size = new Size(250, 60);
                 ploshk[i].labeI.Text = ploshk[i].name;
-                ploshk[i].labeI.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                ploshk[i].labeI.ForeColor = System.Drawing.SystemColors.ButtonFace;
-                ploshk[i].labeI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                ploshk[i].labeI.Font = new Font("Lucida Console", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+                ploshk[i].labeI.ForeColor = SystemColors.ButtonFace;
+                ploshk[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
 
                 x = x + 270;
                 if (x + 270 > 600)

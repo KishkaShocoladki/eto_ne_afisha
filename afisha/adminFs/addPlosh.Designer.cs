@@ -182,6 +182,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(444, 269);
             this.Name = "addPlosh";
             this.Text = "ДОБАВИТЬ ПЛОЩАДКУ";
             this.Load += new System.EventHandler(this.addPlosh_Load);

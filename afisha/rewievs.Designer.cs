@@ -167,6 +167,7 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximumSize = new System.Drawing.Size(605, 329);
             this.Name = "rewievs";
             this.Text = "куцшумы";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

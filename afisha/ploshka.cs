@@ -12,22 +12,8 @@ using System.Data.Common;
 
 namespace AfishA
 {
-    public struct IV
-    {
-        public string name;
-        public Label labeI;
-        public PictureBox picB;
-
-        public IV(string name1)
-        {
-            name = name1;
-            labeI = new Label();
-            picB = new PictureBox();
-        }
-    }
     public partial class ploshka : Form
     {
-        public static List<IV> ivt = new List<IV>();
         PLOSH ploshk;
         public ploshka(PLOSH ploshka1)
         {
@@ -76,26 +62,6 @@ namespace AfishA
                     }
                     panel1.Controls.Add(picB);
                     panel1.Controls.Add(lbl);
-             
-                /*Label lbl = new Label();
-                lbl.ForeColor = Color.White;
-                lbl.Text = parts[i];
-                lbl.Size = new Size(120, 30);
-                lbl.AutoSize = false;
-                lbl.Location = new Point(10, 120 + 130 * i);
-                lbl.Click += new EventHandler(button2_Click);
-                panel1.Controls.Add(lbl);
-
-                PictureBox picB = new PictureBox();
-                picB.Location = new Point(10, 5 + 130 * i);
-                picB.Size = new Size(120, 120);
-                picB.SizeMode = PictureBoxSizeMode.Zoom;
-                try
-                {
-                    picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + parts[i] + "'");
-                }
-                catch (Exception) { }
-                panel1.Controls.Add(picB);*/
             }
         }
         private void button1_Click(object sender, EventArgs e)

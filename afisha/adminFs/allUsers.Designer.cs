@@ -85,12 +85,14 @@
             // 
             this.col1.HeaderText = "ID";
             this.col1.Name = "col1";
+            this.col1.ReadOnly = true;
             this.col1.Width = 48;
             // 
             // col2
             // 
             this.col2.HeaderText = "ПОЛЬЗОВАТЕЛЬ";
             this.col2.Name = "col2";
+            this.col2.ReadOnly = true;
             this.col2.Width = 128;
             // 
             // col4
@@ -106,6 +108,7 @@
             this.ClientSize = new System.Drawing.Size(334, 245);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(350, 283);
             this.Name = "allUsers";
             this.Text = "ВСЕ ПОЛЬЗОВАТЕЛИ";
             this.Load += new System.EventHandler(this.allUsers_Load);

@@ -9,48 +9,68 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AfishA
-{
+{ 
+    public struct part 
+    {
+        public string name;
+        public string genre;
+        public string country;
+        public Label lbl;
+        public Label labl;
+        public PictureBox picB;
+        public part(string name1, string genre1, string country1)
+        {
+            name = name1;
+            genre = genre1;
+            country = country1;
+            lbl = new Label();
+            labl = new Label();
+            picB = new PictureBox();
+        }
+    }
     public partial class parts : Form
     {
+        public static List<part> prt = new List<part>();
         public parts()
         {
             InitializeComponent();
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
             comboBox1.DataSource = fillCountry;
-            List<string> parts = Program.Select("SELECT name FROM `participants`");
-            List<string> genre = Program.Select("SELECT genre FROM `participants`");
+            List<string> part = Program.Select("SELECT name, genre, country FROM `participants`");
+            for (int i = 0; i < part.Count; i = i + 3)
+            {
+                string name = part[i];
+                string genre = part[i + 1];
+                string country = part[i + 2];
+                prt.Add(new part(name, genre, country));
+            }
             int x = 10;
             int y = 80;
-            for (int i = 0; i < parts.Count; i = i + 1)
+            for (int i = 0; i < prt.Count; i = i + 1)
             {
-                PictureBox picB = new PictureBox();
-                picB.Location = new Point(x, y);
-                picB.Size = new Size(250, 200);
+                prt[i].picB.Location = new Point(x, y);
+                prt[i].picB.Size = new Size(250, 200);
                 try
                 {
-                    picB.Image = Program.SelectImage("SELECT kartinochka FROM participants WHERE name = '" + parts[i] + "'");
+                    prt[i].picB.Image = Program.SelectImage("SELECT kartinochka FROM participants WHERE name = '" + prt[i].name + "'");
                 }
                 catch (Exception) { }
-                picB.SizeMode = PictureBoxSizeMode.Zoom;
+                prt[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
 
-                // sobytia[i].picB.BackgroundImage = Image.FromFile("C:/Users/User/Desktop/eto_ne_afisha-master/kartinochki/про щяй.jpg");
-                // sobytia[i].picB.BackgroundImageLayout = ImageLayout.Zoom;
-                Label lbl = new Label();
-                lbl.Location = new Point(x, y + 200);
-                lbl.Size = new Size(250, 60);
-                lbl.Text = parts[i];
-                lbl.Font = new Font("Lucida Console", 18F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                lbl.ForeColor = SystemColors.ButtonFace;
-                lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.Click += new EventHandler(button2_Click);
+                prt[i].lbl.Location = new Point(x, y + 200);
+                prt[i].lbl.Size = new Size(250, 60);
+                prt[i].lbl.Text = prt[i].name;
+                prt[i].lbl.Font = new Font("Lucida Console", 18F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                prt[i].lbl.ForeColor = SystemColors.ButtonFace;
+                prt[i].lbl.TextAlign = ContentAlignment.MiddleCenter;
+                prt[i].lbl.Click += new EventHandler(button2_Click);
 
-                Label labl = new Label();
-                labl.Location = new Point(x, y + 255);
-                labl.Size = new Size(250, 60);
-                labl.Text = genre[i];
-                labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                labl.ForeColor = SystemColors.ControlDark;
-                labl.TextAlign = ContentAlignment.MiddleCenter;
+                prt[i].labl.Location = new Point(x, y + 255);
+                prt[i].labl.Size = new Size(250, 60);
+                prt[i].labl.Text = prt[i].genre;
+                prt[i].labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                prt[i].labl.ForeColor = SystemColors.ControlDark;
+                prt[i].labl.TextAlign = ContentAlignment.MiddleCenter;
 
                 x = x + 270;
                 if (x + 270 > 600)
@@ -58,9 +78,9 @@ namespace AfishA
                     x = 10;
                     y = y + 320;
                 }
-                panel1.Controls.Add(picB);
-                panel1.Controls.Add(lbl);
-                panel1.Controls.Add(labl);
+                panel1.Controls.Add(prt[i].picB);
+                panel1.Controls.Add(prt[i].lbl);
+                panel1.Controls.Add(prt[i].labl);
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -72,51 +92,36 @@ namespace AfishA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<string> parts = Program.Select("SELECT name FROM `participants` WHERE country ='" + Convert.ToString(comboBox1.SelectedItem) + "'");
             int x = 10;
             int y = 80;
-            for (int i = 0; i < parts.Count; i = i + 1)
+            for (int i = 0; i < prt.Count; i = i + 1)
             {
-                PictureBox picB = new PictureBox();
-                picB.Location = new Point(x, y);
-                picB.Size = new Size(250, 200);
-                try
-                {
-                    picB.Image = Program.SelectImage("SELECT kartinochka FROM participants WHERE name = '" + parts[i] + "'");
-                }
-                catch (Exception) { }
-                picB.SizeMode = PictureBoxSizeMode.Zoom;
+                prt[i].lbl.Visible = false;
+                prt[i].labl.Visible = false;
+                prt[i].picB.Visible = false;
+                bool show = true;
 
-                // sobytia[i].picB.BackgroundImage = Image.FromFile("C:/Users/User/Desktop/eto_ne_afisha-master/kartinochki/про щяй.jpg");
-                // sobytia[i].picB.BackgroundImageLayout = ImageLayout.Zoom;
-                Label lbl = new Label();
-                lbl.Location = new Point(x, y + 200);
-                lbl.Size = new Size(250, 60);
-                lbl.Text = parts[i];
-                lbl.Font = new Font("Lucida Console", 18F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                lbl.ForeColor = SystemColors.ButtonFace;
-                lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.Click += new EventHandler(button2_Click);
-
-                x = x + 270;
-                if (x + 270 > 500)
+                if (comboBox1.Text != "" && prt[i].country != comboBox1.Text)
                 {
-                    x = 10;
-                    y = y + 320;
+                    show = false;
                 }
-                panel1.Controls.Add(picB);
-                panel1.Controls.Add(lbl);
+                if (show)
+                {
+                    prt[i].picB.Visible = true;
+                    prt[i].picB.Location = new Point(x, y);
+                    prt[i].lbl.Visible = true;
+                    prt[i].lbl.Location = new Point(x, y + 200);
+                    prt[i].labl.Visible = true;
+                    prt[i].labl.Location = new Point(x, y + 255);
+                    x = x + 270;
+                    if (x + 270 > 600)
+                    {
+                        x = 10;
+                        y = y + 320;
+                    }
+                }
+
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void parts_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

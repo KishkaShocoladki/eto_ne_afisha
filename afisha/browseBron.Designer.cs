@@ -66,6 +66,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -78,19 +79,21 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 116);
+            this.dataGridView1.Size = new System.Drawing.Size(348, 118);
             this.dataGridView1.TabIndex = 1;
             // 
             // col2
             // 
             this.col2.HeaderText = "СОБЫТИЕ";
             this.col2.Name = "col2";
+            this.col2.ReadOnly = true;
             this.col2.Width = 88;
             // 
             // col3
             // 
             this.col3.HeaderText = "МЕСТО";
             this.col3.Name = "col3";
+            this.col3.ReadOnly = true;
             this.col3.Width = 72;
             // 
             // col4
@@ -104,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(344, 116);
+            this.ClientSize = new System.Drawing.Size(348, 118);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(539, 214);

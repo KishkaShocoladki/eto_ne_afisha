@@ -40,6 +40,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(538, 195);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(554, 233);
             this.Name = "notreg";
             this.Text = "notreg";
             this.Load += new System.EventHandler(this.notreg_Load);

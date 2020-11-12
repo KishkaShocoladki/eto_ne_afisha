@@ -221,6 +221,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.MaximumSize = new System.Drawing.Size(590, 379);
             this.Name = "user";
             this.Text = "user";
             this.Load += new System.EventHandler(this.user_Load);
