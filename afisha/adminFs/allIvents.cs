@@ -42,5 +42,20 @@ namespace AfishA
                 MessageBox.Show("УДАЛЕНО");
             }
         }
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            string ivent = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            string area = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            if (e.ColumnIndex == 0)
+            {
+                Program.Select("UPDATE ivents SET name ='" + ivent + "' WHERE area ='" + area + "'");
+                MessageBox.Show("ОТРЕДАКТИРОВАНО");
+            }
+            if (e.ColumnIndex == 1)
+            {
+                Program.Select("UPDATE ivents SET area ='" + area + "' WHERE name ='" + ivent + "'");
+                MessageBox.Show("ОТРЕДАКТИРОВАНО");
+            }
+        }
     }
 }

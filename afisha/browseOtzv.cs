@@ -34,7 +34,16 @@ namespace AfishA
                 MessageBox.Show("УДАЛЕНО");
             }
         }
-
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            string ivent = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            string otzv = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            if (e.ColumnIndex == 1)
+            {
+                Program.Select("UPDATE tipacomments SET otzv ='" + otzv + "' WHERE user ='" + Program.user + "' AND ivent ='" + ivent + "'");
+                MessageBox.Show("ОТРЕДАКТИРОВАНО");
+            }
+        }
         private void browseOtzv_Load(object sender, EventArgs e)
         {
 
