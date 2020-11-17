@@ -38,7 +38,10 @@
             this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.col5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col8 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +66,10 @@
             this.col2,
             this.col3,
             this.col4,
-            this.col5});
+            this.col5,
+            this.col6,
+            this.col7,
+            this.col8});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -86,7 +92,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(501, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(919, 296);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
@@ -126,19 +132,37 @@
             // 
             // col5
             // 
-            this.col5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.col5.HeaderText = "УДАЛЕНИЕ";
+            this.col5.HeaderText = "МИН. ВМЕСТИМОСТЬ";
             this.col5.Name = "col5";
-            this.col5.Width = 77;
+            this.col5.Width = 146;
+            // 
+            // col6
+            // 
+            this.col6.HeaderText = "ПЛАТА ЗА ВЫСТУПЛЕНИЕ";
+            this.col6.Name = "col6";
+            this.col6.Width = 175;
+            // 
+            // col7
+            // 
+            this.col7.HeaderText = "ГДЕ НЕ ВЫСТУПАЕТ";
+            this.col7.Name = "col7";
+            this.col7.Width = 146;
+            // 
+            // col8
+            // 
+            this.col8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.col8.HeaderText = "УДАЛЕНИЕ";
+            this.col8.Name = "col8";
+            this.col8.Width = 77;
             // 
             // allParts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 296);
+            this.ClientSize = new System.Drawing.Size(919, 296);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(517, 334);
+            this.MaximumSize = new System.Drawing.Size(935, 334);
             this.Name = "allParts";
             this.Text = "ВСЕ УЧАСТНИКИ";
             this.Load += new System.EventHandler(this.allParts_Load);
@@ -155,6 +179,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col2;
         private System.Windows.Forms.DataGridViewTextBoxColumn col3;
         private System.Windows.Forms.DataGridViewTextBoxColumn col4;
-        private System.Windows.Forms.DataGridViewButtonColumn col5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col7;
+        private System.Windows.Forms.DataGridViewButtonColumn col8;
     }
 }

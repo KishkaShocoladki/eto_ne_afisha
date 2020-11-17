@@ -40,13 +40,13 @@ namespace AfishA
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
             comboBox1.DataSource = fillCountry;
     
-            List<string> pls = Program.Select("SELECT * FROM `ploshki`");
-            for (int i = 0; i < pls.Count; i = i + 7)
+            List<string> pls = Program.Select("SELECT name, description, city, vmest FROM `ploshki`");
+            for (int i = 0; i < pls.Count; i = i + 4)
             {
                 string name = pls[i];
                 string descript = pls[i + 1];
                 string city = pls[i + 2];
-                string vmest = pls[i + 6];
+                string vmest = pls[i + 3];
                 ploshk.Add(new PLOSH(name, descript, city, vmest));
             }
 

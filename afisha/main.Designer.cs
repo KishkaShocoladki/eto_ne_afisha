@@ -123,7 +123,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Console", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(717, 48);
+            this.label3.Location = new System.Drawing.Point(717, 37);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 18);
@@ -178,10 +178,10 @@
             this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(722, 5);
+            this.button3.Location = new System.Drawing.Point(719, 6);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(58, 33);
+            this.button3.Size = new System.Drawing.Size(58, 28);
             this.button3.TabIndex = 12;
             this.button3.Text = "PLAY";
             this.button3.UseVisualStyleBackColor = false;
@@ -192,10 +192,10 @@
             this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(825, 5);
+            this.button4.Location = new System.Drawing.Point(823, 5);
             this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(58, 33);
+            this.button4.Size = new System.Drawing.Size(58, 29);
             this.button4.TabIndex = 13;
             this.button4.Text = "STOP";
             this.button4.UseVisualStyleBackColor = false;
@@ -210,7 +210,8 @@
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.ButtonFace;
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
             this.dateTimePicker1.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(722, 83);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(720, 58);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(161, 21);
             this.dateTimePicker1.TabIndex = 15;
@@ -221,7 +222,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(825, 116);
+            this.button5.Location = new System.Drawing.Point(823, 85);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(58, 22);
             this.button5.TabIndex = 16;
@@ -235,9 +236,9 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(689, 116);
+            this.button6.Location = new System.Drawing.Point(720, 85);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(130, 22);
+            this.button6.Size = new System.Drawing.Size(102, 22);
             this.button6.TabIndex = 17;
             this.button6.Text = "РЕГИСТРАЦИЯ";
             this.button6.UseVisualStyleBackColor = false;
@@ -249,9 +250,9 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Location = new System.Drawing.Point(811, 48);
+            this.button8.Location = new System.Drawing.Point(823, 112);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(72, 26);
+            this.button8.Size = new System.Drawing.Size(58, 22);
             this.button8.TabIndex = 19;
             this.button8.Text = "ВЫЙТИ";
             this.button8.UseVisualStyleBackColor = false;
@@ -264,9 +265,9 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Location = new System.Drawing.Point(689, 116);
+            this.button9.Location = new System.Drawing.Point(720, 84);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(194, 22);
+            this.button9.Size = new System.Drawing.Size(161, 22);
             this.button9.TabIndex = 20;
             this.button9.Text = "ПРОФИЛЬ";
             this.button9.UseVisualStyleBackColor = false;
@@ -294,7 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(905, 594);
+            this.ClientSize = new System.Drawing.Size(898, 594);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);

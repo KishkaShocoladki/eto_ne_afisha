@@ -15,15 +15,18 @@ namespace AfishA
         public allParts()
         {
             InitializeComponent();
-            List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `genre`, `country` FROM `participants`");
-            for (int i = 0; i < ivs.Count; i = i + 5)
+            List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `genre`, `country`, `mVmest`, `tipgonorar`, `neGo` FROM `participants`");
+            for (int i = 0; i < ivs.Count; i = i + 8)
             {
-                string[] row = new string[5];
+                string[] row = new string[8];
                 row[0] = ivs[i];
                 row[1] = ivs[i + 1]; 
                 row[2] = ivs[i + 2];
                 row[3] = ivs[i + 3];
                 row[4] = ivs[i + 4];
+                row[5] = ivs[i + 5];
+                row[6] = ivs[i + 6];
+                row[7] = ivs[i + 7];
                 dataGridView1.Rows.Add(row);
             }
         }
@@ -50,6 +53,9 @@ namespace AfishA
             string descript = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             string genre = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             string country = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string mVmest = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string tipgonorar = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string neGo = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             if (e.ColumnIndex == 1)
             {
                 Program.Select("UPDATE participants SET name ='" + part + "' WHERE ident ='" + ident + "'");
@@ -68,6 +74,21 @@ namespace AfishA
             if (e.ColumnIndex == 4)
             {
                 Program.Select("UPDATE participants SET country ='" + country + "' WHERE ident ='" + ident + "'");
+                MessageBox.Show("ОТРЕДАКТИРОВАНО");
+            }
+            if (e.ColumnIndex == 5)
+            {
+                Program.Select("UPDATE participants SET mVmest ='" + mVmest + "' WHERE ident ='" + ident + "'");
+                MessageBox.Show("ОТРЕДАКТИРОВАНО");
+            }
+            if (e.ColumnIndex == 6)
+            {
+                Program.Select("UPDATE participants SET tipgonorar ='" + tipgonorar + "' WHERE ident ='" + ident + "'");
+                MessageBox.Show("ОТРЕДАКТИРОВАНО");
+            }
+            if (e.ColumnIndex == 7)
+            {
+                Program.Select("UPDATE participants SET neGo ='" + neGo + "' WHERE ident ='" + ident + "'");
                 MessageBox.Show("ОТРЕДАКТИРОВАНО");
             }
         }

@@ -21,11 +21,12 @@ namespace AfishA
         public string country;
         public string type;
         public string area;
-       // public string agelimit;
+        public string dt;
+        // public string agelimit;
         public Label labeI;
         public PictureBox picB;
 
-        public Ivent(string name1, string descript1, string city1, string country1, string type1, string area1)
+        public Ivent(string name1, string descript1, string city1, string country1, string type1, string area1, string dt1)
         {
             name = name1;
             descript = descript1;
@@ -33,6 +34,7 @@ namespace AfishA
             country = country1;
             type = type1;
             area = area1;
+            dt = dt1; 
             //agelimit = agelimit1;
             labeI = new Label();
             picB = new PictureBox();
@@ -80,8 +82,8 @@ namespace AfishA
             List<string> fillType = Program.Select("SELECT DISTINCT type FROM ivents");
             comboBox2.DataSource = fillType;
 
-            List<string> results = Program.Select("SELECT * FROM `ivents`");
-            for (int i = 0; i < results.Count; i = i + 12)
+            List<string> results = Program.Select("SELECT `name`, `descript`, `city`, `country`, `type`, `area`, `dt` FROM `ivents`");
+            for (int i = 0; i < results.Count; i = i + 7)
             {
                 string name = results[i];
                 string descript = results[i + 1];
@@ -89,7 +91,8 @@ namespace AfishA
                 string country = results[i + 3];
                 string type = results[i + 4];
                 string area = results[i + 5];
-                Ivent iv = new Ivent(name, descript, city, country, type, area);
+                string dt = results[i + 6];
+                Ivent iv = new Ivent(name, descript, city, country, type, area, dt);
                 sobytia.Add(iv);
             }
             fillsob();
@@ -98,12 +101,15 @@ namespace AfishA
             {
                 try 
                 {
+                    //DateTime myDate = DateTime.ParseExact(iv.dt, "dd-MM-yyyy HH:mm:ss",
+                     //                  System.Globalization.CultureInfo.InvariantCulture);
                     iv.picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + iv.name + "'");
                 }
                 catch(Exception) { }
                 Controls.Add(iv.labeI);
                 Controls.Add(iv.picB);
             }
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -124,16 +130,15 @@ namespace AfishA
                 {
                     show = false;
                 }
-
                 else if (comboBox2.Text != "" && sobytia[i].type != comboBox2.Text)
                 {
                     show = false;
                 }
-
                 else if (comboBox4.Text != "" && sobytia[i].area != comboBox4.Text)
                 {
                     show = false;
                 }
+                
                 if (show)
                 {
                     sobytia[i].picB.Visible = true;

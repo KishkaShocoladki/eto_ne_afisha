@@ -36,6 +36,7 @@ namespace AfishA
         /// </summary>
         public static MySqlConnection conn;
         public static string user = "_";
+        public static string userid = "_";
 
         public static void Insert(string Text)
         {

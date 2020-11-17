@@ -25,7 +25,8 @@ namespace AfishA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Program.Select("UPDATE `users` SET `login` = '" + textBox2.Text + "' WHERE ident = '" + Program.id + "'");
+            Program.Select("UPDATE `users` SET `login` = '" + textBox2.Text + "' WHERE ident = '" + Program.userid + "'");
+            MessageBox.Show("ЛОГИН ИЗМЕНЕН");
         }
 
         private void button1_Click(object sender, EventArgs e)

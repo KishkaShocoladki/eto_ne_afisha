@@ -61,9 +61,11 @@ namespace AfishA
                     notreg f = new notreg(but.Text);
                     f.Show();
                 }
-                else
+                else if (login != 0)
                 {
                     Program.user = textBox1.Text;
+                    string ident = Program.Select("SELECT ident FROM users WHERE login ='" + textBox1.Text + "'")[0];
+                    Program.userid = ident;
                 }
             }
             else
