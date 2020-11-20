@@ -17,9 +17,20 @@ namespace AfishA
         {
             InitializeComponent();
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM participants");
-            comboBox1.DataSource = fillCountry;         
-            List<string> fillGenre = Program.Select("SELECT genre FROM genres");
-            comboBox2.DataSource = fillGenre;
+            comboBox1.DataSource = fillCountry;
+            List<string> genres = Program.Select("SELECT genre FROM participants");
+            List<string> genress = new List<string>();
+            foreach (string genre in genres)
+            {
+                string[] genre1 = genre.Split(new string[] { ", " }, StringSplitOptions.None);
+                foreach (string gen in genre1)
+                {
+                    if (!genress.Contains(gen))
+                        genress.Add(gen);
+                }
+            }
+            genress.Sort();
+            comboBox2.DataSource = genress.ToArray();
             List<string> parts = Program.Select("SELECT name FROM `participants`");
             int x = 10;
             int y = 5;
@@ -43,12 +54,12 @@ namespace AfishA
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 lbl.ForeColor = SystemColors.ButtonFace;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.Click += new EventHandler(button1_Click);
+                lbl.Click += new EventHandler(button2_Click);
                
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 255);
                 labl.Size = new Size(250, 60);
-                labl.Text = genre[0];
+                labl.Text = genres[0];
                 labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 labl.ForeColor = SystemColors.ControlDark;
                 labl.TextAlign = ContentAlignment.MiddleCenter;

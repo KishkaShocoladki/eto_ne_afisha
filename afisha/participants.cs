@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace AfishA
 {
     public partial class participants : Form
     {
+        //static int PlayPause = 0;
+        WindowsMediaPlayer wmp = new WindowsMediaPlayer();
+       // SoundPlayer player = null;
         string name;
         public participants(string nm)
         {
@@ -67,21 +71,39 @@ namespace AfishA
                     panel1.Controls.Add(lbl);
                 }
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
             sobytie f = new sobytie(lbl.Text);
             f.Show();
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void participants_Load(object sender, EventArgs e)
         {
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //MediaPlayer player = null;
+            wmp.controls.stop();
+        }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Program.SelectMusic("SELECT song1 FROM participants WHERE name='" + name + "'");
+            try 
+            {
+                // wmp = new MediaPlayer();
+                wmp.URL = "sample.mp3";
+                wmp.controls.play();
+            }
+            catch (Exception) { }
         }
     }
 }

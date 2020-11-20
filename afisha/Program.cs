@@ -68,8 +68,25 @@ namespace AfishA
             reader.Close();
             return img;
         }
+        public static void SelectMusic(String Text)
+        {
+            MySqlCommand command = new MySqlCommand(Text, conn);
+            MySqlDataReader reader = command.ExecuteReader();
 
-       
+            while (reader.Read())
+            {
+                byte[] data = (byte[])reader.GetValue(0);
+                try
+                {
+                    FileStream file = new FileStream("sample.mp3", FileMode.Create);//sample.wav
+                    file.Write(data, 0, data.Length);
+                }
+                catch { }
+            }
+            reader.Close();
+        }
+
+
         public static List<string> Select(string Text)
         {
             //Результат
