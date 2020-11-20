@@ -13,9 +13,7 @@ namespace AfishA
 {
     public partial class participants : Form
     {
-        //static int PlayPause = 0;
         WindowsMediaPlayer wmp = new WindowsMediaPlayer();
-       // SoundPlayer player = null;
         string name;
         public participants(string nm)
         {
@@ -90,7 +88,6 @@ namespace AfishA
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            //MediaPlayer player = null;
             wmp.controls.stop();
         }
 
@@ -99,7 +96,6 @@ namespace AfishA
             Program.SelectMusic("SELECT song1 FROM participants WHERE name='" + name + "'");
             try 
             {
-                // wmp = new MediaPlayer();
                 wmp.URL = "sample.mp3";
                 wmp.controls.play();
             }
