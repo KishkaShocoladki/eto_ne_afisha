@@ -29,6 +29,8 @@ namespace AfishA
             {
                 Program.Insert("INSERT INTO `participants` (name, descript, genre, country, mVmest, tipgonorar, neGo)" +
                                "VALUES ('" + nameBox.Text + "', '" + descriptBox.Text + "', '" + genreBox1.Text + ", " + genreBox2.Text + ", " + genreBox3.Text + "', '" + Convert.ToInt32(vmestBox.Text) + "', '" + Convert.ToInt32(payBox.Text) + "', '" + negoBox.Text + "')");
+                Program.Insert("INSERT INTO `songs` (part_name, musicName1, musicName2, musicName3)" +
+                               "VALUES ('" + nameBox.Text + "', '" + musicBox1.Text + "', '" + musicBox2.Text + "', '" + musicBox3.Text + "')");
                 #region
                 /*if (genreBox2.Text != "" && genreBox3.Text != "")
                 {

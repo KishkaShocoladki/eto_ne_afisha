@@ -31,6 +31,10 @@ namespace AfishA
             label2.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
             label5.Text = info[2];
             label5.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
+            List<string> music = Program.Select("SELECT musicName1, musicName2, musicaName3 FROM songs WHERE name = '" + name + "'");
+            label6.Text = music[0];
+            label7.Text = music[0];
+            label8.Text = music[0];
             try
             {          
                 pictureBox1.Image = Program.SelectImage("SELECT kartinochka FROM participants WHERE name = '" + name + "'");
@@ -95,6 +99,26 @@ namespace AfishA
         {
             Program.SelectMusic("SELECT song1 FROM participants WHERE name='" + name + "'");
             try 
+            {
+                wmp.URL = "sample.mp3";
+                wmp.controls.play();
+            }
+            catch (Exception) { }
+        }
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Program.SelectMusic("SELECT song2 FROM participants WHERE name='" + name + "'");
+            try
+            {
+                wmp.URL = "sample.mp3";
+                wmp.controls.play();
+            }
+            catch (Exception) { }
+        }
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            Program.SelectMusic("SELECT song3 FROM participants WHERE name='" + name + "'");
+            try
             {
                 wmp.URL = "sample.mp3";
                 wmp.controls.play();

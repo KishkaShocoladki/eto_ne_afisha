@@ -15,6 +15,8 @@ namespace AfishA
         public allParts()
         {
             InitializeComponent();
+            List<string> fillBox = Program.Select("SELECT DISTINCT country FROM participants");
+            comboBox1.DataSource = fillBox;
             List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `genre`, `country`, `mVmest`, `tipgonorar`, `neGo` FROM `participants`");
             for (int i = 0; i < ivs.Count; i = i + 8)
             {
@@ -90,6 +92,24 @@ namespace AfishA
             {
                 Program.Select("UPDATE participants SET neGo ='" + neGo + "' WHERE ident ='" + ident + "'");
                 MessageBox.Show("ОТРЕДАКТИРОВАНО");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `genre`, `country`, `mVmest`, `tipgonorar`, `neGo` FROM `participants` WHERE country='" + comboBox1.Text + "'");
+            for (int i = 0; i < ivs.Count; i = i + 8)
+            {
+                string[] row = new string[8];
+                row[0] = ivs[i];
+                row[1] = ivs[i + 1];
+                row[2] = ivs[i + 2];
+                row[3] = ivs[i + 3];
+                row[4] = ivs[i + 4];
+                row[5] = ivs[i + 5];
+                row[6] = ivs[i + 6];
+                row[7] = ivs[i + 7];
+                dataGridView1.Rows.Add(row);
             }
         }
     }

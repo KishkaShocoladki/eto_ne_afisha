@@ -46,6 +46,12 @@
             this.countryBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.musicBox1 = new System.Windows.Forms.TextBox();
+            this.musicBox2 = new System.Windows.Forms.TextBox();
+            this.musicBox3 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(11, 196);
+            this.label2.Location = new System.Drawing.Point(11, 275);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 16);
@@ -92,7 +98,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(11, 302);
+            this.button1.Location = new System.Drawing.Point(11, 383);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 40);
@@ -179,7 +185,7 @@
             this.descriptBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descriptBox.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.descriptBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.descriptBox.Location = new System.Drawing.Point(113, 194);
+            this.descriptBox.Location = new System.Drawing.Point(113, 275);
             this.descriptBox.Margin = new System.Windows.Forms.Padding(2);
             this.descriptBox.Multiline = true;
             this.descriptBox.Name = "descriptBox";
@@ -259,13 +265,91 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "СТРАНА:";
             // 
+            // musicBox1
+            // 
+            this.musicBox1.BackColor = System.Drawing.Color.MistyRose;
+            this.musicBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.musicBox1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.musicBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.musicBox1.Location = new System.Drawing.Point(93, 194);
+            this.musicBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.musicBox1.Name = "musicBox1";
+            this.musicBox1.Size = new System.Drawing.Size(323, 23);
+            this.musicBox1.TabIndex = 19;
+            // 
+            // musicBox2
+            // 
+            this.musicBox2.BackColor = System.Drawing.Color.MistyRose;
+            this.musicBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.musicBox2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.musicBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.musicBox2.Location = new System.Drawing.Point(93, 221);
+            this.musicBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.musicBox2.Name = "musicBox2";
+            this.musicBox2.Size = new System.Drawing.Size(323, 23);
+            this.musicBox2.TabIndex = 20;
+            // 
+            // musicBox3
+            // 
+            this.musicBox3.BackColor = System.Drawing.Color.MistyRose;
+            this.musicBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.musicBox3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.musicBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.musicBox3.Location = new System.Drawing.Point(93, 248);
+            this.musicBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.musicBox3.Name = "musicBox3";
+            this.musicBox3.Size = new System.Drawing.Size(323, 23);
+            this.musicBox3.TabIndex = 21;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(11, 201);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 16);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "ТРЕК 1:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(11, 228);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 16);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "ТРЕК 2:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(11, 255);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 16);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "ТРЕК 3:";
+            // 
             // addPart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(427, 352);
+            this.ClientSize = new System.Drawing.Size(427, 433);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.musicBox3);
+            this.Controls.Add(this.musicBox2);
+            this.Controls.Add(this.musicBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.countryBox);
             this.Controls.Add(this.genreBox3);
@@ -313,5 +397,11 @@
         private System.Windows.Forms.TextBox countryBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox musicBox1;
+        private System.Windows.Forms.TextBox musicBox2;
+        private System.Windows.Forms.TextBox musicBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

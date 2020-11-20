@@ -155,6 +155,7 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximumSize = new System.Drawing.Size(654, 273);
             this.Name = "allBrons";
             this.Text = "ВСЕ ЗАБРОНИРОВАННЫЕ МЕРОПРИЯТИЯ";
             this.Load += new System.EventHandler(this.allBrons_Load);
