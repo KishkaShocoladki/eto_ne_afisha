@@ -19,27 +19,94 @@ namespace AfishA
         {
             name = nm;
             InitializeComponent();
+            
+            //ЗАПОЛНЕНИЕ ИНФОРМАЦИИ ОБ ИСПОЛНИТЕЛЕ
             Text = "Информация о " + name;
             label1.Text = name;
             label1.ForeColor = SystemColors.ButtonFace;
             label1.Font = new Font("Lucida Console", 20F, FontStyle.Regular, GraphicsUnit.Point, (204));
-
+            
             List<string> info = Program.Select("SELECT descript, genre, country FROM participants WHERE name = '" + name + "'");
-
             textBox1.Text = info[0];
             label2.Text = info[1];
             label2.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
             label5.Text = info[2];
             label5.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
-            List<string> music = Program.Select("SELECT musicName1, musicName2, musicaName3 FROM songs WHERE name = '" + name + "'");
+          
+            //ЗАПОЛНЕНИЕ ПАНЕЛЬКИ СНИЗУ (ПРЕДЫДУЩИЕ И БУДУЩИЕ(СОЛЬНЫЕ) ВЫСТУПЛЕНИЯ)
+            int his = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `history` WHERE participant='" + name + "'")[0]);
+            int fut = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `ivents` WHERE name='" + name + "'")[0]);
+            if (his != 0)//ЕСЛИ УЖЕ ГДЕ-ТО ВЫСТУПАЛ
+            {
+                List<string> part = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");
+                for (int i = 0; i < part.Count; i = i + 1)
+                {
+                    /*List<string> ivent = Program.Select("SELECT ivent FROM `history` WHERE dt='" + part[i] + "'");*///тут должен быть поиск по дате (part[i]) и участнику (name) но пока как то никак
+                    Label lbl = new Label();
+                    lbl.ForeColor = Color.White;
+                    lbl.Text = part[i];
+                    lbl.Size = new Size(120, 30);
+                    lbl.AutoSize = false;
+                    lbl.Location = new Point(140, 10 + 30 * i);
+                    panel3.Controls.Add(lbl);
+
+                    Label labl = new Label();
+                    labl.ForeColor = Color.White;
+                    labl.Text = name;//здесь должно быть имя события, а не участника
+                    labl.Size = new Size(120, 30);
+                    labl.AutoSize = false;
+                    labl.Location = new Point(10, 10 + 30 * i);
+                    labl.Click += new EventHandler(solo_Click);
+                    panel3.Controls.Add(labl);
+                }
+            }
+            else if (fut != 0)//ЕСЛИ ЕСТЬ ЗАПЛАНИРОВАННЫЕ КОНЦЕРТЫ(СОЛЬНЫЕ) 
+            {
+                List<string> part = Program.Select("SELECT dt FROM `ivents` WHERE name='" + name + "'");
+                for (int i = 0; i < part.Count; i = i + 1)
+                {
+                    Label lbl = new Label();
+                    lbl.ForeColor = Color.White;
+                    lbl.Text = part[i];
+                    lbl.Size = new Size(120, 30);
+                    lbl.AutoSize = false;
+                    lbl.Location = new Point(140, 10 + 30 * i);
+                    panel3.Controls.Add(lbl);
+
+                    Label labl = new Label();
+                    labl.ForeColor = Color.White;
+                    labl.Text = name;
+                    labl.Size = new Size(120, 30);
+                    labl.AutoSize = false;
+                    labl.Location = new Point(10, 10 + 30 * i);
+                    labl.Click += new EventHandler(solo_Click);
+                    panel3.Controls.Add(labl);
+
+                    List<string> plosh = Program.Select("SELECT area FROM `ivents` WHERE name='" + name + "'");//тут должен быть поиск по дате part[i] но пока как то никак
+                    Label label = new Label();
+                    label.ForeColor = Color.White;
+                    label.Text = plosh[0];
+                    label.Size = new Size(120, 30);
+                    label.AutoSize = false;
+                    label.Location = new Point(270, 10 + 30 * i);
+                    panel3.Controls.Add(label);
+                }
+            }
+            
+            //ЗАПОЛНЕНИЕ ПАНЕЛИ СЛЕВА СНИЗУ(МУЗЫКА) 
+            List<string> music = Program.Select("SELECT musicName1, musicName2, musicName3 FROM songs WHERE part_name = '" + name + "'");
             label6.Text = music[0];
-            label7.Text = music[0];
-            label8.Text = music[0];
+            label7.Text = music[1];
+            label8.Text = music[2];
+           
+            //КАРТИНКА ДА
             try
             {          
                 pictureBox1.Image = Program.SelectImage("SELECT kartinochka FROM participants WHERE name = '" + name + "'");
             }
             catch (Exception) { }
+           
+            //ЗАПОЛНЕНИЕ ПАНЕЛИ СЛЕВА(СОБЫТИЯ)
             List<string> parts = Program.Select("SELECT ivent FROM `tipasvyaznaverno` WHERE part= '" + name + "'");
                 int x = 5;
                 int y = 5;
@@ -73,9 +140,10 @@ namespace AfishA
                     panel1.Controls.Add(lbl);
                 }
         }
-        private void timer1_Tick(object sender, EventArgs e)
+        private void solo_Click(object sender, EventArgs e)
         {
-
+            solo f = new solo(name);
+            f.Show();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -83,18 +151,8 @@ namespace AfishA
             sobytie f = new sobytie(lbl.Text);
             f.Show();
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void participants_Load(object sender, EventArgs e)
-        {
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            wmp.controls.stop();
-        }
-
+       //PLAY
+        #region
         private void button1_Click_1(object sender, EventArgs e)
         {
             Program.SelectMusic("SELECT song1 FROM participants WHERE name='" + name + "'");
@@ -124,6 +182,13 @@ namespace AfishA
                 wmp.controls.play();
             }
             catch (Exception) { }
+        }
+        #endregion
+       //STOP
+        private void button2_Click(object sender, EventArgs e)
+        {
+            wmp.controls.stop();
+            wmp.URL = "_.mp3";
         }
     }
 }

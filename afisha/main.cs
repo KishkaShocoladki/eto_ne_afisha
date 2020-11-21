@@ -22,7 +22,6 @@ namespace AfishA
         public string type;
         public string area;
         public string dt;
-        // public string agelimit;
         public Label labeI;
         public PictureBox picB;
 
@@ -35,7 +34,6 @@ namespace AfishA
             type = type1;
             area = area1;
             dt = dt1; 
-            //agelimit = agelimit1;
             labeI = new Label();
             picB = new PictureBox();
         }
@@ -43,10 +41,9 @@ namespace AfishA
     public partial class main : Form
     {
         public static List<Ivent> sobytia = new List<Ivent>();
-        SoundPlayer player = null;
         public static void fillsob()
         { 
-            int x = 10;
+            int x = 60;
             int y = 140;
             for (int i = 0; i < sobytia.Count; i = i + 1)
             {
@@ -56,9 +53,6 @@ namespace AfishA
                 sobytia[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
                 sobytia[i].picB.Click += new EventHandler(button3_Click);
                 
-               // sobytia[i].picB.BackgroundImage = Image.FromFile("C:/Users/User/Desktop/eto_ne_afisha-master/kartinochki/про щяй.jpg");
-               // sobytia[i].picB.BackgroundImageLayout = ImageLayout.Zoom;
-
                 sobytia[i].labeI.Location = new Point(x, y + 210);
                 sobytia[i].labeI.Size = new Size(250, 60);
                 sobytia[i].labeI.Text = sobytia[i].name;
@@ -69,7 +63,7 @@ namespace AfishA
                 x = x + 260;
                 if (x + 260 > 1000)
                 {
-                    x = 10;
+                    x = 60;
                     y = y + 300;
                 }
             }
@@ -101,8 +95,6 @@ namespace AfishA
             {
                 try 
                 {
-                    //DateTime myDate = DateTime.ParseExact(iv.dt, "dd-MM-yyyy HH:mm:ss",
-                     //                  System.Globalization.CultureInfo.InvariantCulture);
                     iv.picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + iv.name + "'");
                 }
                 catch(Exception) { }
@@ -118,7 +110,7 @@ namespace AfishA
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            int x = 10;
+            int x = 60;
             int y = 140;
             for (int i = 0; i < sobytia.Count; i = i + 1)
             {
@@ -148,7 +140,7 @@ namespace AfishA
                     x = x + 270;
                     if (x + 270 > Width)
                     {
-                        x = 10;
+                        x = 60;
                         y = y + 210;
                     }
                 }
@@ -178,26 +170,6 @@ namespace AfishA
                 }
             }
         }
-        private void main_Load(object sender, EventArgs e)
-        {
-            player = new SoundPlayer();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                player.SoundLocation = ("../../kartinochki/Driving.wav.wav");
-                player.Play();
-            }
-            catch (Exception) { }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            player.Stop();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             Button lbl = (Button)sender;
@@ -249,14 +221,10 @@ namespace AfishA
             f.Show();
         }
 
+        private void main_Load(object sender, EventArgs e)
+        {
 
-
-        /*  private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-{
-DateTime date = dateTimePicker1.Value;
-int year = new Year();
-
-}*/
+        }
     }
 }
 

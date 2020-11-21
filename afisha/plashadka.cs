@@ -33,56 +33,53 @@ namespace AfishA
     }
     public partial class plashadka : Form
     {
-        public static List<PLOSH> ploshk = new List<PLOSH>();
         public plashadka()
         {
             InitializeComponent();
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
             comboBox1.DataSource = fillCountry;
-    
-            List<string> pls = Program.Select("SELECT name, description, city, vmest FROM `ploshki`");
-            for (int i = 0; i < pls.Count; i = i + 4)
-            {
-                string name = pls[i];
-                string descript = pls[i + 1];
-                string city = pls[i + 2];
-                string vmest = pls[i + 3];
-                ploshk.Add(new PLOSH(name, descript, city, vmest));
-            }
 
+            List<string> ploshk = Program.Select("SELECT name FROM `ploshki`");
             int x = 10;
-            int y = 120;
+            int y = 5;
             for (int i = 0; i < ploshk.Count; i = i + 1)
             {
-                ploshk[i].picB.Location = new Point(x, y);
-                ploshk[i].picB.Size = new Size(250, 200);
-                ploshk[i].picB.Text = ploshk[i].name;
-                ploshk[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
-                ploshk[i].picB.Click += new EventHandler(button3_Click);
+                List<string> city = Program.Select("SELECT city FROM ploshki WHERE name ='" + ploshk[i] + "'");
+                PictureBox picB = new PictureBox();
+                picB.Location = new Point(x, y);
+                picB.Size = new Size(250, 200);
                 try
                 {
-                    ploshk[i].picB.Image = Program.SelectImage("SELECT kartinka1 FROM ploshki WHERE name = '" + ploshk[i].name + "'");
+                    picB.Image = Program.SelectImage("SELECT kartinka1 FROM ploshki WHERE name = '" + ploshk[i] + "'");
                 }
                 catch (Exception) { }
+                picB.SizeMode = PictureBoxSizeMode.Zoom;
 
-                ploshk[i].labeI.Location = new Point(x, y + 200);
-                ploshk[i].labeI.Size = new Size(250, 60);
-                ploshk[i].labeI.Text = ploshk[i].name;
-                ploshk[i].labeI.Font = new Font("Lucida Console", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-                ploshk[i].labeI.ForeColor = SystemColors.ButtonFace;
-                ploshk[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
+                Label lbl = new Label();
+                lbl.Location = new Point(x, y + 200);
+                lbl.Size = new Size(250, 60);
+                lbl.Text = ploshk[i];
+                lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                lbl.ForeColor = SystemColors.ButtonFace;
+                lbl.TextAlign = ContentAlignment.MiddleCenter;
+                lbl.Click += new EventHandler(button2_Click);
 
+                Label labl = new Label();
+                labl.Location = new Point(x, y + 255);
+                labl.Size = new Size(250, 60);
+                labl.Text = city[0];
+                labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                labl.ForeColor = SystemColors.ControlDark;
+                labl.TextAlign = ContentAlignment.MiddleCenter;
                 x = x + 270;
                 if (x + 270 > 600)
                 {
                     x = 10;
-                    y = y + 210;
+                    y = y + 320;
                 }
-                foreach (PLOSH pl in ploshk)
-                {
-                    Controls.Add(pl.labeI);
-                    Controls.Add(pl.picB);
-                }
+                panel1.Controls.Add(picB);
+                panel1.Controls.Add(lbl);
+                panel1.Controls.Add(labl);
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -92,43 +89,60 @@ namespace AfishA
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            int x = 10;
-            int y = 120;
-            for (int i = 0; i < ploshk.Count; i = i + 1)
+            panel1.Controls.Clear();
+            #region
+            if (comboBox2.Text != "")
             {
-                ploshk[i].labeI.Visible = false;
-                ploshk[i].picB.Visible = false;
-                bool show = true;
+                List<string> parts = Program.Select("SELECT name FROM `ploshki` WHERE city='" + comboBox2.Text + "'");
+                int x = 10;
+                int y = 5;
+                for (int i = 0; i < parts.Count; i = i + 1)
+                {
+                    List<string> city = Program.Select("SELECT city FROM ploshki WHERE name ='" + parts[i] + "'");
+                    PictureBox picB = new PictureBox();
+                    picB.Location = new Point(x, y);
+                    picB.Size = new Size(250, 200);
+                    try
+                    {
+                        picB.Image = Program.SelectImage("SELECT kartinka1 FROM ploshki WHERE name = '" + parts[i] + "'");
+                    }
+                    catch (Exception) { }
+                    picB.SizeMode = PictureBoxSizeMode.Zoom;
 
-                if (comboBox2.Text != "" && ploshk[i].city != comboBox2.Text)
-                {
-                    show = false;
-                }
-                if (show)
-                {
-                    ploshk[i].picB.Visible = true;
-                    ploshk[i].picB.Location = new Point(x, y);
-                    ploshk[i].labeI.Visible = true;
-                    ploshk[i].labeI.Location = new Point(x, y + 200);
+                    Label lbl = new Label();
+                    lbl.Location = new Point(x, y + 200);
+                    lbl.Size = new Size(250, 60);
+                    lbl.Text = parts[i];
+                    lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    lbl.ForeColor = SystemColors.ButtonFace;
+                    lbl.TextAlign = ContentAlignment.MiddleCenter;
+                    lbl.Click += new EventHandler(button1_Click);
+
+                    Label labl = new Label();
+                    labl.Location = new Point(x, y + 255);
+                    labl.Size = new Size(250, 60);
+                    labl.Text = city[0];
+                    labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    labl.ForeColor = SystemColors.ControlDark;
+                    labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 270;
-                    if (x + 270 > 550)
+                    if (x + 270 > 600)
                     {
                         x = 10;
-                        y = y + 210;
+                        y = y + 320;
                     }
+                    panel1.Controls.Add(picB);
+                    panel1.Controls.Add(lbl);
+                    panel1.Controls.Add(labl);
                 }
             }
+            #endregion
         }
         private static void button3_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < ploshk.Count; i = i + 1)
-            {
-                if (((PictureBox)sender).Image == ploshk[i].picB.Image)
-                {
-                    ploshka f = new ploshka(ploshk[i]);
-                    f.Show();
-                }
-            }
+            Label lbl = (Label)sender;
+            ploshka f = new ploshka(lbl.Text);
+            f.Show();
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

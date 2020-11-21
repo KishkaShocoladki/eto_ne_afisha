@@ -48,6 +48,7 @@ namespace AfishA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             List<string> ivs = Program.Select("SELECT  `ident`, `user`, `otzv`, `ivent` FROM `tipacomments` WHERE ivent='" + comboBox1.Text + "'");
             for (int i = 0; i < ivs.Count; i = i + 4)
             {

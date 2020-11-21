@@ -63,5 +63,15 @@ namespace AfishA
             rewievs f = new rewievs(sob);
             f.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void solo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

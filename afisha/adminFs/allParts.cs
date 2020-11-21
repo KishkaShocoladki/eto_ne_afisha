@@ -17,6 +17,21 @@ namespace AfishA
             InitializeComponent();
             List<string> fillBox = Program.Select("SELECT DISTINCT country FROM participants");
             comboBox1.DataSource = fillBox;
+
+            List<string> genres = Program.Select("SELECT genre FROM participants");
+            List<string> genress = new List<string>();
+            foreach (string genre in genres)
+            {
+                string[] genre1 = genre.Split(new string[] { ", " }, StringSplitOptions.None);
+                foreach (string gen in genre1)
+                {
+                    if (!genress.Contains(gen))
+                        genress.Add(gen);
+                }
+            }
+            genress.Sort();
+            comboBox2.DataSource = genress.ToArray();
+
             List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `genre`, `country`, `mVmest`, `tipgonorar`, `neGo` FROM `participants`");
             for (int i = 0; i < ivs.Count; i = i + 8)
             {
@@ -97,7 +112,27 @@ namespace AfishA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `genre`, `country`, `mVmest`, `tipgonorar`, `neGo` FROM `participants` WHERE country='" + comboBox1.Text + "'");
+            for (int i = 0; i < ivs.Count; i = i + 8)
+            {
+                string[] row = new string[8];
+                row[0] = ivs[i];
+                row[1] = ivs[i + 1];
+                row[2] = ivs[i + 2];
+                row[3] = ivs[i + 3];
+                row[4] = ivs[i + 4];
+                row[5] = ivs[i + 5];
+                row[6] = ivs[i + 6];
+                row[7] = ivs[i + 7];
+                dataGridView1.Rows.Add(row);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `genre`, `country`, `mVmest`, `tipgonorar`, `neGo` FROM `participants` WHERE genre LIKE '%" + comboBox2.Text + "%'");
             for (int i = 0; i < ivs.Count; i = i + 8)
             {
                 string[] row = new string[8];

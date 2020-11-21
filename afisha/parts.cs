@@ -59,7 +59,7 @@ namespace AfishA
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 255);
                 labl.Size = new Size(250, 60);
-                labl.Text = genres[0];
+                labl.Text = genre[0];
                 labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 labl.ForeColor = SystemColors.ControlDark;
                 labl.TextAlign = ContentAlignment.MiddleCenter;
@@ -84,6 +84,7 @@ namespace AfishA
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
+            #region
             if (comboBox1.Text != "" && comboBox2.Text != "")
             {
                 List<string> parts = Program.Select("SELECT name FROM `participants` WHERE country ='" + comboBox1.Text + "' AND genre LIKE '%" + comboBox2.Text + "%'");
@@ -109,7 +110,7 @@ namespace AfishA
                     lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                     lbl.ForeColor = SystemColors.ButtonFace;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
-                    lbl.Click += new EventHandler(button1_Click);
+                    lbl.Click += new EventHandler(button2_Click);
 
                     Label labl = new Label();
                     labl.Location = new Point(x, y + 255);
@@ -154,7 +155,7 @@ namespace AfishA
                     lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                     lbl.ForeColor = SystemColors.ButtonFace;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
-                    lbl.Click += new EventHandler(button1_Click);
+                    lbl.Click += new EventHandler(button2_Click);
 
                     Label labl = new Label();
                     labl.Location = new Point(x, y + 255);
@@ -199,7 +200,7 @@ namespace AfishA
                     lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                     lbl.ForeColor = SystemColors.ButtonFace;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
-                    lbl.Click += new EventHandler(button1_Click);
+                    lbl.Click += new EventHandler(button2_Click);
 
                     Label labl = new Label();
                     labl.Location = new Point(x, y + 255);
@@ -219,6 +220,7 @@ namespace AfishA
                     panel1.Controls.Add(labl);
                 }
             }
+            #endregion
         }
 
         private void parts_Load(object sender, EventArgs e)

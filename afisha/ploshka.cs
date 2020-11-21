@@ -14,24 +14,24 @@ namespace AfishA
 {
     public partial class ploshka : Form
     {
-        PLOSH ploshk;
-        public ploshka(PLOSH ploshka1)
+        string ploshk;
+        public ploshka(string plosh)
         {
-            ploshk = ploshka1;
+            ploshk = plosh;
             InitializeComponent();
             try
             {
-                Text = "Информация о " + ploshk.name;
-                label1.Text = ploshk.name;
-                label2.Text = ploshk.city;
-                label4.Text = "Вместимость: " + ploshk.vmest;
-                pictureBox1.Image = Program.SelectImage("SELECT kartinka1 FROM ploshki WHERE name = '" + ploshk.name + "'");
-                pictureBox2.Image = Program.SelectImage("SELECT kartinka2 FROM ploshki WHERE name = '" + ploshk.name + "'");
-                pictureBox3.Image = Program.SelectImage("SELECT kartinka3 FROM ploshki WHERE name = '" + ploshk.name + "'");
-                textBox1.Text = ploshk.descript;
+                Text = "Информация о " + ploshk;
+                label1.Text = ploshk;
+                label2.Text = ploshk;
+                label4.Text = "Вместимость: " + ploshk;
+                pictureBox1.Image = Program.SelectImage("SELECT kartinka1 FROM ploshki WHERE name = '" + ploshk + "'");
+                pictureBox2.Image = Program.SelectImage("SELECT kartinka2 FROM ploshki WHERE name = '" + ploshk + "'");
+                pictureBox3.Image = Program.SelectImage("SELECT kartinka3 FROM ploshki WHERE name = '" + ploshk + "'");
+                textBox1.Text = ploshk;
             }
             catch (Exception) { }
-            List<string> parts = Program.Select("SELECT name FROM ivents WHERE area = '" + ploshk.name + "'");
+            List<string> parts = Program.Select("SELECT name FROM ivents WHERE area = '" + ploshk + "'");
             int x = 5;
             int y = 5;
             for (int i = 0; i < parts.Count; i = i + 1)

@@ -75,6 +75,7 @@ namespace AfishA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             List<string> ivs = Program.Select("SELECT `ident`, `name`, `city`, `description`, `vmest` FROM `ploshki` WHERE city='" + comboBox1.Text + "'");
             for (int i = 0; i < ivs.Count; i = i + 5)
             {

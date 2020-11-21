@@ -78,7 +78,7 @@
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
@@ -144,7 +144,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(563, 27);
             this.comboBox1.Name = "comboBox1";
@@ -176,7 +176,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "allPloshks";
             this.Text = "ВСЕ ПЛОЩАДКИ";
             this.Load += new System.EventHandler(this.allPloshks_Load);

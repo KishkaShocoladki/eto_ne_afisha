@@ -106,12 +106,12 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Lucida Console", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(527, 7);
+            this.button1.Location = new System.Drawing.Point(548, 306);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(239, 32);
+            this.button1.Size = new System.Drawing.Size(218, 37);
             this.button1.TabIndex = 7;
             this.button1.Text = "КУПИТЬ БИЛЕТ";
             this.button1.UseVisualStyleBackColor = false;
@@ -135,7 +135,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 317);
+            this.textBox1.Size = new System.Drawing.Size(308, 299);
             this.textBox1.TabIndex = 14;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -182,8 +182,9 @@
             this.panel1.Location = new System.Drawing.Point(325, 326);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 315);
+            this.panel1.Size = new System.Drawing.Size(219, 297);
             this.panel1.TabIndex = 19;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label5
             // 
@@ -203,10 +204,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Lucida Console", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(662, 42);
+            this.button2.Location = new System.Drawing.Point(663, 348);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 29);
+            this.button2.Size = new System.Drawing.Size(103, 29);
             this.button2.TabIndex = 21;
             this.button2.Text = "ОТЗЫВЫ";
             this.button2.UseVisualStyleBackColor = false;
@@ -218,7 +219,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(779, 573);
+            this.ClientSize = new System.Drawing.Size(783, 633);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -237,6 +238,7 @@
             this.MaximumSize = new System.Drawing.Size(799, 701);
             this.Name = "solo";
             this.Text = "АФИША МЕРОПРИЯТИЙ(детальная стр.)";
+            this.Load += new System.EventHandler(this.solo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
