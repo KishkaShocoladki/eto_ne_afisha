@@ -155,6 +155,7 @@ namespace AfishA
         #region
         private void button1_Click_1(object sender, EventArgs e)
         {
+            wmp.URL = "_.mp3";
             Program.SelectMusic("SELECT song1 FROM participants WHERE name='" + name + "'");
             try 
             {
@@ -165,6 +166,7 @@ namespace AfishA
         }
         private void button1_Click_2(object sender, EventArgs e)
         {
+            wmp.URL = "_.mp3";
             Program.SelectMusic("SELECT song2 FROM participants WHERE name='" + name + "'");
             try
             {
@@ -175,6 +177,7 @@ namespace AfishA
         }
         private void button1_Click_3(object sender, EventArgs e)
         {
+            wmp.URL = "_.mp3";
             Program.SelectMusic("SELECT song3 FROM participants WHERE name='" + name + "'");
             try
             {
@@ -186,6 +189,12 @@ namespace AfishA
         #endregion
        //STOP
         private void button2_Click(object sender, EventArgs e)
+        {
+            wmp.controls.stop();
+            wmp.URL = "_.mp3";
+        }
+
+        private void participants_FormClosing(object sender, FormClosingEventArgs e)
         {
             wmp.controls.stop();
             wmp.URL = "_.mp3";

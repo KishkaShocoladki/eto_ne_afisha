@@ -280,6 +280,7 @@
             this.MaximumSize = new System.Drawing.Size(1265, 600);
             this.Name = "participants";
             this.Text = "participants";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.participants_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

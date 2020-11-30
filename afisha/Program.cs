@@ -80,8 +80,9 @@ namespace AfishA
                 {
                     FileStream file = new FileStream("sample.mp3", FileMode.Create);//sample.wav
                     file.Write(data, 0, data.Length);
+                    file.Close();
                 }
-                catch { }
+                catch (Exception e){ }
             }
             reader.Close();
         }
