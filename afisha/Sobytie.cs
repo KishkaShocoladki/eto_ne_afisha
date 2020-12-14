@@ -38,7 +38,26 @@ namespace AfishA
         {
             name = sob;
             InitializeComponent();
-
+            List<string> history = Program.Select("SELECT dt FROM `history` WHERE ivent='" + name + "'");
+            for (int i = 0; i < history.Count; i = i + 1)
+            {
+                List<string> hCountry = Program.Select("SELECT country FROM `history` WHERE ivent='" + name + "'");//' AND dt ='" + history[i] + "'"
+                Label lbl = new Label();
+                lbl.ForeColor = Color.White;
+                lbl.Text = hCountry[i];
+                lbl.Size = new Size(65, 30);
+                lbl.AutoSize = false;
+                lbl.Location = new Point(10, 10 + 30 * i);
+                
+                Label labl = new Label();
+                labl.ForeColor = Color.White;
+                labl.Text = history[i];
+                labl.Size = new Size(65, 30);
+                labl.AutoSize = false;
+                labl.Location = new Point(70, 10 + 30 * i);
+                panel2.Controls.Add(labl);
+                panel2.Controls.Add(lbl);
+            }
             List<string> parts = Program.Select("SELECT part FROM `tipasvyaznaverno` WHERE ivent='" + sob + "'");
             int x = 5;
             int y = 5;
@@ -81,8 +100,7 @@ namespace AfishA
                 label2.Text = info[0];
                 pictureBox1.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + sob + "'");
                 pictureBox2.Image = Program.SelectImage("SELECT pic2 FROM ivents WHERE name = '" + sob + "'");
-                pictureBox3.Image = Program.SelectImage("SELECT pic3 FROM ivents WHERE name = '" + sob + "'");
-                pictureBox4.Image = Program.SelectImage("SELECT pic4 FROM ivents WHERE name = '" + sob + "'");
+                pictureBox3.Image = Program.SelectImage("SELECT ploshki.kartinka1 FROM ploshki JOIN ivents ON ploshki.name = ivents.area WHERE ivents.name = '" + name + "'");
                 textBox1.Text = info[1];
             }
             catch (Exception) { }
@@ -131,6 +149,16 @@ namespace AfishA
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

@@ -108,46 +108,28 @@ namespace AfishA
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            if (comboBox1.Text != "")
-            {
-                List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `city`, `country`, `type`, `pay`, `area`, `dt` FROM `ivents` WHERE  country='" + comboBox1.Text + "'");
-                for (int i = 0; i < ivs.Count; i = i + 9)
-                {
-                    string[] row = new string[9];
-                    row[0] = ivs[i];
-                    row[1] = ivs[i + 1];
-                    row[2] = ivs[i + 2];
-                    row[3] = ivs[i + 3];
-                    row[4] = ivs[i + 4];
-                    row[5] = ivs[i + 5];
-                    row[6] = ivs[i + 6];
-                    row[7] = ivs[i + 7];
-                    row[8] = ivs[i + 8];
-                    dataGridView1.Rows.Add(row);
-                }
-            }
-        }
+            string com = "SELECT `ident`, `name`, `descript`, `city`, `country`, `type`, `pay`, `area`, `dt` FROM `ivents` WHERE 1";
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
             if (comboBox1.Text != "")
+                com += " AND country = '" + comboBox1.Text + "'";
+            
+            if (comboBox2.Text != "")
+                com += " AND type = '" + comboBox2.Text + "'";
+            
+            List<string> ivs = Program.Select(com);
+            for (int i = 0; i < ivs.Count; i = i + 9)
             {
-                List<string> ivs = Program.Select("SELECT `ident`, `name`, `descript`, `city`, `country`, `type`, `pay`, `area`, `dt` FROM `ivents` WHERE  type='" + comboBox2.Text + "'");
-                for (int i = 0; i < ivs.Count; i = i + 9)
-                {
-                    string[] row = new string[9];
-                    row[0] = ivs[i];
-                    row[1] = ivs[i + 1];
-                    row[2] = ivs[i + 2];
-                    row[3] = ivs[i + 3];
-                    row[4] = ivs[i + 4];
-                    row[5] = ivs[i + 5];
-                    row[6] = ivs[i + 6];
-                    row[7] = ivs[i + 7];
-                    row[8] = ivs[i + 8];
-                    dataGridView1.Rows.Add(row);
-                }
+                string[] row = new string[9];
+                row[0] = ivs[i];
+                row[1] = ivs[i + 1];
+                row[2] = ivs[i + 2];
+                row[3] = ivs[i + 3];
+                row[4] = ivs[i + 4];
+                row[5] = ivs[i + 5];
+                row[6] = ivs[i + 6];
+                row[7] = ivs[i + 7];
+                row[8] = ivs[i + 8];
+                dataGridView1.Rows.Add(row);
             }
         }
     }

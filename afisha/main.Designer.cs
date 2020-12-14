@@ -44,6 +44,12 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -69,10 +75,10 @@
             this.comboBox2.Items.AddRange(new object[] {
             "ФЕСТИВАЛЬ",
             "СОЛО КОНЦЕРТ"});
-            this.comboBox2.Location = new System.Drawing.Point(242, 41);
+            this.comboBox2.Location = new System.Drawing.Point(220, 41);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(311, 24);
+            this.comboBox2.Size = new System.Drawing.Size(333, 24);
             this.comboBox2.TabIndex = 1;
             // 
             // comboBox4
@@ -83,7 +89,7 @@
             "ДОНИНГТОН-ПАРК",
             "ЧТО-ТО В ЕВРОПЕ",
             "ЧТО-ТО В АМЕРИКЕ"});
-            this.comboBox4.Location = new System.Drawing.Point(300, 80);
+            this.comboBox4.Location = new System.Drawing.Point(300, 77);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(253, 24);
@@ -257,13 +263,99 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(885, 6);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 19);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "ПОИСК";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "ЛУЖНИКИ ПАРК",
+            "ДОНИНГТОН-ПАРК",
+            "ЧТО-ТО В ЕВРОПЕ",
+            "ЧТО-ТО В АМЕРИКЕ"});
+            this.comboBox3.Location = new System.Drawing.Point(890, 64);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(135, 24);
+            this.comboBox3.TabIndex = 23;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.GrayText;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(890, 92);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(135, 22);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "ПОИСК";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(885, 25);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 19);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "ПО ЖАНРУ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(886, 43);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 19);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "ИСПОЛНИТЕЛЕЙ";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.GrayText;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(812, 5);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(69, 27);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "ПОИСК";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(893, 594);
+            this.ClientSize = new System.Drawing.Size(1069, 594);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -283,7 +375,7 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(927, 650);
+            this.MaximumSize = new System.Drawing.Size(1089, 632);
             this.Name = "main";
             this.Text = "АФИША";
             this.Load += new System.EventHandler(this.main_Load);
@@ -309,6 +401,12 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button4;
     }
 }
 

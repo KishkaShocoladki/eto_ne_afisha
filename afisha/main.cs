@@ -33,7 +33,7 @@ namespace AfishA
             country = country1;
             type = type1;
             area = area1;
-            dt = dt1; 
+            dt = dt1;
             labeI = new Label();
             picB = new PictureBox();
         }
@@ -42,8 +42,8 @@ namespace AfishA
     {
         public static List<Ivent> sobytia = new List<Ivent>();
         public static void fillsob()
-        { 
-            int x = 60;
+        {
+            int x = 10;
             int y = 140;
             for (int i = 0; i < sobytia.Count; i = i + 1)
             {
@@ -52,7 +52,7 @@ namespace AfishA
                 sobytia[i].picB.Text = sobytia[i].name;
                 sobytia[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
                 sobytia[i].picB.Click += new EventHandler(button3_Click);
-                
+
                 sobytia[i].labeI.Location = new Point(x, y + 210);
                 sobytia[i].labeI.Size = new Size(250, 60);
                 sobytia[i].labeI.Text = sobytia[i].name;
@@ -61,9 +61,9 @@ namespace AfishA
                 sobytia[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
 
                 x = x + 260;
-                if (x + 260 > 1000)
+                if (x + 260 > 1050)
                 {
-                    x = 60;
+                    x = 10;
                     y = y + 300;
                 }
             }
@@ -73,6 +73,19 @@ namespace AfishA
             InitializeComponent();
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
             comboBox1.DataSource = fillCountry;
+            List<string> genres = Program.Select("SELECT genre FROM participants");
+            List<string> genress = new List<string>();
+            foreach (string genre in genres)
+            {
+                string[] genre1 = genre.Split(new string[] { ", " }, StringSplitOptions.None);
+                foreach (string gen in genre1)
+                {
+                    if (!genress.Contains(gen))
+                        genress.Add(gen);
+                }
+            }
+            genress.Sort();
+            comboBox3.DataSource = genress.ToArray();
             List<string> fillType = Program.Select("SELECT DISTINCT type FROM ivents");
             comboBox2.DataSource = fillType;
 
@@ -93,15 +106,15 @@ namespace AfishA
 
             foreach (Ivent iv in sobytia)
             {
-                try 
+                try
                 {
                     iv.picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + iv.name + "'");
                 }
-                catch(Exception) { }
+                catch (Exception) { }
                 Controls.Add(iv.labeI);
                 Controls.Add(iv.picB);
             }
-            
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -110,7 +123,7 @@ namespace AfishA
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            int x = 60;
+            int x = 10;
             int y = 140;
             for (int i = 0; i < sobytia.Count; i = i + 1)
             {
@@ -130,7 +143,6 @@ namespace AfishA
                 {
                     show = false;
                 }
-                
                 if (show)
                 {
                     sobytia[i].picB.Visible = true;
@@ -140,7 +152,7 @@ namespace AfishA
                     x = x + 270;
                     if (x + 270 > Width)
                     {
-                        x = 60;
+                        x = 10;
                         y = y + 210;
                     }
                 }
@@ -148,7 +160,7 @@ namespace AfishA
         }
         public static void button3_Click(object sender, EventArgs e)
         {
-           for (int i = 0; i < sobytia.Count; i = i + 1)//sobytia.Count
+            for (int i = 0; i < sobytia.Count; i = i + 1)//sobytia.Count
             {
                 if (sobytia[i].type == "ФЕСТИВАЛЬ")
                 {
@@ -174,7 +186,14 @@ namespace AfishA
         {
             Button lbl = (Button)sender;
             reg f = new reg(lbl.Text);
-            f.Show();
+            f.ShowDialog();
+            if (Program.user != "_")
+            {
+                button5.Visible = false;
+                button6.Visible = false;
+                button8.Visible = true;
+                button9.Visible = true;
+            }
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -220,6 +239,70 @@ namespace AfishA
             parts f = new parts();
             f.Show();
         }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox3.Text != "")
+            {
+                string ivents = Program.Select("SELECT ivents.name FROM `ivents` JOIN tipasvyaznaverno ON ivents.name = tipasvyaznaverno.ivent JOIN participants ON tipasvyaznaverno.part = participants.name WHERE genre LIKE '%" + comboBox3.Text + "%'")[0];//, tipasvyaznaverno.part, participants.name
+                int x = 10;
+                int y = 140;
+                for (int i = 0; i < sobytia.Count; i = i + 1)
+                {
+                    sobytia[i].labeI.Visible = false;
+                    sobytia[i].picB.Visible = false;
+                    bool show = false;
+
+                    if (sobytia[i].name == ivents)
+                    {
+                        show = true;
+                    }
+                    if (show)
+                    {
+                        sobytia[i].picB.Visible = true;
+                        sobytia[i].picB.Location = new Point(x, y);
+                        sobytia[i].labeI.Visible = true;
+                        sobytia[i].labeI.Location = new Point(x, y + 200);
+                        x = x + 270;
+                        if (x + 270 > Width)
+                        {
+                            x = 10;
+                            y = y + 210;
+                        }
+                    }
+                }
+            }
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string yMd = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            string ivents = Program.Select("SELECT name FROM `ivents` WHERE dt >= '" + yMd + "'")[0];
+            int x = 10;
+            int y = 140;
+            for (int i = 0; i < sobytia.Count; i = i + 1)
+            {
+                sobytia[i].labeI.Visible = false;
+                sobytia[i].picB.Visible = false;
+                bool show = false;
+
+                if (sobytia[i].name == ivents)
+                {
+                    show = true;
+                }
+                if (show)
+                {
+                    sobytia[i].picB.Visible = true;
+                    sobytia[i].picB.Location = new Point(x, y);
+                    sobytia[i].labeI.Visible = true;
+                    sobytia[i].labeI.Location = new Point(x, y + 200);
+                    x = x + 270;
+                    if (x + 270 > Width)
+                    {
+                        x = 10;
+                        y = y + 210;
+                    }
+                }
+            }
+        }
 
         private void main_Load(object sender, EventArgs e)
         {
@@ -227,4 +310,5 @@ namespace AfishA
         }
     }
 }
+
 

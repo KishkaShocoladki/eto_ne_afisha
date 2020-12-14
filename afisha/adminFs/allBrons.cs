@@ -47,17 +47,17 @@ namespace AfishA
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+            string com = "SELECT `user`, `ivent`, `place` FROM bron WHERE 1";
             if (comboBox1.Text != "")
+                com += "ivent = '" + comboBox1.Text + "'";
+            List<string> rews = Program.Select(com);
+            for (int i = 0; i < rews.Count; i = i + 3)
             {
-                List<string> rews = Program.Select("SELECT `user`, `ivent`, `place` FROM bron WHERE ivent='" + comboBox1.Text + "'");
-                for (int i = 0; i < rews.Count; i = i + 3)
-                {
-                    string[] row = new string[3];
-                    row[0] = rews[i];
-                    row[1] = rews[i + 1];
-                    row[2] = rews[i + 2];
-                    dataGridView1.Rows.Add(row);
-                }
+                string[] row = new string[3];
+                row[0] = rews[i];
+                row[1] = rews[i + 1];
+                row[2] = rews[i + 2];
+                dataGridView1.Rows.Add(row);
             }
         }
     }

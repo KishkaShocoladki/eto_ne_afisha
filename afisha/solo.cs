@@ -17,17 +17,33 @@ namespace AfishA
         {
             sob = name;
             InitializeComponent();
+            
             List<string> parts = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");
-
             for (int i = 0; i < parts.Count; i = i + 1)
             {
+                List<string> ivents = Program.Select("SELECT ivent FROM `history` WHERE participant='" + name + "'");
+                List<string> country = Program.Select("SELECT country FROM `history` WHERE participant='" + name + "'");
                 Label lbl = new Label();
                 lbl.ForeColor = Color.White;
-                lbl.Text = parts[i];
-                lbl.Size = new Size(120, 30);
+                lbl.Text = ivents[i];
+                lbl.Size = new Size(75, 30);
                 lbl.AutoSize = false;
                 lbl.Location = new Point(10, 10 + 30 * i);
+                Label labl = new Label();
+                labl.ForeColor = Color.White;
+                labl.Text = parts[i];
+                labl.Size = new Size(75, 30);
+                labl.AutoSize = false;
+                labl.Location = new Point(85, 10 + 30 * i);
+                Label lbel = new Label();
+                lbel.ForeColor = Color.White;
+                lbel.Text = country[i];
+                lbel.Size = new Size(75, 30);
+                lbel.AutoSize = false;
+                lbel.Location = new Point(170, 10 + 30 * i);
                 panel1.Controls.Add(lbl);
+                panel1.Controls.Add(labl);
+                panel1.Controls.Add(lbel);
             }
 
             Text = "Информация о " + name;
@@ -39,7 +55,7 @@ namespace AfishA
                 //label3.Text = sob.agelimit;
                 pictureBox1.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + name + "'");
                 pictureBox2.Image = Program.SelectImage("SELECT pic2 FROM ivents WHERE name = '" + name + "'");
-                pictureBox3.Image = Program.SelectImage("SELECT pic3 FROM ivents WHERE name = '" + name + "'");
+                pictureBox3.Image = Program.SelectImage("SELECT ploshki.kartinka1 FROM ploshki JOIN ivents ON ploshki.name = ivents.area WHERE ivents.name = '" + name + "'");
                 textBox1.Text = info[1];
                 //System.IO.File.ReadAllLines("../../Pictures/" + sob.name + "Б1" + ".txt");
             }
@@ -70,6 +86,11 @@ namespace AfishA
         }
 
         private void solo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }
