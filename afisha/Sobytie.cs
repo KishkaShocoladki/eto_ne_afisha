@@ -51,7 +51,7 @@ namespace AfishA
                 
                 Label labl = new Label();
                 labl.ForeColor = Color.White;
-                labl.Text = history[i];
+                labl.Text = Convert.ToDateTime(history[i]).ToString("d.MM.yyyy");
                 labl.Size = new Size(65, 30);
                 labl.AutoSize = false;
                 labl.Location = new Point(70, 10 + 30 * i);

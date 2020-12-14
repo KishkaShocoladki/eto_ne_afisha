@@ -31,7 +31,7 @@ namespace AfishA
                 lbl.Location = new Point(10, 10 + 30 * i);
                 Label labl = new Label();
                 labl.ForeColor = Color.White;
-                labl.Text = parts[i];
+                labl.Text = Convert.ToDateTime(parts[i]).ToString("d.MM.yyyy");
                 labl.Size = new Size(75, 30);
                 labl.AutoSize = false;
                 labl.Location = new Point(85, 10 + 30 * i);

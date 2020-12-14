@@ -49,7 +49,7 @@ namespace AfishA
             dataGridView1.Rows.Clear();
             string com = "SELECT `user`, `ivent`, `place` FROM bron WHERE 1";
             if (comboBox1.Text != "")
-                com += "ivent = '" + comboBox1.Text + "'";
+                com += " AND ivent = '" + comboBox1.Text + "'";
             List<string> rews = Program.Select(com);
             for (int i = 0; i < rews.Count; i = i + 3)
             {

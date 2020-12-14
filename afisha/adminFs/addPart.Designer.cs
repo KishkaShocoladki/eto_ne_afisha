@@ -109,7 +109,7 @@
             // 
             // negoBox
             // 
-            this.negoBox.BackColor = System.Drawing.Color.Bisque;
+            this.negoBox.BackColor = System.Drawing.Color.RosyBrown;
             this.negoBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.negoBox.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.negoBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -121,7 +121,7 @@
             // 
             // payBox
             // 
-            this.payBox.BackColor = System.Drawing.Color.Bisque;
+            this.payBox.BackColor = System.Drawing.Color.RosyBrown;
             this.payBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.payBox.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.payBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -133,7 +133,7 @@
             // 
             // vmestBox
             // 
-            this.vmestBox.BackColor = System.Drawing.Color.Bisque;
+            this.vmestBox.BackColor = System.Drawing.Color.RosyBrown;
             this.vmestBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vmestBox.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.vmestBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -169,7 +169,7 @@
             // 
             // genreBox1
             // 
-            this.genreBox1.BackColor = System.Drawing.Color.Bisque;
+            this.genreBox1.BackColor = System.Drawing.Color.RosyBrown;
             this.genreBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genreBox1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.genreBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -195,7 +195,7 @@
             // 
             // nameBox
             // 
-            this.nameBox.BackColor = System.Drawing.Color.Tan;
+            this.nameBox.BackColor = System.Drawing.Color.RosyBrown;
             this.nameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameBox.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -207,7 +207,7 @@
             // 
             // genreBox2
             // 
-            this.genreBox2.BackColor = System.Drawing.Color.Bisque;
+            this.genreBox2.BackColor = System.Drawing.Color.Tan;
             this.genreBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genreBox2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.genreBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -219,7 +219,7 @@
             // 
             // genreBox3
             // 
-            this.genreBox3.BackColor = System.Drawing.Color.Bisque;
+            this.genreBox3.BackColor = System.Drawing.Color.Tan;
             this.genreBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.genreBox3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.genreBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -231,7 +231,7 @@
             // 
             // countryBox
             // 
-            this.countryBox.BackColor = System.Drawing.Color.Tan;
+            this.countryBox.BackColor = System.Drawing.Color.RosyBrown;
             this.countryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.countryBox.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.countryBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -267,7 +267,7 @@
             // 
             // musicBox1
             // 
-            this.musicBox1.BackColor = System.Drawing.Color.Tan;
+            this.musicBox1.BackColor = System.Drawing.Color.RosyBrown;
             this.musicBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.musicBox1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.musicBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -279,7 +279,7 @@
             // 
             // musicBox2
             // 
-            this.musicBox2.BackColor = System.Drawing.Color.Bisque;
+            this.musicBox2.BackColor = System.Drawing.Color.Tan;
             this.musicBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.musicBox2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.musicBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -291,7 +291,7 @@
             // 
             // musicBox3
             // 
-            this.musicBox3.BackColor = System.Drawing.Color.Bisque;
+            this.musicBox3.BackColor = System.Drawing.Color.Tan;
             this.musicBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.musicBox3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.musicBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;

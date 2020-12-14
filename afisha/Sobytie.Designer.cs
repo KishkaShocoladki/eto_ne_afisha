@@ -278,7 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(833, 697);
+            this.ClientSize = new System.Drawing.Size(839, 697);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button3);
@@ -299,7 +299,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.MaximumSize = new System.Drawing.Size(849, 735);
+            this.MaximumSize = new System.Drawing.Size(855, 735);
             this.Name = "sobytie";
             this.Text = "АФИША МЕРОПРИЯТИЙ(детальная стр.)";
             this.Load += new System.EventHandler(this.sobytie_Load);

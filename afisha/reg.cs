@@ -42,6 +42,7 @@ namespace AfishA
                           "VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "')");
                 Program.user = textBox1.Text;
                 MessageBox.Show("ВЫ ТИПА ЗАРЕГИСТРИРОВАЛИСЬ");
+                Close();
             }
             else
             {
@@ -66,6 +67,7 @@ namespace AfishA
                     Program.user = textBox1.Text;
                     string ident = Program.Select("SELECT ident FROM users WHERE login ='" + textBox1.Text + "'")[0];
                     Program.userid = ident;
+                    Close();
                 }
             }
             else

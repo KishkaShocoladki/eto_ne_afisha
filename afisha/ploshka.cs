@@ -27,7 +27,6 @@ namespace AfishA
                 label4.Text = "Вместимость: " + ploshk;
                 pictureBox1.Image = Program.SelectImage("SELECT kartinka1 FROM ploshki WHERE name = '" + ploshk + "'");
                 pictureBox2.Image = Program.SelectImage("SELECT kartinka2 FROM ploshki WHERE name = '" + ploshk + "'");
-                pictureBox3.Image = Program.SelectImage("SELECT kartinka3 FROM ploshki WHERE name = '" + ploshk + "'");
                 textBox1.Text = ploshk;
             }
             catch (Exception) { }
@@ -76,6 +75,11 @@ namespace AfishA
         }
 
         private void ploshka_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

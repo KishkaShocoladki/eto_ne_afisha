@@ -24,17 +24,22 @@ namespace AfishA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int ivents = Convert.ToInt32(Program.Select("SELECT COUNT(name) FROM ivents WHERE name ='" + textBox1.Text + "' AND descript ='" + textBox2.Text + "' AND city='" + textBox4.Text + "'AND country='" + textBox5.Text +"'AND type='" + textBox6.Text +"'AND area='" + textBox7.Text + "'")[0]);
-            if (ivents == 0)
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
             {
-                Program.Insert("INSERT INTO `ivents` (name, descript, city, country, type, area, pay)" +
-                         "VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + Convert.ToInt32(textBox8.Text) + "')");
-                MessageBox.Show("СОХРАНЕНО");
+                int ivents = Convert.ToInt32(Program.Select("SELECT COUNT(name) FROM ivents WHERE name ='" + textBox1.Text + "' AND descript ='" + textBox2.Text + "' AND city='" + textBox4.Text + "'AND country='" + textBox5.Text + "'AND type='" + textBox6.Text + "'AND area='" + textBox7.Text + "'")[0]);
+                if (ivents == 0)
+                {
+                    Program.Insert("INSERT INTO `ivents` (name, descript, city, country, type, area, pay)" +
+                             "VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + Convert.ToInt32(textBox8.Text) + "')");
+                    MessageBox.Show("СОХРАНЕНО");
+                }
+                else if (ivents != 0)
+                {
+                    MessageBox.Show("ТАКОЕ СОБЫТИЕ УЖЕ СУЩЕСТВУЕТ!!!111!!1!11");
+                }
             }
-            else if (ivents != 0)
-            {
-                MessageBox.Show("ТАКОЕ СОБЫТИЕ УЖЕ СУЩЕСТВУЕТ");
-            }
+            else
+                MessageBox.Show("ЗАПОЛНИТЕ ВСЕ ПОЛЯ!1111!!!");
         }
 
         private void addSob_Load(object sender, EventArgs e)
