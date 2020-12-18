@@ -40,6 +40,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -201,6 +202,21 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "ИМЯ ПОЛЬЗОВАТЕЛЯ";
             // 
+            // button
+            // 
+            this.button.BackColor = System.Drawing.SystemColors.Info;
+            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button.Location = new System.Drawing.Point(12, 103);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(120, 41);
+            this.button.TabIndex = 12;
+            this.button.Text = "ПРОСМОТРЕТЬ ОШИБКИ";
+            this.button.UseVisualStyleBackColor = false;
+            this.button.Visible = false;
+            this.button.Click += new System.EventHandler(this.button10_Click_1);
+            // 
             // user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +225,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(574, 341);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button9);
@@ -243,5 +260,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button;
     }
 }

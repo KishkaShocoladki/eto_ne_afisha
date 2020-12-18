@@ -89,7 +89,7 @@ namespace AfishA
             List<string> fillType = Program.Select("SELECT DISTINCT type FROM ivents");
             comboBox2.DataSource = fillType;
 
-            List<string> results = Program.Select("SELECT `name`, `descript`, `city`, `country`, `type`, `area`, `dt` FROM `ivents`");
+            List<string> results = Program.Select("SELECT `name`, `descript`, `city`, `country`, `type`, `area`, `dt` FROM `ivasasents`");//ts
             for (int i = 0; i < results.Count; i = i + 7)
             {
                 string name = results[i];
@@ -108,7 +108,7 @@ namespace AfishA
             {
                 try
                 {
-                    iv.picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + iv.name + "'");
+                    iv.picB.Image = Program.SelectImage("SELECT picssss1 FROM ivents WHERE name = '" + iv.name + "'");
                 }
                 catch (Exception) { }
                 Controls.Add(iv.labeI);

@@ -164,3 +164,5 @@ C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.csproj.CopyComp
 C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.exe
 C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.pdb
 C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.csproj.ResolveComReference.cache
+C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.ERROR.resources
+C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.ERRORFORM.resources

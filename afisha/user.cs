@@ -26,6 +26,7 @@ namespace AfishA
                 button7.Visible = true;
                 button8.Visible = true;
                 button9.Visible = true;
+                button.Visible = true;
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -107,6 +108,12 @@ namespace AfishA
         private void user_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            ERRORFORM f = new ERRORFORM();
+            f.Show();
         }
     }
 

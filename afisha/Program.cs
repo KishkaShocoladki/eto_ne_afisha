@@ -51,21 +51,32 @@ namespace AfishA
             Image img = null;
             MySqlCommand command = new MySqlCommand(Text, conn);
             MySqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                //Предполагается, что в запросе 1 столбец, и в нем картинка
-                byte[] data = (byte[])reader.GetValue(0);
-                try
+                while (reader.Read())
                 {
+                    //Предполагается, что в запросе 1 столбец, и в нем картинка
+                    byte[] data = (byte[])reader.GetValue(0);
+
                     MemoryStream ms = new MemoryStream(data, 0, data.Length);
                     ms.Write(data, 0, data.Length);
                     img = Image.FromStream(ms, true);//Конвертируем в картинку
                 }
-                catch { }
-            }
 
-            reader.Close();
+                reader.Close();
+            }
+            catch (Exception error)
+            {
+                string address = Path.GetTempPath() + "AFSH.txt";
+                ERROR f = new ERROR("НУ ЧО КАРТИНОЧКИ СДОХЛИ ВСЁ КИНА НЕ БУДЕТ ヽ(´ー` )┌");
+                f.ShowDialog();
+                if (!File.Exists(address))
+                {
+                    FileStream file = File.Create(address);
+                    file.Close();
+                }
+                File.AppendAllText(address, DateTime.Now.ToString() + ";" + Environment.NewLine + error.Message + ";" + Environment.NewLine + "ЗАПРОС: " + Text + ";" + Environment.NewLine);
+            }
             return img;
         }
         public static void SelectMusic(String Text)
@@ -73,20 +84,31 @@ namespace AfishA
             MySqlCommand command = new MySqlCommand(Text, conn);
             MySqlDataReader reader = command.ExecuteReader();
 
-            while (reader.Read())
+            try
             {
-                byte[] data = (byte[])reader.GetValue(0);
-                try
+                while (reader.Read())
                 {
+                    byte[] data = (byte[])reader.GetValue(0);
+                        
                     FileStream file = new FileStream("sample.mp3", FileMode.Create);//sample.wav
                     file.Write(data, 0, data.Length);
                     file.Close();
                 }
-                catch (Exception e){ }
+                reader.Close();
             }
-            reader.Close();
+            catch (Exception error)
+            {
+                string address = Path.GetTempPath() + "AFSH.txt";
+                ERROR f = new ERROR("НУ ЧО МУЗЫЧКА СДОХЛА ВСЁ КИНА НЕ БУДЕТ ヽ(´ー` )┌");
+                f.ShowDialog();
+                if (!File.Exists(address))
+                {
+                    FileStream file = File.Create(address);
+                    file.Close();
+                }
+                File.AppendAllText(address, DateTime.Now.ToString() + ";" + Environment.NewLine + error.Message + ";" + Environment.NewLine + "ЗАПРОС: " + Text + ";" + Environment.NewLine);
+            }
         }
-
 
         public static List<string> Select(string Text)
         {
@@ -95,15 +117,30 @@ namespace AfishA
             //Создать команду
             MySqlCommand command = new MySqlCommand(Text, conn);
 
-            //Выполнить команду
-            DbDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                for (int i = 0; i < reader.FieldCount; i++)
-                    results.Add(reader.GetValue(i).ToString());
+                //Выполнить команду
+                DbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    for (int i = 0; i < reader.FieldCount; i++)
+                        results.Add(reader.GetValue(i).ToString());
+                }
+                reader.Close();
             }
-            reader.Close();
-
+            catch(Exception error)
+            {
+                string address = Path.GetTempPath() + "AFSH.txt";
+                ERROR f = new ERROR("ну че это ошибка. просто закройте уведомление ヽ(´ー` )┌");
+                f.ShowDialog();
+                if (!File.Exists(address))
+                {
+                    FileStream file = File.Create(address);
+                    file.Close();
+                }
+                
+                File.AppendAllText(address, DateTime.Now.ToString() + ";" + Environment.NewLine + error.Message + ";" + Environment.NewLine + "ЗАПРОС: " + Text + ";" + Environment.NewLine);
+            }
             return results;
         }
     }
