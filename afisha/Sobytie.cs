@@ -58,6 +58,7 @@ namespace AfishA
                 panel2.Controls.Add(labl);
                 panel2.Controls.Add(lbl);
             }
+            
             List<string> parts = Program.Select("SELECT part FROM `tipasvyaznaverno` WHERE ivent='" + sob + "'");
             int x = 5;
             int y = 5;

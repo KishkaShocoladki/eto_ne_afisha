@@ -301,6 +301,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaximumSize = new System.Drawing.Size(855, 735);
             this.Name = "sobytie";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АФИША МЕРОПРИЯТИЙ(детальная стр.)";
             this.Load += new System.EventHandler(this.sobytie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

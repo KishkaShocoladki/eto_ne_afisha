@@ -107,6 +107,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(695, 485);
             this.Name = "buy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "КУПИТЬ это кто";
             this.Load += new System.EventHandler(this.buy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

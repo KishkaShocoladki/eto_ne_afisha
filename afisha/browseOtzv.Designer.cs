@@ -129,6 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(550, 201);
             this.Name = "browseOtzv";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "МОИ ОТЗЫВЫ";
             this.Load += new System.EventHandler(this.browseOtzv_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

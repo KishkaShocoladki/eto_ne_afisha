@@ -182,7 +182,7 @@ namespace AfishA
                 int y = 5;
                 for (int i = 0; i < parts.Count; i = i + 1)
                 {
-                    List<string> genre = Program.Select("SELECT genre FROM participants WHERE name ='" + parts[i] + "'");
+                    string genre = Program.Select("SELECT genre FROM participants WHERE name ='" + parts[i] + "'")[0];
                     PictureBox picB = new PictureBox();
                     picB.Location = new Point(x, y);
                     picB.Size = new Size(250, 200);
@@ -205,7 +205,7 @@ namespace AfishA
                     Label labl = new Label();
                     labl.Location = new Point(x, y + 255);
                     labl.Size = new Size(250, 60);
-                    labl.Text = genre[0];
+                    labl.Text = genre;
                     labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                     labl.ForeColor = SystemColors.ControlDark;
                     labl.TextAlign = ContentAlignment.MiddleCenter;

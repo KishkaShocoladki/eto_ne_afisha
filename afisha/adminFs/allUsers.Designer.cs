@@ -110,6 +110,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(350, 283);
             this.Name = "allUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ВСЕ ПОЛЬЗОВАТЕЛИ";
             this.Load += new System.EventHandler(this.allUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

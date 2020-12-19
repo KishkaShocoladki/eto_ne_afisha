@@ -228,6 +228,7 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "allIvents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ВСЕ МЕРОПРИЯТИЯ";
             this.Load += new System.EventHandler(this.allIvents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

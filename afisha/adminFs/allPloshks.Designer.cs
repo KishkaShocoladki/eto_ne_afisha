@@ -178,6 +178,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "allPloshks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ВСЕ ПЛОЩАДКИ";
             this.Load += new System.EventHandler(this.allPloshks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -42,8 +42,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(465, 263);
             this.Name = "ERROR";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ERROR";
             this.Load += new System.EventHandler(this.ERROR_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button_Click);
             this.ResumeLayout(false);
 
         }

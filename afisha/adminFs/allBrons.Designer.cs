@@ -157,6 +157,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximumSize = new System.Drawing.Size(654, 273);
             this.Name = "allBrons";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ВСЕ ЗАБРОНИРОВАННЫЕ МЕРОПРИЯТИЯ";
             this.Load += new System.EventHandler(this.allBrons_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

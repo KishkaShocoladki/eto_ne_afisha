@@ -44,7 +44,7 @@ namespace AfishA
             int y = 5;
             for (int i = 0; i < ploshk.Count; i = i + 1)
             {
-                List<string> city = Program.Select("SELECT city FROM ploshki WHERE name ='" + ploshk[i] + "'");
+                string city = Program.Select("SELECT city FROM ploshki WHERE name ='" + ploshk[i] + "'")[0];
                 PictureBox picB = new PictureBox();
                 picB.Location = new Point(x, y);
                 picB.Size = new Size(250, 200);
@@ -62,12 +62,12 @@ namespace AfishA
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 lbl.ForeColor = SystemColors.ButtonFace;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.Click += new EventHandler(button2_Click);
+                lbl.Click += new EventHandler(button3_Click);
 
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 255);
                 labl.Size = new Size(250, 60);
-                labl.Text = city[0];
+                labl.Text = city;
                 labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 labl.ForeColor = SystemColors.ControlDark;
                 labl.TextAlign = ContentAlignment.MiddleCenter;

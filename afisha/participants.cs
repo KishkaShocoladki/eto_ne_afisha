@@ -67,7 +67,7 @@ namespace AfishA
                 {
                     Label lbl = new Label();
                     lbl.ForeColor = Color.White;
-                    lbl.Text = part[i];
+                    lbl.Text = Convert.ToDateTime(part[i]).ToString("d.MM.yyyy"); ;
                     lbl.Size = new Size(120, 30);
                     lbl.AutoSize = false;
                     lbl.Location = new Point(140, 10 + 30 * i);
@@ -82,10 +82,10 @@ namespace AfishA
                     labl.Click += new EventHandler(solo_Click);
                     panel3.Controls.Add(labl);
 
-                    List<string> plosh = Program.Select("SELECT area FROM `ivents` WHERE name='" + name + "'");//тут должен быть поиск по дате part[i] но пока как то никак
+                    string plosh = Program.Select("SELECT area FROM `ivents` WHERE name='" + name + "'")[0];//тут должен быть поиск по дате part[i] но пока как то никак
                     Label label = new Label();
                     label.ForeColor = Color.White;
-                    label.Text = plosh[0];
+                    label.Text = plosh;
                     label.Size = new Size(120, 30);
                     label.AutoSize = false;
                     label.Location = new Point(270, 10 + 30 * i);
@@ -142,7 +142,8 @@ namespace AfishA
         }
         private void solo_Click(object sender, EventArgs e)
         {
-            solo f = new solo(name);
+            Label lbl = (Label)sender;
+            solo f = new solo(lbl.Text);
             f.Show();
         }
         private void button1_Click(object sender, EventArgs e)
@@ -152,7 +153,7 @@ namespace AfishA
             f.Show();
         }
        //PLAY
-        #region
+            #region
         private void button1_Click_1(object sender, EventArgs e)
         {
             wmp.URL = "_.mp3";
@@ -198,6 +199,11 @@ namespace AfishA
         {
             wmp.controls.stop();
             wmp.URL = "_.mp3";
+        }
+
+        private void participants_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

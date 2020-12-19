@@ -12,23 +12,21 @@ namespace AfishA
 {
     public partial class ERROR : Form
     {
-        string err;
+       // string err;
         public ERROR(string error)
         {
-            err = error;
+            //err = error;
             InitializeComponent();
             Text = error;
 
         }
-
         private void ERROR_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button_Click(object sender, KeyEventArgs e)
         {
-
+            Close();
         }
     }
 }

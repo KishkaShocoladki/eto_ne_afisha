@@ -272,6 +272,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(491, 368);
             this.Name = "addSob";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ДОБАВИТЬ СОБЫТИЕ";
             this.Load += new System.EventHandler(this.addSob_Load);
             this.panel1.ResumeLayout(false);

@@ -377,6 +377,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(1089, 632);
             this.Name = "main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АФИША";
             this.Load += new System.EventHandler(this.main_Load);
             this.ResumeLayout(false);

@@ -50,6 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(445, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(508, 347);
+            this.pictureBox1.Size = new System.Drawing.Size(508, 328);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -164,7 +165,6 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "play";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button1_Click_3);
             // 
             // label8
             // 
@@ -195,7 +195,6 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "play";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // label7
             // 
@@ -237,7 +236,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "play";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label5
             // 
@@ -256,6 +254,17 @@
             this.panel3.Size = new System.Drawing.Size(508, 154);
             this.panel3.TabIndex = 9;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(444, 343);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(143, 14);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "СОЛЬНЫЕ КОНЦЕРТЫ:";
+            // 
             // participants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
@@ -263,6 +272,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1249, 530);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
@@ -279,8 +289,10 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximumSize = new System.Drawing.Size(1265, 600);
             this.Name = "participants";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "participants";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.participants_FormClosing);
+            this.Load += new System.EventHandler(this.participants_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -311,5 +323,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -112,6 +112,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(539, 214);
             this.Name = "browseBron";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "МОИ ЗАБРОНИРОВАННЫЕ СОБЫТИЯ";
             this.Load += new System.EventHandler(this.browseBron_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

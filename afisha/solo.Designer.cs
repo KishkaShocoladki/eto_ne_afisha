@@ -238,6 +238,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaximumSize = new System.Drawing.Size(799, 701);
             this.Name = "solo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АФИША МЕРОПРИЯТИЙ(детальная стр.)";
             this.Load += new System.EventHandler(this.solo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

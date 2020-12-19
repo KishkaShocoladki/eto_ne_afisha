@@ -42,6 +42,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(554, 233);
             this.Name = "notreg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "notreg";
             this.Load += new System.EventHandler(this.notreg_Load);
             this.ResumeLayout(false);
