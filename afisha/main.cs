@@ -89,7 +89,7 @@ namespace AfishA
             List<string> fillType = Program.Select("SELECT DISTINCT type FROM ivents");
             comboBox2.DataSource = fillType;
 
-            List<string> results = Program.Select("SELECT `name`, `descript`, `city`, `country`, `type`, `area`, `dt` FROM `ivedddnts`");//ts
+            List<string> results = Program.Select("SELECT `name`, `descript`, `city`, `country`, `type`, `area`, `dt` FROM `ivents`");//ts
             for (int i = 0; i < results.Count; i = i + 7)
             {
                 string name = results[i];
@@ -147,13 +147,15 @@ namespace AfishA
                 {
                     sobytia[i].picB.Visible = true;
                     sobytia[i].picB.Location = new Point(x, y);
+                    sobytia[i].picB.Size = new Size(250, 200);
                     sobytia[i].labeI.Visible = true;
-                    sobytia[i].labeI.Location = new Point(x, y + 200);
-                    x = x + 270;
-                    if (x + 270 > Width)
+                    sobytia[i].labeI.Location = new Point(x, y + 210);
+                    sobytia[i].labeI.Size = new Size(250, 60);
+                    x = x + 260;
+                    if (x + 260 > 1050)
                     {
                         x = 10;
-                        y = y + 210;
+                        y = y + 300;
                     }
                 }
             }
@@ -243,7 +245,9 @@ namespace AfishA
         {
             if (comboBox3.Text != "")
             {
-                string ivents = Program.Select("SELECT ivents.name FROM `ivents` JOIN tipasvyaznaverno ON ivents.name = tipasvyaznaverno.ivent JOIN participants ON tipasvyaznaverno.part = participants.name WHERE genre LIKE '%" + comboBox3.Text + "%'")[0];//, tipasvyaznaverno.part, participants.name
+                List<string> ivents = Program.Select("SELECT ivents.name FROM `ivents` JOIN tipasvyaznaverno ON ivents.name = tipasvyaznaverno.ivent JOIN participants ON tipasvyaznaverno.part = participants.name WHERE genre LIKE '%" + comboBox3.Text + "%'");//, tipasvyaznaverno.part, participants.name
+                List<string> solo = Program.Select("SELECT ivents.name FROM ivents JOIN participants ON ivents.name = participants.name WHERE genre LIKE '%" + comboBox3.Text + "%'");
+               
                 int x = 10;
                 int y = 140;
                 for (int i = 0; i < sobytia.Count; i = i + 1)
@@ -252,53 +256,109 @@ namespace AfishA
                     sobytia[i].picB.Visible = false;
                     bool show = false;
 
-                    if (sobytia[i].name == ivents)
+                    for (int z = 0; z < ivents.Count; z = z + 1)
                     {
-                        show = true;
+                        for (int q = 0; q < solo.Count; q = q + 1)
+                        {
+                            if (sobytia[i].name == ivents[z])
+                            {
+                            show = true;
+                            }
+                            else if (sobytia[i].name == solo[q])
+                            {
+                               show = true;
+                            }
+                        }
                     }
                     if (show)
                     {
                         sobytia[i].picB.Visible = true;
                         sobytia[i].picB.Location = new Point(x, y);
+                        sobytia[i].picB.Size = new Size(250, 200);
                         sobytia[i].labeI.Visible = true;
-                        sobytia[i].labeI.Location = new Point(x, y + 200);
-                        x = x + 270;
-                        if (x + 270 > Width)
+                        sobytia[i].labeI.Location = new Point(x, y + 210);
+                        sobytia[i].labeI.Size = new Size(250, 60);
+                        x = x + 260;
+                        if (x + 260 > 1050)
                         {
                             x = 10;
-                            y = y + 210;
+                            y = y + 300;
                         }
                     }
                 }
+                
             }
         }
         private void button4_Click(object sender, EventArgs e)
         {
             string yMd = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-            string ivents = Program.Select("SELECT name FROM `ivents` WHERE dt >= '" + yMd + "'")[0];
+            List<string> ivents = Program.Select("SELECT name FROM `ivents` WHERE dt = '" + yMd + "'");
             int x = 10;
             int y = 140;
-            for (int i = 0; i < sobytia.Count; i = i + 1)
+            if (ivents.Count == 0)
             {
-                sobytia[i].labeI.Visible = false;
-                sobytia[i].picB.Visible = false;
-                bool show = false;
-
-                if (sobytia[i].name == ivents)
+                if (MessageBox.Show("СОБЫТИЙ НА ВЫБРАННУЮ ДАТУ НЕТ. ПРИ НАЖАТИИ НА «ОК» ПОКАЖУТСЯ СОБЫТИЯ ПОЗЖЕ ВЫБРАННОЙ ДАТЫ") == DialogResult.OK)
                 {
-                    show = true;
-                }
-                if (show)
-                {
-                    sobytia[i].picB.Visible = true;
-                    sobytia[i].picB.Location = new Point(x, y);
-                    sobytia[i].labeI.Visible = true;
-                    sobytia[i].labeI.Location = new Point(x, y + 200);
-                    x = x + 270;
-                    if (x + 270 > Width)
+                    for (int i = 0; i < sobytia.Count; i = i + 1)
                     {
-                        x = 10;
-                        y = y + 210;
+                        sobytia[i].labeI.Visible = false;
+                        sobytia[i].picB.Visible = false;
+                        bool show = false;
+
+                        List<string> ivent = Program.Select("SELECT name FROM `ivents` WHERE dt >= '" + yMd + "'");
+                        for (int z = 0; z < ivent.Count; z = z + 1)
+                        {
+                            if (sobytia[i].name == ivent[z])
+                            {
+                                show = true;
+                            }
+                        }
+                        if (show)
+                        {
+                            sobytia[i].picB.Visible = true;
+                            sobytia[i].picB.Location = new Point(x, y);
+                            sobytia[i].picB.Size = new Size(250, 200);
+                            sobytia[i].labeI.Visible = true;
+                            sobytia[i].labeI.Location = new Point(x, y + 210);
+                            sobytia[i].labeI.Size = new Size(250, 60);
+                            x = x + 260;
+                            if (x + 260 > 1050)
+                            {
+                                x = 10;
+                                y = y + 300;
+                            }
+                        }
+                    }
+                }
+            }
+            else if (ivents.Count > 0)
+            {
+                for (int i = 0; i < sobytia.Count; i = i + 1)
+                {
+                    sobytia[i].labeI.Visible = false;
+                    sobytia[i].picB.Visible = false;
+                    bool show = false;
+                    for (int z = 0; z < ivents.Count; z = z + 1)
+                    {
+                        if (sobytia[i].name == ivents[z])
+                        {
+                            show = true;
+                        }
+                    }
+                    if (show)
+                    {
+                        sobytia[i].picB.Visible = true;
+                        sobytia[i].picB.Location = new Point(x, y);
+                        sobytia[i].picB.Size = new Size(250, 200);
+                        sobytia[i].labeI.Visible = true;
+                        sobytia[i].labeI.Location = new Point(x, y + 210);
+                        sobytia[i].labeI.Size = new Size(250, 60);
+                        x = x + 260;
+                        if (x + 260 > 1050)
+                        {
+                            x = 10;
+                            y = y + 300;
+                        }
                     }
                 }
             }

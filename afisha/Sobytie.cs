@@ -45,16 +45,16 @@ namespace AfishA
                 Label lbl = new Label();
                 lbl.ForeColor = Color.White;
                 lbl.Text = hCountry[i];
-                lbl.Size = new Size(65, 30);
+                lbl.Size = new Size(115, 30);
                 lbl.AutoSize = false;
-                lbl.Location = new Point(10, 10 + 30 * i);
+                lbl.Location = new Point(5, 10 + 30 * i);
                 
                 Label labl = new Label();
                 labl.ForeColor = Color.White;
                 labl.Text = Convert.ToDateTime(history[i]).ToString("d.MM.yyyy");
-                labl.Size = new Size(65, 30);
+                labl.Size = new Size(61, 30);
                 labl.AutoSize = false;
-                labl.Location = new Point(70, 10 + 30 * i);
+                labl.Location = new Point(121, 10 + 30 * i);
                 panel2.Controls.Add(labl);
                 panel2.Controls.Add(lbl);
             }
@@ -126,16 +126,24 @@ namespace AfishA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Program.user == "_")
+            string dt = Program.Select("SELECT dt FROM ivents WHERE name='" + name + "'")[0];
+            DateTime dat = Convert.ToDateTime(dt);
+            if (dat >= DateTime.Now)
             {
-                MessageBox.Show("ЗАРЕГИСТРИРУЙТЕСЬ ИЛИ ВОЙДИТЕ В АККАУНТ, ЧТОБЫ КУПИТЬ БИЛЕТ  ┬┴┬┴┤(･_├┬┴┬┴");
+                if (Program.user == "_")
+                {
+                    MessageBox.Show("ЗАРЕГИСТРИРУЙТЕСЬ ИЛИ ВОЙДИТЕ В АККАУНТ, ЧТОБЫ КУПИТЬ БИЛЕТ  ┬┴┬┴┤(･_├┬┴┬┴");
+                }
+                else
+                {
+                    buy f = new buy(name);
+                    f.Show();
+                }
             }
             else
             {
-                buy f = new buy(name);
-                f.Show();
+                MessageBox.Show("БИЛЕТОВ НЕТ, Т.К. СОБЫТИЕ УЖЕ ЗАКОНЧИЛОСЬ");
             }
-            
         }
 
         private void sobytie_Load(object sender, EventArgs e)

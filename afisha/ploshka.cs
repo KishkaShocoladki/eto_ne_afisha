@@ -63,7 +63,6 @@ namespace AfishA
                 textBox1.Text = pl_descr;
                 
                 pictureBox2.Image = Program.SelectImage("SELECT kartinka1 FROM ploshki WHERE name = '" + ploshk + "'");
-                pictureBox1.Image = Program.SelectImage("SELECT kartinka2 FROM ploshki WHERE name = '" + ploshk + "'");
             }
             catch (Exception) { }
         }

@@ -44,30 +44,7 @@ namespace AfishA
                     /*List<string> ivent = Program.Select("SELECT ivent FROM `history` WHERE dt='" + part[i] + "'");*///тут должен быть поиск по дате (part[i]) и участнику (name) но пока как то никак
                     Label lbl = new Label();
                     lbl.ForeColor = Color.White;
-                    lbl.Text = part[i];
-                    lbl.Size = new Size(120, 30);
-                    lbl.AutoSize = false;
-                    lbl.Location = new Point(140, 10 + 30 * i);
-                    panel3.Controls.Add(lbl);
-
-                    Label labl = new Label();
-                    labl.ForeColor = Color.White;
-                    labl.Text = name;//здесь должно быть имя события, а не участника
-                    labl.Size = new Size(120, 30);
-                    labl.AutoSize = false;
-                    labl.Location = new Point(10, 10 + 30 * i);
-                    labl.Click += new EventHandler(solo_Click);
-                    panel3.Controls.Add(labl);
-                }
-            }
-            else if (fut != 0)//ЕСЛИ ЕСТЬ ЗАПЛАНИРОВАННЫЕ КОНЦЕРТЫ(СОЛЬНЫЕ) 
-            {
-                List<string> part = Program.Select("SELECT dt FROM `ivents` WHERE name='" + name + "'");
-                for (int i = 0; i < part.Count; i = i + 1)
-                {
-                    Label lbl = new Label();
-                    lbl.ForeColor = Color.White;
-                    lbl.Text = Convert.ToDateTime(part[i]).ToString("d.MM.yyyy"); ;
+                    lbl.Text = Convert.ToDateTime(part[i]).ToString("yyyy.MM.dd"); ;
                     lbl.Size = new Size(120, 30);
                     lbl.AutoSize = false;
                     lbl.Location = new Point(140, 10 + 30 * i);
@@ -81,17 +58,50 @@ namespace AfishA
                     labl.Location = new Point(10, 10 + 30 * i);
                     labl.Click += new EventHandler(solo_Click);
                     panel3.Controls.Add(labl);
-
-                    string plosh = Program.Select("SELECT area FROM `ivents` WHERE name='" + name + "'")[0];//тут должен быть поиск по дате part[i] но пока как то никак
+                    
+                    string country = Program.Select("SELECT country FROM `history` WHERE dt='" + lbl.Text + "'")[0];//тут должен быть поиск по дате part[i] но пока как то никак
                     Label label = new Label();
                     label.ForeColor = Color.White;
-                    label.Text = plosh;
+                    label.Text = country;
                     label.Size = new Size(120, 30);
                     label.AutoSize = false;
                     label.Location = new Point(270, 10 + 30 * i);
                     panel3.Controls.Add(label);
                 }
             }
+            if (fut != 0)//ЕСЛИ ЕСТЬ ЗАПЛАНИРОВАННЫЕ КОНЦЕРТЫ(СОЛЬНЫЕ) 
+            {
+                List<string> part = Program.Select("SELECT dt FROM `ivents` WHERE name='" + name + "'");
+                for (int i = 0; i < part.Count; i = i + 1)
+                {
+                    Label lbl = new Label();
+                    lbl.ForeColor = Color.White;
+                    lbl.Text = Convert.ToDateTime(part[i]).ToString("yyyy.MM.dd"); ;
+                    lbl.Size = new Size(120, 30);
+                    lbl.AutoSize = false;
+                    lbl.Location = new Point(140, 10 + 30 * i);
+                    panel4.Controls.Add(lbl);
+
+                    Label labl = new Label();
+                    labl.ForeColor = Color.White;
+                    labl.Text = name;
+                    labl.Size = new Size(120, 30);
+                    labl.AutoSize = false;
+                    labl.Location = new Point(10, 10 + 30 * i);
+                    labl.Click += new EventHandler(solo_Click);
+                    panel4.Controls.Add(labl);
+
+                    string country = Program.Select("SELECT country FROM `ivents` WHERE dt='" + lbl.Text + "'")[0];//тут должен быть поиск по дате part[i] но пока как то никак
+                    Label label = new Label();
+                    label.ForeColor = Color.White;
+                    label.Text = country;
+                    label.Size = new Size(120, 30);
+                    label.AutoSize = false;
+                    label.Location = new Point(270, 10 + 30 * i);
+                    panel4.Controls.Add(label);
+                }
+            }
+            
             
             //ЗАПОЛНЕНИЕ ПАНЕЛИ СЛЕВА СНИЗУ(МУЗЫКА) 
             List<string> music = Program.Select("SELECT musicName1, musicName2, musicName3 FROM songs WHERE part_name = '" + name + "'");
@@ -202,6 +212,11 @@ namespace AfishA
         }
 
         private void participants_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

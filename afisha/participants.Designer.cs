@@ -51,6 +51,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -126,9 +128,10 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(960, 32);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(277, 484);
+            this.panel1.Size = new System.Drawing.Size(277, 308);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -165,6 +168,7 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "play";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button1_Click_3);
             // 
             // label8
             // 
@@ -195,6 +199,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "play";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // label7
             // 
@@ -236,6 +241,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "play";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label5
             // 
@@ -251,8 +257,9 @@
             // 
             this.panel3.Location = new System.Drawing.Point(445, 362);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(508, 154);
+            this.panel3.Size = new System.Drawing.Size(391, 154);
             this.panel3.TabIndex = 9;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label10
             // 
@@ -261,9 +268,27 @@
             this.label10.Location = new System.Drawing.Point(444, 343);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 14);
+            this.label10.Size = new System.Drawing.Size(223, 14);
             this.label10.TabIndex = 11;
-            this.label10.Text = "СОЛЬНЫЕ КОНЦЕРТЫ:";
+            this.label10.Text = "СЫГРАННЫЕ СОЛЬНЫЕ КОНЦЕРТЫ:";
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(846, 362);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(391, 154);
+            this.panel4.TabIndex = 12;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(843, 343);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(207, 14);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "БУДУЩИЕ СОЛЬНЫЕ КОНЦЕРТЫ:";
             // 
             // participants
             // 
@@ -272,6 +297,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1249, 530);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label5);
@@ -324,5 +351,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label9;
     }
 }

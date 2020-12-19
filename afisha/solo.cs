@@ -12,10 +12,10 @@ namespace AfishA
 {
     public partial class solo : Form
     {
-        string sob;
+        string sbyt;
         public solo(string name)
         {
-            sob = name;
+            sbyt = name;
             InitializeComponent();
             
             List<string> parts = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");
@@ -26,21 +26,21 @@ namespace AfishA
                 Label lbl = new Label();
                 lbl.ForeColor = Color.White;
                 lbl.Text = ivents[i];
-                lbl.Size = new Size(75, 30);
+                lbl.Size = new Size(93, 40);
                 lbl.AutoSize = false;
-                lbl.Location = new Point(10, 10 + 30 * i);
+                lbl.Location = new Point(10, 10 + 40 * i);
                 Label labl = new Label();
                 labl.ForeColor = Color.White;
                 labl.Text = Convert.ToDateTime(parts[i]).ToString("d.MM.yyyy");
-                labl.Size = new Size(75, 30);
+                labl.Size = new Size(93, 30);
                 labl.AutoSize = false;
-                labl.Location = new Point(85, 10 + 30 * i);
+                labl.Location = new Point(103, 10 + 40 * i);
                 Label lbel = new Label();
                 lbel.ForeColor = Color.White;
                 lbel.Text = country[i];
-                lbel.Size = new Size(75, 30);
+                lbel.Size = new Size(93, 30);
                 lbel.AutoSize = false;
-                lbel.Location = new Point(170, 10 + 30 * i);
+                lbel.Location = new Point(206, 10 + 40 * i);
                 panel1.Controls.Add(lbl);
                 panel1.Controls.Add(labl);
                 panel1.Controls.Add(lbel);
@@ -63,34 +63,32 @@ namespace AfishA
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Program.user == "_")
+            string dt = Program.Select("SELECT dt FROM ivents WHERE name='" + sbyt + "'")[0];
+            DateTime dat = Convert.ToDateTime(dt);
+            if (dat >= DateTime.Now)
             {
-                MessageBox.Show("ЗАРЕГИСТРИРУЙТЕСЬ ИЛИ ВОЙДИТЕ В АККАУНТ, ЧТОБЫ КУПИТЬ БИЛЕТ  ┬┴┬┴┤(･_├┬┴┬┴");
+                if (Program.user == "_")
+                {
+                    MessageBox.Show("ЗАРЕГИСТРИРУЙТЕСЬ ИЛИ ВОЙДИТЕ В АККАУНТ, ЧТОБЫ КУПИТЬ БИЛЕТ  ┬┴┬┴┤(･_├┬┴┬┴");
+                }
+                else
+                {
+                    buy f = new buy(sbyt);
+                    f.Show();
+                }
             }
             else
             {
-                buy f = new buy(sob);
-                f.Show();
+                MessageBox.Show("БИЛЕТОВ НЕТ, Т.К. СОБЫТИЕ УЖЕ ЗАКОНЧИЛОСЬ");
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            rewievs f = new rewievs(sob);
+            rewievs f = new rewievs(sbyt);
             f.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void solo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }
