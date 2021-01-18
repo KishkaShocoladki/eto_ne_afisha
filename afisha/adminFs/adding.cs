@@ -34,5 +34,10 @@ namespace AfishA
             addSob f = new addSob();
             f.Show();
         }
+
+        private void adding_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

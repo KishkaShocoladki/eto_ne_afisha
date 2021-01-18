@@ -132,11 +132,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(637, 468);
             this.Name = "ploshka";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+           // this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ploshka";
             this.Load += new System.EventHandler(this.ploshka_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

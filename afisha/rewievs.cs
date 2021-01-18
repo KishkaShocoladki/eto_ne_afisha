@@ -41,7 +41,7 @@ namespace AfishA
             }
             else
             {
-                Program.Insert("INSERT INTO tipacomments ( user, otzv, rat, ivent) VALUES ('" + Program.user + "', '" + textBox1.Text + "', '" + Convert.ToInt32(comboBox1.Text) + "', " + name + "')");
+                Program.Insert("INSERT INTO tipacomments (user, otzv, rat, ivent) VALUES ('" + Program.user + "', '" + textBox1.Text + "', '" + Convert.ToInt32(comboBox1.Text) + "', '" + name + "')");
                 MessageBox.Show("ОТЗЫВ ДОБАВЛЕН");
             }
         }

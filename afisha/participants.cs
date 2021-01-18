@@ -11,7 +11,7 @@ using WMPLib;
 
 namespace AfishA
 {
-    public partial class participants : Form
+    public partial class participants : UserControl
     {
         WindowsMediaPlayer wmp = new WindowsMediaPlayer();
         string name;
@@ -36,6 +36,7 @@ namespace AfishA
             //ЗАПОЛНЕНИЕ ПАНЕЛЬКИ СНИЗУ (ПРЕДЫДУЩИЕ И БУДУЩИЕ(СОЛЬНЫЕ) ВЫСТУПЛЕНИЯ)
             int his = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `history` WHERE participant='" + name + "'")[0]);
             int fut = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `ivents` WHERE name='" + name + "'")[0]);
+            
             if (his != 0)//ЕСЛИ УЖЕ ГДЕ-ТО ВЫСТУПАЛ
             {
                 List<string> part = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");

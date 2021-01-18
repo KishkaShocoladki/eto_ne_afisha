@@ -98,6 +98,7 @@
             this.Name = "adding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ДОБАВЛЕНИЕ";
+            this.Load += new System.EventHandler(this.adding_Load);
             this.ResumeLayout(false);
 
         }

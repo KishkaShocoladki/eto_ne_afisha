@@ -12,7 +12,7 @@ using System.Data.Common;
 
 namespace AfishA
 {
-    public partial class ploshka : Form
+    public partial class ploshka : UserControl
     {
         string ploshk;
         public ploshka(string plosh)

@@ -54,8 +54,9 @@ namespace AfishA
 
         private void bronirovanie(object sender, EventArgs e)
         {
+            string plosh = Program.Select("SELECT area FROM ivents WHERE name ='" + ivt + "'")[0];
             Button btn = (Button)sender;
-            Program.Insert("INSERT INTO bron(ivent, user, place) VALUES('" + ivt + "', '" + Program.user + "', '" + btn.Text + "')");
+            Program.Insert("INSERT INTO bron(ivent, ploshk, user, place) VALUES('" + ivt + "', '" + plosh  + "', '" + Program.user + "', '" + btn.Text + "')");
             btn.Enabled = false;
             MessageBox.Show("Вы забронировали место, поздравляю");
         }

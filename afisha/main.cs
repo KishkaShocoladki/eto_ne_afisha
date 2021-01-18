@@ -61,7 +61,7 @@ namespace AfishA
                 sobytia[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
 
                 x = x + 260;
-                if (x + 260 > 1050)
+                if (x + 260 > 855)
                 {
                     x = 10;
                     y = y + 300;
@@ -94,7 +94,7 @@ namespace AfishA
             {
                 string name = results[i];
                 string descript = results[i + 1];
-                string city = results[i + 2];
+                string city = results[i + 2];  
                 string country = results[i + 3];
                 string type = results[i + 4];
                 string area = results[i + 5];
@@ -111,15 +111,16 @@ namespace AfishA
                     iv.picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + iv.name + "'");
                 }
                 catch (Exception) { }
-                Controls.Add(iv.labeI);
-                Controls.Add(iv.picB);
+                panel1.Controls.Add(iv.labeI);
+                panel1.Controls.Add(iv.picB);
             }
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            plashadka form = new plashadka();
-            form.Show();
+            plashadka fm = new plashadka();
+            panel1.Controls.Clear();
+            panel1.Controls.Add(fm);
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -152,11 +153,13 @@ namespace AfishA
                     sobytia[i].labeI.Location = new Point(x, y + 210);
                     sobytia[i].labeI.Size = new Size(250, 60);
                     x = x + 260;
-                    if (x + 260 > 1050)
+                    if (x + 260 > 855)
                     {
                         x = 10;
                         y = y + 300;
                     }
+                    panel1.Controls.Add(sobytia[i].labeI);
+                    panel1.Controls.Add(sobytia[i].picB);
                 }
             }
         }
@@ -170,7 +173,6 @@ namespace AfishA
                     {
                         PictureBox pic = (PictureBox)sender;
                         sobytie f = new sobytie(pic.Text);
-                        f.Show();
                     }
                 }
                 else if (sobytia[i].type == "СОЛО КОНЦЕРТ")
@@ -179,7 +181,6 @@ namespace AfishA
                     {
                         PictureBox pic = (PictureBox)sender;
                         solo f = new solo(pic.Text);
-                        f.Show();
                     }
                 }
             }
@@ -226,7 +227,8 @@ namespace AfishA
             if (Program.user != "_")
             {
                 user f = new user();
-                f.Show();
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
             }
         }
 
@@ -239,7 +241,8 @@ namespace AfishA
         private void button7_Click(object sender, EventArgs e)
         {
             parts f = new parts();
-            f.Show();
+            panel1.Controls.Clear();
+            panel1.Controls.Add(f);
         }
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -279,11 +282,13 @@ namespace AfishA
                         sobytia[i].labeI.Location = new Point(x, y + 210);
                         sobytia[i].labeI.Size = new Size(250, 60);
                         x = x + 260;
-                        if (x + 260 > 1050)
+                        if (x + 260 > 855)
                         {
                             x = 10;
                             y = y + 300;
                         }
+                        panel1.Controls.Add(sobytia[i].labeI);
+                        panel1.Controls.Add(sobytia[i].picB);
                     }
                 }
                 
@@ -354,11 +359,13 @@ namespace AfishA
                         sobytia[i].labeI.Location = new Point(x, y + 210);
                         sobytia[i].labeI.Size = new Size(250, 60);
                         x = x + 260;
-                        if (x + 260 > 1050)
+                        if (x + 260 > 855)
                         {
                             x = 10;
                             y = y + 300;
                         }
+                        panel1.Controls.Add(sobytia[i].labeI);
+                        panel1.Controls.Add(sobytia[i].picB);
                     }
                 }
             }
@@ -367,6 +374,80 @@ namespace AfishA
         private void main_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            UserControl f = new UserControl();
+            if (e.Node.Text == "parts")
+            {
+                f = new parts();
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "plashadki")
+            {
+                f = new plashadka();
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "my chemical romance")
+            {
+                string send = e.Node.Text;
+                f = new participants(send);
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "mindless self indulgence")
+            {
+                string send = e.Node.Text;
+                f = new participants(send);
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "placebo")
+            {
+                string send = e.Node.Text;
+                f = new participants(send);
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "ace of spades")
+            {
+                string send = e.Node.Text;
+                f = new ploshka(send);
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "a2 green concert")
+            {
+                string send = e.Node.Text;
+                f = new ploshka(send);
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "макухари мессе холл")
+            {
+                string send = e.Node.Text;
+                f = new ploshka(send);
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "ploshki")
+            {
+                f = new plashadka();
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
+            else if (e.Node.Text == "main")
+            {
+                
+            }
         }
     }
 }
