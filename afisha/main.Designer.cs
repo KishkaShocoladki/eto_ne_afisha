@@ -29,21 +29,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("main");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("my chemical romance");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("mindless self indulgence");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("placebo");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("parts", new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode3,
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("a2 green concert");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("ace of spades");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("макухари мессе холл");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("plashadki", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7,
-            treeNode8});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("главная");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("исполнители");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("площадки");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -416,33 +404,15 @@
             this.treeView1.Location = new System.Drawing.Point(4, 30);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Узел0";
-            treeNode1.Text = "main";
-            treeNode2.Name = "Узел4";
-            treeNode2.Tag = "my chemical romance";
-            treeNode2.Text = "my chemical romance";
-            treeNode3.Name = "Узел4";
-            treeNode3.Tag = "mindless self indulgence";
-            treeNode3.Text = "mindless self indulgence";
-            treeNode4.Name = "Узел5";
-            treeNode4.Tag = "placebo";
-            treeNode4.Text = "placebo";
-            treeNode5.Name = "Узел1";
-            treeNode5.Text = "parts";
-            treeNode6.Name = "Узел5";
-            treeNode6.Tag = "a2 green concert";
-            treeNode6.Text = "a2 green concert";
-            treeNode7.Name = "Узел6";
-            treeNode7.Tag = "ace of spades";
-            treeNode7.Text = "ace of spades";
-            treeNode8.Name = "Узел7";
-            treeNode8.Tag = "макухари мессе холл";
-            treeNode8.Text = "макухари мессе холл";
-            treeNode9.Name = "Узел2";
-            treeNode9.Text = "plashadki";
+            treeNode1.Text = "главная";
+            treeNode2.Name = "Узел1";
+            treeNode2.Text = "исполнители";
+            treeNode3.Name = "Узел2";
+            treeNode3.Text = "площадки";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
-            treeNode5,
-            treeNode9});
+            treeNode2,
+            treeNode3});
             this.treeView1.Size = new System.Drawing.Size(238, 552);
             this.treeView1.TabIndex = 28;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);

@@ -71,6 +71,20 @@ namespace AfishA
         public main()
         {
             InitializeComponent();
+
+            List<string> prt = Program.Select("SELECT name FROM `participants`");
+            for (int i = 0; i < prt.Count; i = i + 1)
+            {
+                TreeNode tt = new TreeNode(prt[i]);
+                treeView1.Nodes[1].Nodes.Add(tt);
+            }
+            List<string> plk = Program.Select("SELECT name FROM `ploshki`");
+            for (int i = 0; i < plk.Count; i = i + 1)
+            {
+                TreeNode tt = new TreeNode(plk[i]);
+                treeView1.Nodes[2].Nodes.Add(tt);
+            }
+
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
             comboBox1.DataSource = fillCountry;
             List<string> genres = Program.Select("SELECT genre FROM participants");
@@ -106,13 +120,13 @@ namespace AfishA
 
             foreach (Ivent iv in sobytia)
             {
-                try
-                {
-                    iv.picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + iv.name + "'");
-                }
-                catch (Exception) { }
-                panel1.Controls.Add(iv.labeI);
-                panel1.Controls.Add(iv.picB);
+            try
+            {
+                iv.picB.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + iv.name + "'");    
+            }
+            catch (Exception) { }
+            panel1.Controls.Add(iv.labeI);
+            panel1.Controls.Add(iv.picB);
             }
 
         }
@@ -227,8 +241,7 @@ namespace AfishA
             if (Program.user != "_")
             {
                 user f = new user();
-                panel1.Controls.Clear();
-                panel1.Controls.Add(f);
+                f.Show();
             }
         }
 
@@ -384,67 +397,31 @@ namespace AfishA
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             UserControl f = new UserControl();
-            if (e.Node.Text == "parts")
+            if (e.Node.Text == "исполнители")
             {
                 f = new parts();
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Text == "plashadki")
+            else if (e.Node.Text == "площадки")
             {
                 f = new plashadka();
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Text == "my chemical romance")
+            else if (e.Node.Level == 1 && e.Node.Parent.Text == "исполнители")
             {
-                string send = e.Node.Text;
-                f = new participants(send);
+                f = new participants(e.Node.Text);
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Text == "mindless self indulgence")
+            else if (e.Node.Level == 1 && e.Node.Parent.Text == "площадки")
             {
-                string send = e.Node.Text;
-                f = new participants(send);
+                f = new ploshka(e.Node.Text);
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Text == "placebo")
-            {
-                string send = e.Node.Text;
-                f = new participants(send);
-                panel1.Controls.Clear();
-                panel1.Controls.Add(f);
-            }
-            else if (e.Node.Text == "ace of spades")
-            {
-                string send = e.Node.Text;
-                f = new ploshka(send);
-                panel1.Controls.Clear();
-                panel1.Controls.Add(f);
-            }
-            else if (e.Node.Text == "a2 green concert")
-            {
-                string send = e.Node.Text;
-                f = new ploshka(send);
-                panel1.Controls.Clear();
-                panel1.Controls.Add(f);
-            }
-            else if (e.Node.Text == "макухари мессе холл")
-            {
-                string send = e.Node.Text;
-                f = new ploshka(send);
-                panel1.Controls.Clear();
-                panel1.Controls.Add(f);
-            }
-            else if (e.Node.Text == "ploshki")
-            {
-                f = new plashadka();
-                panel1.Controls.Clear();
-                panel1.Controls.Add(f);
-            }
-            else if (e.Node.Text == "main")
+            else if (e.Node.Text == "главная")
             {
                 
             }

@@ -70,7 +70,7 @@ namespace AfishA
         {
             Label lbl = (Label)sender;
             string type = Program.Select("SELECT type FROM ivents WHERE name = '" + lbl.Text + "'")[0];
-            MessageBox.Show(type);
+           // MessageBox.Show(type);
             if (type == "ФЕСТИВАЛЬ")
             {
                 sobytie f = new sobytie(lbl.Text);

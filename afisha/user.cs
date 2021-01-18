@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AfishA
 {
-    public partial class user : UserControl
+    public partial class user : Form
     {
         public user()
         {
