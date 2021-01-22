@@ -36,6 +36,10 @@ namespace AfishA
         public plashadka()
         {
             InitializeComponent();
+            if (Program.navigation.Count > Program.navigation_pos)
+                Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
+            Program.navigation.Add(this);
+            Program.navigation_pos++;
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
             comboBox1.DataSource = fillCountry;
 

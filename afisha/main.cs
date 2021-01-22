@@ -41,37 +41,12 @@ namespace AfishA
     public partial class main : Form
     {
         public static List<Ivent> sobytia = new List<Ivent>();
-        public static void fillsob()
-        {
-            int x = 10;
-            int y = 140;
-            for (int i = 0; i < sobytia.Count; i = i + 1)
-            {
-                sobytia[i].picB.Location = new Point(x, y);
-                sobytia[i].picB.Size = new Size(250, 200);
-                sobytia[i].picB.Text = sobytia[i].name;
-                sobytia[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
-                sobytia[i].picB.Click += new EventHandler(button3_Click);
-
-                sobytia[i].labeI.Location = new Point(x, y + 210);
-                sobytia[i].labeI.Size = new Size(250, 60);
-                sobytia[i].labeI.Text = sobytia[i].name;
-                sobytia[i].labeI.Font = new Font("Lucida Console", 18F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                sobytia[i].labeI.ForeColor = SystemColors.ButtonFace;
-                sobytia[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
-
-                x = x + 260;
-                if (x + 260 > 855)
-                {
-                    x = 10;
-                    y = y + 300;
-                }
-            }
-        }
         public main()
         {
             InitializeComponent();
-
+            //Program.navigation.Clear();
+           // Program.navigation_pos++;
+            
             List<string> prt = Program.Select("SELECT name FROM `participants`");
             for (int i = 0; i < prt.Count; i = i + 1)
             {
@@ -116,7 +91,31 @@ namespace AfishA
                 Ivent iv = new Ivent(name, descript, city, country, type, area, dt);
                 sobytia.Add(iv);
             }
-            fillsob();
+            
+            int x = 10;
+            int y = 140;
+            for (int i = 0; i < sobytia.Count; i = i + 1)
+            {
+                sobytia[i].picB.Location = new Point(x, y);
+                sobytia[i].picB.Size = new Size(250, 200);
+                sobytia[i].picB.Text = sobytia[i].name;
+                sobytia[i].picB.SizeMode = PictureBoxSizeMode.Zoom;
+                sobytia[i].picB.Click += new EventHandler(button3_Click);
+
+                sobytia[i].labeI.Location = new Point(x, y + 210);
+                sobytia[i].labeI.Size = new Size(250, 60);
+                sobytia[i].labeI.Text = sobytia[i].name;
+                sobytia[i].labeI.Font = new Font("Lucida Console", 18F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                sobytia[i].labeI.ForeColor = SystemColors.ButtonFace;
+                sobytia[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
+
+                x = x + 260;
+                if (x + 260 > 855)
+                {
+                    x = 10;
+                    y = y + 300;
+                }
+            }
 
             foreach (Ivent iv in sobytia)
             {
@@ -163,6 +162,7 @@ namespace AfishA
                     sobytia[i].picB.Visible = true;
                     sobytia[i].picB.Location = new Point(x, y);
                     sobytia[i].picB.Size = new Size(250, 200);
+                    sobytia[i].picB.Click += new EventHandler(button3_Click);
                     sobytia[i].labeI.Visible = true;
                     sobytia[i].labeI.Location = new Point(x, y + 210);
                     sobytia[i].labeI.Size = new Size(250, 60);
@@ -177,25 +177,27 @@ namespace AfishA
                 }
             }
         }
-        public static void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < sobytia.Count; i = i + 1)//sobytia.Count
             {
+                UserControl f = new UserControl();
                 if (sobytia[i].type == "ФЕСТИВАЛЬ")
                 {
-                    if (((PictureBox)sender).Image == sobytia[i].picB.Image)
-                    {
+                    //if (((PictureBox)sender).Image == sobytia[i].picB.Image)
+                    
                         PictureBox pic = (PictureBox)sender;
-                        sobytie f = new sobytie(pic.Text);
-                    }
+                        f = new sobytie(pic.Text);
+                        panel1.Controls.Clear();
+                        panel1.Controls.Add(f);
+                    
                 }
                 else if (sobytia[i].type == "СОЛО КОНЦЕРТ")
                 {
-                    if (((PictureBox)sender).Image == sobytia[i].picB.Image)
-                    {
                         PictureBox pic = (PictureBox)sender;
-                        solo f = new solo(pic.Text);
-                    }
+                        f = new solo(pic.Text);
+                        panel1.Controls.Clear();
+                        panel1.Controls.Add(f);
                 }
             }
         }
@@ -291,6 +293,7 @@ namespace AfishA
                         sobytia[i].picB.Visible = true;
                         sobytia[i].picB.Location = new Point(x, y);
                         sobytia[i].picB.Size = new Size(250, 200);
+                        sobytia[i].picB.Click += new EventHandler(button3_Click);
                         sobytia[i].labeI.Visible = true;
                         sobytia[i].labeI.Location = new Point(x, y + 210);
                         sobytia[i].labeI.Size = new Size(250, 60);
@@ -336,6 +339,7 @@ namespace AfishA
                             sobytia[i].picB.Visible = true;
                             sobytia[i].picB.Location = new Point(x, y);
                             sobytia[i].picB.Size = new Size(250, 200);
+                            sobytia[i].picB.Click += new EventHandler(button3_Click);
                             sobytia[i].labeI.Visible = true;
                             sobytia[i].labeI.Location = new Point(x, y + 210);
                             sobytia[i].labeI.Size = new Size(250, 60);
@@ -368,6 +372,7 @@ namespace AfishA
                         sobytia[i].picB.Visible = true;
                         sobytia[i].picB.Location = new Point(x, y);
                         sobytia[i].picB.Size = new Size(250, 200);
+                        sobytia[i].picB.Click += new EventHandler(button3_Click);
                         sobytia[i].labeI.Visible = true;
                         sobytia[i].labeI.Location = new Point(x, y + 210);
                         sobytia[i].labeI.Size = new Size(250, 60);
@@ -383,17 +388,6 @@ namespace AfishA
                 }
             }
         }
-
-        private void main_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             UserControl f = new UserControl();
@@ -402,6 +396,10 @@ namespace AfishA
                 f = new parts();
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
+            }
+            if (e.Node.Text == "главная")
+            {
+
             }
             else if (e.Node.Text == "площадки")
             {
@@ -421,10 +419,34 @@ namespace AfishA
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Text == "главная")
-            {
-                
-            }
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Program.navigation_pos--;
+            UserControl rf = Program.navigation[Program.navigation_pos];
+            panel1.Controls.Clear();
+            panel1.Controls.Add(rf);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Program.navigation_pos++;
+            UserControl rf = Program.navigation[Program.navigation_pos];
+            panel1.Controls.Clear();
+            panel1.Controls.Add(rf);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pictureBox1.Enabled = (Program.navigation_pos > 0);
+            pictureBox2.Enabled = (Program.navigation_pos < Program.navigation.Count - 2);
+
         }
     }
 }

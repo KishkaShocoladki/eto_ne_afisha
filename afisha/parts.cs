@@ -16,6 +16,10 @@ namespace AfishA
         public parts()
         {
             InitializeComponent();
+            if (Program.navigation.Count > Program.navigation_pos)
+                Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
+            Program.navigation.Add(this);
+            Program.navigation_pos++;
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM participants");
             comboBox1.DataSource = fillCountry;
             List<string> genres = Program.Select("SELECT genre FROM participants");
@@ -76,10 +80,11 @@ namespace AfishA
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            UserControl f = new UserControl();
             Label lbl = (Label)sender;
-            participants f = new participants(lbl.Text);
-            f.Show();
-
+            f = new participants(lbl.Text);
+            panel1.Controls.Clear();
+            panel1.Controls.Add(f);
         }
 
         private void button1_Click(object sender, EventArgs e)

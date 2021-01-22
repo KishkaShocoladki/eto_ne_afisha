@@ -19,6 +19,10 @@ namespace AfishA
         {
             ploshk = plosh;
             InitializeComponent();
+            if (Program.navigation.Count > Program.navigation_pos)
+                Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
+            Program.navigation.Add(this);
+            Program.navigation_pos++;
             List<string> parts = Program.Select("SELECT name FROM ivents WHERE area= '" + ploshk + "'");
             int x = 5;
             int y = 5;

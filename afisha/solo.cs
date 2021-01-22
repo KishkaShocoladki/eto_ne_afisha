@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace AfishA
 {
-    public partial class solo : Form
+    public partial class solo : UserControl
     {
         string sbyt;
         public solo(string name)
         {
             sbyt = name;
             InitializeComponent();
-            
+            Program.navigation.Add(this);
+
             List<string> parts = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");
             for (int i = 0; i < parts.Count; i = i + 1)
             {
@@ -89,6 +90,11 @@ namespace AfishA
         }
 
         private void solo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

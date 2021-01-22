@@ -61,10 +61,10 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(445, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(379, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(508, 328);
+            this.pictureBox1.Size = new System.Drawing.Size(422, 275);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -94,12 +94,13 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ControlText;
             this.textBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox1.Location = new System.Drawing.Point(13, 153);
+            this.textBox1.Location = new System.Drawing.Point(16, 115);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(424, 160);
+            this.textBox1.Size = new System.Drawing.Size(358, 160);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "кароч описание";
             // 
@@ -107,7 +108,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(961, 12);
+            this.label3.Location = new System.Drawing.Point(809, 5);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(239, 14);
@@ -119,7 +120,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(15, 316);
+            this.label4.Location = new System.Drawing.Point(15, 278);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 14);
@@ -129,9 +130,9 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(960, 32);
+            this.panel1.Location = new System.Drawing.Point(808, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(277, 308);
+            this.panel1.Size = new System.Drawing.Size(236, 253);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -145,9 +146,9 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(13, 333);
+            this.panel2.Location = new System.Drawing.Point(16, 295);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(424, 183);
+            this.panel2.Size = new System.Drawing.Size(515, 173);
             this.panel2.TabIndex = 7;
             // 
             // button6
@@ -255,9 +256,9 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(445, 362);
+            this.panel3.Location = new System.Drawing.Point(534, 295);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(391, 154);
+            this.panel3.Size = new System.Drawing.Size(510, 89);
             this.panel3.TabIndex = 9;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -265,7 +266,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(444, 343);
+            this.label10.Location = new System.Drawing.Point(535, 278);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(223, 14);
@@ -274,16 +275,16 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(846, 362);
+            this.panel4.Location = new System.Drawing.Point(534, 405);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(391, 154);
+            this.panel4.Size = new System.Drawing.Size(510, 62);
             this.panel4.TabIndex = 12;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(843, 343);
+            this.label9.Location = new System.Drawing.Point(538, 388);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(207, 14);
@@ -314,7 +315,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximumSize = new System.Drawing.Size(1265, 600);
             this.Name = "participants";
-            this.Size = new System.Drawing.Size(1249, 530);
+            this.Size = new System.Drawing.Size(1054, 474);
             this.Load += new System.EventHandler(this.participants_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

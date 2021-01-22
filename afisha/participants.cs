@@ -19,7 +19,11 @@ namespace AfishA
         {
             name = nm;
             InitializeComponent();
-            
+            if (Program.navigation.Count > Program.navigation_pos)
+                Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
+            Program.navigation.Add(this);
+            Program.navigation_pos++;
+
             //ЗАПОЛНЕНИЕ ИНФОРМАЦИИ ОБ ИСПОЛНИТЕЛЕ
             Text = "Информация о " + name;
             label1.Text = name;
@@ -31,6 +35,7 @@ namespace AfishA
             label2.Text = info[1];
             label2.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
             label5.Text = info[2];
+            label5.Location = new Point(16, 70);
             label5.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
           
             //ЗАПОЛНЕНИЕ ПАНЕЛЬКИ СНИЗУ (ПРЕДЫДУЩИЕ И БУДУЩИЕ(СОЛЬНЫЕ) ВЫСТУПЛЕНИЯ)

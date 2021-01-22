@@ -29,7 +29,7 @@ namespace AfishA
             picB = new PictureBox();
         }
     }
-    public partial class sobytie : Form
+    public partial class sobytie : UserControl
     {
         public static List<Participants> part = new List<Participants>();
 
@@ -38,6 +38,7 @@ namespace AfishA
         {
             name = sob;
             InitializeComponent();
+            Program.navigation.Add(this);
             List<string> history = Program.Select("SELECT dt FROM `history` WHERE ivent='" + name + "'");
             for (int i = 0; i < history.Count; i = i + 1)
             {
