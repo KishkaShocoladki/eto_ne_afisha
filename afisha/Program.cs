@@ -10,8 +10,11 @@ namespace AfishA
 {
     static class Program
     {
+        public static Panel panel1;
         public static List<UserControl> navigation = new List<UserControl>();
         public static int navigation_pos = 0;
+        public static List<UserControl> navigationUserForm = new List<UserControl>();
+        public static int navigationUserForm_pos = 0;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

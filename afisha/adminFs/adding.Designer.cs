@@ -91,12 +91,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.Coral;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(408, 346);
             this.Name = "adding";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ДОБАВЛЕНИЕ";
             this.Load += new System.EventHandler(this.adding_Load);
             this.ResumeLayout(false);

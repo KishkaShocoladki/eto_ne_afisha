@@ -121,8 +121,8 @@
             // 
             // ploshka
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -134,7 +134,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(637, 468);
             this.Name = "ploshka";
-            this.Size = new System.Drawing.Size(607, 430);
+            this.Size = new System.Drawing.Size(613, 438);
             this.Load += new System.EventHandler(this.ploshka_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

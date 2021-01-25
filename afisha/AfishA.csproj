@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adminFs\adding.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="adminFs\adding.Designer.cs">
       <DependentUpon>adding.cs</DependentUpon>
@@ -93,7 +93,7 @@
       <DependentUpon>allIvents.cs</DependentUpon>
     </Compile>
     <Compile Include="adminFs\allParts.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="adminFs\allParts.Designer.cs">
       <DependentUpon>allParts.cs</DependentUpon>
@@ -163,6 +163,12 @@
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainCntrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainCntrl.Designer.cs">
+      <DependentUpon>mainCntrl.cs</DependentUpon>
     </Compile>
     <Compile Include="notreg.cs">
       <SubType>Form</SubType>
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainCntrl.resx">
+      <DependentUpon>mainCntrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="notreg.resx">
       <DependentUpon>notreg.cs</DependentUpon>

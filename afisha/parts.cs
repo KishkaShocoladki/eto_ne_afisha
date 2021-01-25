@@ -16,6 +16,7 @@ namespace AfishA
         public parts()
         {
             InitializeComponent();
+            //MessageBox.Show(Convert.ToString(Program.navigation_pos));
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
             Program.navigation.Add(this);
@@ -68,7 +69,7 @@ namespace AfishA
                 labl.ForeColor = SystemColors.ControlDark;
                 labl.TextAlign = ContentAlignment.MiddleCenter;
                 x = x + 190;
-                if (x + 190 > 605)
+                if (x + 190 > panel1.Width)
                 {
                     x = 10;
                     y = y + 185;
@@ -80,11 +81,10 @@ namespace AfishA
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            UserControl f = new UserControl();
             Label lbl = (Label)sender;
-            f = new participants(lbl.Text);
-            panel1.Controls.Clear();
-            panel1.Controls.Add(f);
+            participants f = new participants(lbl.Text);
+            Program.panel1.Controls.Clear();
+            Program.panel1.Controls.Add(f);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -126,7 +126,7 @@ namespace AfishA
                     labl.ForeColor = SystemColors.ControlDark;
                     labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 190;
-                    if (x + 190 > 605)
+                    if (x + 190 > panel1.Width)
                     {
                         x = 10;
                         y = y + 185;
@@ -171,7 +171,7 @@ namespace AfishA
                     labl.ForeColor = SystemColors.ControlDark;
                     labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 190;
-                    if (x + 190 > 605)
+                    if (x + 190 > panel1.Width)
                     {
                         x = 10;
                         y = y + 185;
@@ -216,7 +216,7 @@ namespace AfishA
                     labl.ForeColor = SystemColors.ControlDark;
                     labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 190;
-                    if (x + 190 > 605)
+                    if (x + 190 > panel1.Width)
                     {
                         x = 10;
                         y = y + 185;
@@ -227,16 +227,6 @@ namespace AfishA
                 }
             }
             #endregion
-        }
-
-        private void parts_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void parts_Load_1(object sender, EventArgs e)
-        {
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

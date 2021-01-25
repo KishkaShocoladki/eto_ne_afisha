@@ -78,12 +78,14 @@ namespace AfishA
             if (type == "ФЕСТИВАЛЬ")
             {
                 sobytie f = new sobytie(lbl.Text);
-                f.Show();
+                Program.panel1.Controls.Clear();
+                Program.panel1.Controls.Add(f);
             }
             else if (type == "СОЛО КОНЦЕРТ") 
             {
                 solo f = new solo(lbl.Text);
-                f.Show();
+                Program.panel1.Controls.Clear();
+                Program.panel1.Controls.Add(f);
             }
         }
 

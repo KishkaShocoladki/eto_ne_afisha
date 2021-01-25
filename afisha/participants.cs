@@ -19,6 +19,7 @@ namespace AfishA
         {
             name = nm;
             InitializeComponent();
+           // MessageBox.Show(Convert.ToString(Program.navigation_pos));
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
             Program.navigation.Add(this);
@@ -160,13 +161,15 @@ namespace AfishA
         {
             Label lbl = (Label)sender;
             solo f = new solo(lbl.Text);
-            f.Show();
+            Program.panel1.Controls.Clear();
+            Program.panel1.Controls.Add(f);
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
             sobytie f = new sobytie(lbl.Text);
-            f.Show();
+            Program.panel1.Controls.Clear();
+            Program.panel1.Controls.Add(f);
         }
        //PLAY
             #region
@@ -217,12 +220,7 @@ namespace AfishA
             wmp.URL = "_.mp3";
         }
 
-        private void participants_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

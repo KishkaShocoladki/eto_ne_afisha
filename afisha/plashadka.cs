@@ -76,7 +76,7 @@ namespace AfishA
                 labl.ForeColor = SystemColors.ControlDark;
                 labl.TextAlign = ContentAlignment.MiddleCenter;
                 x = x + 190;
-                if (x + 190 > 605)
+                if (x + 190 > panel1.Width)
                 {
                     x = 10;
                     y = y + 185;
@@ -130,7 +130,7 @@ namespace AfishA
                     labl.ForeColor = SystemColors.ControlDark;
                     labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 190;
-                    if (x + 190 > 605)
+                    if (x + 190 > panel1.Width)
                     {
                         x = 10;
                         y = y + 185;
@@ -146,7 +146,8 @@ namespace AfishA
         {
             Label lbl = (Label)sender;
             ploshka f = new ploshka(lbl.Text);
-            f.Show();
+            Program.panel1.Controls.Clear();
+            Program.panel1.Controls.Add(f);
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

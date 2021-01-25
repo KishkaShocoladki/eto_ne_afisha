@@ -64,7 +64,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(379, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(422, 275);
+            this.pictureBox1.Size = new System.Drawing.Size(422, 287);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -100,7 +100,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(358, 160);
+            this.textBox1.Size = new System.Drawing.Size(358, 169);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "кароч описание";
             // 
@@ -120,7 +120,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Console", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(15, 278);
+            this.label4.Location = new System.Drawing.Point(15, 287);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 14);
@@ -132,11 +132,12 @@
             this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(808, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 253);
+            this.panel1.Size = new System.Drawing.Size(236, 482);
             this.panel1.TabIndex = 6;
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.label8);
@@ -146,9 +147,9 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(16, 295);
+            this.panel2.Location = new System.Drawing.Point(16, 307);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(515, 173);
+            this.panel2.Size = new System.Drawing.Size(440, 197);
             this.panel2.TabIndex = 7;
             // 
             // button6
@@ -256,17 +257,16 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(534, 295);
+            this.panel3.Location = new System.Drawing.Point(462, 307);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(510, 89);
+            this.panel3.Size = new System.Drawing.Size(339, 89);
             this.panel3.TabIndex = 9;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(535, 278);
+            this.label10.Location = new System.Drawing.Point(466, 290);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(223, 14);
@@ -275,26 +275,27 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(534, 405);
+            this.panel4.Location = new System.Drawing.Point(462, 418);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(510, 62);
+            this.panel4.Size = new System.Drawing.Size(339, 86);
             this.panel4.TabIndex = 12;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(538, 388);
+            this.label9.Location = new System.Drawing.Point(463, 401);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(207, 14);
             this.label9.TabIndex = 13;
             this.label9.Text = "БУДУЩИЕ СОЛЬНЫЕ КОНЦЕРТЫ:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // participants
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.label9);
@@ -315,8 +316,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximumSize = new System.Drawing.Size(1265, 600);
             this.Name = "participants";
-            this.Size = new System.Drawing.Size(1054, 474);
-            this.Load += new System.EventHandler(this.participants_Load);
+            this.Size = new System.Drawing.Size(1054, 507);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

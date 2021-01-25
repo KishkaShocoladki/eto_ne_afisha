@@ -117,7 +117,8 @@ namespace AfishA
         {
             Label lbl = (Label)sender;
             participants f = new participants(lbl.Text);
-            f.Show();
+            Program.panel1.Controls.Clear();
+            Program.panel1.Controls.Add(f);
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
