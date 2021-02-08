@@ -188,6 +188,7 @@
             this.Controls.Add(this.button1);
             this.Name = "designTupoy";
             this.Text = "designTupoy";
+            this.Load += new System.EventHandler(this.designTupoy_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
