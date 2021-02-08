@@ -31,22 +31,26 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("главная");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("исполнители");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("площадки");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("главная");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("исполнители");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("площадки");
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.блин = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.блин.SuspendLayout();
             this.SuspendLayout();
             // 
             // button5
@@ -119,6 +123,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button5);
@@ -129,6 +134,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1064, 26);
             this.panel2.TabIndex = 29;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(477, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 22);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "хрен знает что";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
             // 
@@ -158,18 +177,18 @@
             this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.treeView1.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.treeView1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.treeView1.Location = new System.Drawing.Point(4, 30);
+            this.treeView1.Location = new System.Drawing.Point(4, 28);
             this.treeView1.Name = "treeView1";
-            treeNode13.Name = "Узел0";
-            treeNode13.Text = "главная";
-            treeNode14.Name = "Узел1";
-            treeNode14.Text = "исполнители";
-            treeNode15.Name = "Узел2";
-            treeNode15.Text = "площадки";
+            treeNode7.Name = "Узел0";
+            treeNode7.Text = "главная";
+            treeNode8.Name = "Узел1";
+            treeNode8.Text = "исполнители";
+            treeNode9.Name = "Узел2";
+            treeNode9.Text = "площадки";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14,
-            treeNode15});
+            treeNode7,
+            treeNode8,
+            treeNode9});
             this.treeView1.Size = new System.Drawing.Size(238, 552);
             this.treeView1.TabIndex = 28;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -177,6 +196,21 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // блин
+            // 
+            this.блин.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.блин.Name = "contextMenuStrip1";
+            this.блин.Size = new System.Drawing.Size(181, 48);
+            this.блин.Text = "блин";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // main
             // 
@@ -201,6 +235,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.блин.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -216,6 +251,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip блин;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

@@ -29,20 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("посмотреть всех пользователей");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("посмотреть все отзывы");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("посмотреть все забронированные мероприятия");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("посмотреть все мероприятия");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("посмотреть всех участников");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("посмотреть все площадки");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("че то посмотреть", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("добавление");
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,8 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -252,44 +236,10 @@
             this.panel11.Controls.Add(this.button6);
             this.panel11.Controls.Add(this.button7);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(527, 0);
+            this.panel11.Location = new System.Drawing.Point(-2, 0);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(588, 349);
             this.panel11.TabIndex = 13;
-            // 
-            // treeView1
-            // 
-            this.treeView1.BackColor = System.Drawing.SystemColors.Info;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Узел1";
-            treeNode1.Text = "посмотреть всех пользователей";
-            treeNode2.Name = "Узел4";
-            treeNode2.Text = "посмотреть все отзывы";
-            treeNode3.Name = "Узел5";
-            treeNode3.Text = "посмотреть все забронированные мероприятия";
-            treeNode4.Name = "Узел7";
-            treeNode4.Text = "посмотреть все мероприятия";
-            treeNode5.Name = "Узел8";
-            treeNode5.Text = "посмотреть всех участников";
-            treeNode6.Name = "Узел9";
-            treeNode6.Text = "посмотреть все площадки";
-            treeNode7.Name = "Узел0";
-            treeNode7.Text = "че то посмотреть";
-            treeNode8.Name = "Узел10";
-            treeNode8.Text = "добавление";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8});
-            this.treeView1.Size = new System.Drawing.Size(215, 349);
-            this.treeView1.TabIndex = 13;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(221, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 349);
-            this.panel1.TabIndex = 14;
             // 
             // user
             // 
@@ -297,9 +247,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1115, 349);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.treeView1);
+            this.ClientSize = new System.Drawing.Size(586, 349);
             this.Controls.Add(this.panel11);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -328,7 +276,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Panel panel1;
     }
 }

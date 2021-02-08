@@ -145,6 +145,24 @@ namespace AfishA
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            designTupoy f = new designTupoy();
+            f.ShowDialog();
+           
+            BackColor = f.colour;
+            Font = f.font;
+            ForeColor = f.foreColor;
+        }
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            designTupoy f = new designTupoy();
+            f.ShowDialog();
+
+            BackColor = f.colour;
+            Font = f.font;
+        }
     }
 }
 

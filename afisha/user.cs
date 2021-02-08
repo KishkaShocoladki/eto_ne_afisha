@@ -115,6 +115,11 @@ namespace AfishA
             ERRORFORM f = new ERRORFORM();
             f.Show();
         }
+
+        private void button10_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

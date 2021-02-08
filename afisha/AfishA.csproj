@@ -146,6 +146,12 @@
     <Compile Include="change.Designer.cs">
       <DependentUpon>change.cs</DependentUpon>
     </Compile>
+    <Compile Include="designTupoy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designTupoy.Designer.cs">
+      <DependentUpon>designTupoy.cs</DependentUpon>
+    </Compile>
     <Compile Include="ERROR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="change.resx">
       <DependentUpon>change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designTupoy.resx">
+      <DependentUpon>designTupoy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ERROR.resx">
       <DependentUpon>ERROR.cs</DependentUpon>
