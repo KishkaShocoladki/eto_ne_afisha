@@ -154,14 +154,14 @@ namespace AfishA
             designTupoy.ApplyDesign(panel1);
             designTupoy.ApplyDesign(panel2);
         }
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+       /* private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             designTupoy f = new designTupoy();
             f.ShowDialog();
 
             BackColor = f.colour;
             Font = f.font;
-        }
+        }*/
     }
 }
 
