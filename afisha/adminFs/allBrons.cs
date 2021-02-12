@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AfishA
 {
-    public partial class allBrons : Form
+    public partial class allBrons : UserControl
     {
         public allBrons()
         {

@@ -80,6 +80,10 @@ namespace AfishA
             if (Program.user != "_")
             {
                 user f = new user();
+                if(Program.user != "admin")
+                {
+                    f.Width = 596;
+                }
                 f.Show();
             }
         }

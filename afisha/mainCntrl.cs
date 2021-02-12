@@ -170,22 +170,24 @@ namespace AfishA
         {
             for (int i = 0; i < sobytia.Count; i = i + 1)//sobytia.Count
             {
-                if (sobytia[i].type == "ФЕСТИВАЛЬ")
+                if (((PictureBox)sender).Image == sobytia[i].picB.Image)
                 {
-                    //if (((PictureBox)sender).Image == sobytia[i].picB.Image)
-
-                    PictureBox pic = (PictureBox)sender;
-                    sobytie f = new sobytie(pic.Text);
-                    Program.panel1.Controls.Clear();
-                    Program.panel1.Controls.Add(f);
-
-                }
-                else if (sobytia[i].type == "СОЛО КОНЦЕРТ")
-                {
-                    PictureBox pic = (PictureBox)sender;
-                    solo f = new solo(pic.Text);
-                    Program.panel1.Controls.Clear();
-                    Program.panel1.Controls.Add(f);
+                    if (sobytia[i].type == "ФЕСТИВАЛЬ")
+                    {
+                        PictureBox pic = (PictureBox)sender;
+                        sobytie f = new sobytie(pic.Text);
+                        Program.panel1.Controls.Clear();
+                        Program.panel1.Controls.Add(f);
+                        break;
+                    }
+                    else if (sobytia[i].type == "СОЛО КОНЦЕРТ")
+                    {
+                        PictureBox pic = (PictureBox)sender;
+                        solo f = new solo(pic.Text);
+                        Program.panel1.Controls.Clear();
+                        Program.panel1.Controls.Add(f);
+                        break;
+                    }
                 }
             }
         }

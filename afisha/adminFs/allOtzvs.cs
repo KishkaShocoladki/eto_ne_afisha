@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AfishA
 {
-    public partial class allOtzvs : Form
+    public partial class allOtzvs : UserControl
     {
         public allOtzvs()
         {

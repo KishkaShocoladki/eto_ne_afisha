@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AfishA
 {
-    public partial class allPloshks : Form
+    public partial class allPloshks : UserControl
     {
         public allPloshks()
         {

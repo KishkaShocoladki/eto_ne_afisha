@@ -146,10 +146,22 @@
     <Compile Include="change.Designer.cs">
       <DependentUpon>change.cs</DependentUpon>
     </Compile>
-    <Compile Include="designTupoy.cs">
+    <Compile Include="adminFs\config.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminFs\config.Designer.cs">
+      <DependentUpon>config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFs\configs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminFs\configs.Designer.cs">
+      <DependentUpon>configs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminFs\designTupoy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="designTupoy.Designer.cs">
+    <Compile Include="adminFs\designTupoy.Designer.cs">
       <DependentUpon>designTupoy.cs</DependentUpon>
     </Compile>
     <Compile Include="ERROR.cs">
@@ -238,6 +250,12 @@
     <Compile Include="user.Designer.cs">
       <DependentUpon>user.cs</DependentUpon>
     </Compile>
+    <Compile Include="userCntrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userCntrl.Designer.cs">
+      <DependentUpon>userCntrl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="adminFs\adding.resx">
       <DependentUpon>adding.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,7 +301,13 @@
     <EmbeddedResource Include="change.resx">
       <DependentUpon>change.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="designTupoy.resx">
+    <EmbeddedResource Include="adminFs\config.resx">
+      <DependentUpon>config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFs\configs.resx">
+      <DependentUpon>configs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminFs\designTupoy.resx">
       <DependentUpon>designTupoy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ERROR.resx">
@@ -337,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="user.resx">
       <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userCntrl.resx">
+      <DependentUpon>userCntrl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
