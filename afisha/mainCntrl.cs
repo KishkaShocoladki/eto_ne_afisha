@@ -42,6 +42,7 @@ namespace AfishA
         public mainCntrl(Panel _panel1)
         {
             panel = _panel1;
+            designTupoy.ApplyDesign(this);
             InitializeComponent();
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);

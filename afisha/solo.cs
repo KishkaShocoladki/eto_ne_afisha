@@ -17,6 +17,7 @@ namespace AfishA
         {
             sbyt = name;
             InitializeComponent();
+            designTupoy.ApplyDesign(this);
             Program.navigation.Add(this);
 
             List<string> parts = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");

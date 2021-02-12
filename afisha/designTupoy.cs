@@ -12,9 +12,9 @@ namespace AfishA
 {
     public partial class designTupoy : Form
     {
-        public Color colour;
-        public Font font;
-        public Color foreColor;
+        public static Color colour;
+        public static Font font;
+        public static Color foreColor;
 
         public static void ApplyDesign(Control form)
         {
