@@ -111,6 +111,8 @@ namespace AfishA
         {
             designTupoy f = new designTupoy();
             f.ShowDialog();
+
+            designTupoy.ApplyDesign(this);
         }
     }
 }

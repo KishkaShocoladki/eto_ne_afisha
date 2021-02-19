@@ -16,9 +16,22 @@ namespace AfishA
     public partial class main : Form
     {
         public static List<Ivent> sobytia = new List<Ivent>();
+        private void main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.color = designTupoy.colour;
+            Properties.Settings.Default.Save();
+        }
         public main()
         {
             InitializeComponent();
+
+            designTupoy.colour = Properties.Settings.Default.color;
+            designTupoy.ApplyDesign(this);
+            treeView1.BackColor = Properties.Settings.Default.color;
+            foreach (Control ctrl in panel1.Controls)
+                designTupoy.ApplyDesign(ctrl);
+
+
             Program.panel1 = panel1;
 
             List<string> prt = Program.Select("SELECT name FROM `participants`");
@@ -84,7 +97,10 @@ namespace AfishA
                 {
                     f.Width = 596;
                 }
-                f.Show();
+                f.ShowDialog();
+
+                designTupoy.ApplyDesign(this);
+                treeView1.BackColor = Properties.Settings.Default.color;
             }
         }
 
@@ -158,14 +174,15 @@ namespace AfishA
             designTupoy.ApplyDesign(panel1);
             designTupoy.ApplyDesign(panel2);
         }
-       /* private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            designTupoy f = new designTupoy();
-            f.ShowDialog();
 
-            BackColor = f.colour;
-            Font = f.font;
-        }*/
+        /* private void toolStripMenuItem1_Click(object sender, EventArgs e)
+{
+    designTupoy f = new designTupoy();
+    f.ShowDialog();
+
+    BackColor = f.colour;
+    Font = f.font;
+}*/
     }
 }
 

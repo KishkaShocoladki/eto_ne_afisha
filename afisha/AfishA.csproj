@@ -146,18 +146,6 @@
     <Compile Include="change.Designer.cs">
       <DependentUpon>change.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminFs\config.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="adminFs\config.Designer.cs">
-      <DependentUpon>config.cs</DependentUpon>
-    </Compile>
-    <Compile Include="adminFs\configs.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="adminFs\configs.Designer.cs">
-      <DependentUpon>configs.cs</DependentUpon>
-    </Compile>
     <Compile Include="adminFs\designTupoy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,12 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="change.resx">
       <DependentUpon>change.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="adminFs\config.resx">
-      <DependentUpon>config.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="adminFs\configs.resx">
-      <DependentUpon>configs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminFs\designTupoy.resx">
       <DependentUpon>designTupoy.cs</DependentUpon>

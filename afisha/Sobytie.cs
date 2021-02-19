@@ -38,6 +38,8 @@ namespace AfishA
         {
             name = sob;
             InitializeComponent();
+            designTupoy.ApplyDesign(this);
+            textBox1.BackColor = Properties.Settings.Default.color;
             Program.navigation.Add(this);
             List<string> history = Program.Select("SELECT dt FROM `history` WHERE ivent='" + name + "'");
             for (int i = 0; i < history.Count; i = i + 1)

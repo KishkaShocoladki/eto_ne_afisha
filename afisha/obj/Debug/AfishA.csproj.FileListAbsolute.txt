@@ -169,5 +169,3 @@ C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.ERRORFORM.resou
 C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.mainCntrl.resources
 C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.designTupoy.resources
 C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.userCntrl.resources
-C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.configs.resources
-C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.config.resources

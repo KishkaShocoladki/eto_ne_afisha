@@ -36,12 +36,12 @@ namespace AfishA.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Drawing.Font font {
+        public global::System.Drawing.Color forecolor {
             get {
-                return ((global::System.Drawing.Font)(this["font"]));
+                return ((global::System.Drawing.Color)(this["forecolor"]));
             }
             set {
-                this["font"] = value;
+                this["forecolor"] = value;
             }
         }
     }

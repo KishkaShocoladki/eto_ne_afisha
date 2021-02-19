@@ -5,7 +5,7 @@
     <Setting Name="color" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="font" Type="System.Drawing.Font" Scope="User">
+    <Setting Name="forecolor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

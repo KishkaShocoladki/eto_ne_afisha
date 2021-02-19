@@ -19,6 +19,8 @@ namespace AfishA
         {
             ploshk = plosh;
             InitializeComponent();
+            designTupoy.ApplyDesign(this);
+            textBox1.BackColor = Properties.Settings.Default.color;
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
             Program.navigation.Add(this);

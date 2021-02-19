@@ -130,6 +130,7 @@
             this.Controls.Add(this.label1);
             this.Name = "parts";
             this.Size = new System.Drawing.Size(799, 539);
+            this.Load += new System.EventHandler(this.parts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

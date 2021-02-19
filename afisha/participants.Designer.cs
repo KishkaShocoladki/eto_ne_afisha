@@ -317,6 +317,7 @@
             this.MaximumSize = new System.Drawing.Size(1265, 600);
             this.Name = "participants";
             this.Size = new System.Drawing.Size(1054, 507);
+            this.Load += new System.EventHandler(this.participants_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

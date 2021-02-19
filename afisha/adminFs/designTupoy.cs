@@ -13,77 +13,91 @@ namespace AfishA
     public partial class designTupoy : Form
     {
         public static Color colour;
-        public static Font font;
-        public static Color foreColor;
+        public static Color forecolor;
 
         public static void ApplyDesign(Control form)
         {
             form.BackColor = colour;
-            form.Font = font;
-            form.ForeColor = foreColor;
-
+            form.ForeColor = forecolor;
         }
         public designTupoy()
         {
             InitializeComponent();
-            UserControl f = new UserControl();
-            f = new config();
-            panel1.Controls.Add(f);
-            button6.Visible = false;
+            colour = Properties.Settings.Default.color;
         }
+        //BACKГРАУНДЫ
         #region
-        private void button1_Click(object sender, EventArgs e)
+        private void backG1_CheckedChanged(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-                colour = colorDialog1.Color;
+            colour = Color.FromArgb(19, 19, 21);
+            Properties.Settings.Default.color = colour;
+            preButt.BackColor = colour;
+        }      
+        private void backG2_CheckedChanged(object sender, EventArgs e)
+        {
+            colour = Color.FromArgb(170, 240, 209);
+            Properties.Settings.Default.color = colour;
+            preButt.BackColor = colour;
         }
 
-        private void F1_CheckedChanged(object sender, EventArgs e)
+        private void backG3_CheckedChanged(object sender, EventArgs e)
         {
-            font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            colour = Color.FromArgb(255, 140, 105);
+            Properties.Settings.Default.color = colour;
+            preButt.BackColor = colour;
         }
 
-        private void F2_CheckedChanged(object sender, EventArgs e)
+        private void backG4_CheckedChanged(object sender, EventArgs e)
         {
-            font = new Font("Lucida Console", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            colour = Color.FromArgb(94, 33, 41);
+            Properties.Settings.Default.color = colour;
+            preButt.BackColor = colour;
         }
 
-        private void F3_CheckedChanged(object sender, EventArgs e)
+        private void backG5_CheckedChanged(object sender, EventArgs e)
         {
-            font = new Font("OCR A Extended", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            colour = Color.FromArgb(106, 90, 205);
+            Properties.Settings.Default.color = colour;
+            preButt.BackColor = colour;
         }
 
-        private void F4_CheckedChanged(object sender, EventArgs e)
+        private void backG6_CheckedChanged(object sender, EventArgs e)
         {
-            font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            colour = Color.FromArgb(120, 219, 226);
+            Properties.Settings.Default.color = colour;
+            preButt.BackColor = colour;
+        }
+        #endregion
+        //ТНЕМЕС
+        private void theme1_CheckedChanged(object sender, EventArgs e)
+        {
+            forecolor = Color.FromArgb(208, 208, 208);
+            colour = Color.FromArgb(30, 30, 30);
+            Properties.Settings.Default.color = colour;
+            Properties.Settings.Default.forecolor = forecolor;
         }
 
-        private void FC1_CheckedChanged(object sender, EventArgs e)
+        private void theme3_CheckedChanged(object sender, EventArgs e)
         {
-            foreColor = Color.White;
+            forecolor = Color.FromArgb(30, 30, 30);
+            colour = Color.FromArgb(119, 208, 204);
+            Properties.Settings.Default.color = colour;
+            Properties.Settings.Default.forecolor = forecolor;
         }
 
-        private void FC2_CheckedChanged(object sender, EventArgs e)
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            foreColor = Color.Black;
+            forecolor = Color.FromArgb(30, 30, 30);
         }
 
-        private void FC3_CheckedChanged(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            foreColor = Color.Yellow;
+            forecolor = Color.FromArgb(208, 208, 208);
         }
 
-        private void FC4_CheckedChanged(object sender, EventArgs e)
+        private void designTupoy_Load(object sender, EventArgs e)
         {
-            foreColor = Color.Crimson;
-        }
-#endregion
-        private void button6_Click(object sender, EventArgs e)
-        {
-            UserControl f = new UserControl();
-            f = new config();
-            panel1.Controls.Clear();
-            panel1.Controls.Add(f);
+
         }
     }
 }

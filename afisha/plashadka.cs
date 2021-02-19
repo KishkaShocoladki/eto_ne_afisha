@@ -36,6 +36,7 @@ namespace AfishA
         public plashadka()
         {
             InitializeComponent();
+            designTupoy.ApplyDesign(this);
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
             Program.navigation.Add(this);
@@ -66,7 +67,7 @@ namespace AfishA
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 lbl.ForeColor = SystemColors.ButtonFace;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.Click += new EventHandler(button2_Click);
+                lbl.Click += new EventHandler(button3_Click);
 
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 160);
@@ -120,7 +121,7 @@ namespace AfishA
                     lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                     lbl.ForeColor = SystemColors.ButtonFace;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
-                    lbl.Click += new EventHandler(button2_Click);
+                    lbl.Click += new EventHandler(button3_Click);
 
                     Label labl = new Label();
                     labl.Location = new Point(x, y + 160);

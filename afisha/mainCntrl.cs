@@ -41,9 +41,9 @@ namespace AfishA
         public static List<Ivent> sobytia = new List<Ivent>();
         public mainCntrl(Panel _panel1)
         {
-            panel = _panel1;
-            designTupoy.ApplyDesign(this);
+            panel = _panel1;         
             InitializeComponent();
+            designTupoy.ApplyDesign(this);
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
             Program.navigation.Add(this);

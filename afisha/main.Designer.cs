@@ -31,16 +31,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("главная");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("исполнители");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("площадки");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("главная");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("исполнители");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("площадки");
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -123,7 +122,6 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button5);
@@ -134,20 +132,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1064, 26);
             this.panel2.TabIndex = 29;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(477, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 22);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "хрен знает что";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
             // 
@@ -179,16 +163,16 @@
             this.treeView1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.treeView1.Location = new System.Drawing.Point(4, 28);
             this.treeView1.Name = "treeView1";
-            treeNode7.Name = "Узел0";
-            treeNode7.Text = "главная";
-            treeNode8.Name = "Узел1";
-            treeNode8.Text = "исполнители";
-            treeNode9.Name = "Узел2";
-            treeNode9.Text = "площадки";
+            treeNode4.Name = "Узел0";
+            treeNode4.Text = "главная";
+            treeNode5.Name = "Узел1";
+            treeNode5.Text = "исполнители";
+            treeNode6.Name = "Узел2";
+            treeNode6.Text = "площадки";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9});
+            treeNode4,
+            treeNode5,
+            treeNode6});
             this.treeView1.Size = new System.Drawing.Size(238, 552);
             this.treeView1.TabIndex = 28;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -202,7 +186,7 @@
             this.блин.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.блин.Name = "contextMenuStrip1";
-            this.блин.Size = new System.Drawing.Size(181, 48);
+            this.блин.Size = new System.Drawing.Size(181, 26);
             this.блин.Text = "блин";
             // 
             // toolStripMenuItem1
@@ -230,6 +214,7 @@
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АФИША";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_FormClosing);
             this.Load += new System.EventHandler(this.main_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -250,7 +235,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ContextMenuStrip блин;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }

@@ -19,7 +19,9 @@ namespace AfishA
         {
             name = nm;
             InitializeComponent();
-           // MessageBox.Show(Convert.ToString(Program.navigation_pos));
+            designTupoy.ApplyDesign(this);
+            textBox1.BackColor = Properties.Settings.Default.color;
+            // MessageBox.Show(Convert.ToString(Program.navigation_pos));
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
             Program.navigation.Add(this);
@@ -39,6 +41,8 @@ namespace AfishA
             label5.Location = new Point(16, 70);
             label5.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
           
+            //
+
             //ЗАПОЛНЕНИЕ ПАНЕЛЬКИ СНИЗУ (ПРЕДЫДУЩИЕ И БУДУЩИЕ(СОЛЬНЫЕ) ВЫСТУПЛЕНИЯ)
             int his = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `history` WHERE participant='" + name + "'")[0]);
             int fut = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `ivents` WHERE name='" + name + "'")[0]);
@@ -221,6 +225,11 @@ namespace AfishA
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void participants_Load(object sender, EventArgs e)
         {
 
         }

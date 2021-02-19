@@ -18,6 +18,8 @@ namespace AfishA
             sbyt = name;
             InitializeComponent();
             designTupoy.ApplyDesign(this);
+            textBox1.BackColor = Properties.Settings.Default.color;
+
             Program.navigation.Add(this);
 
             List<string> parts = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");

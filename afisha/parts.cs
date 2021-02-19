@@ -16,6 +16,8 @@ namespace AfishA
         public parts()
         {
             InitializeComponent();
+            designTupoy.ApplyDesign(this);
+            panel1.BackColor = Properties.Settings.Default.color;
             //MessageBox.Show(Convert.ToString(Program.navigation_pos));
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
@@ -230,6 +232,11 @@ namespace AfishA
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void parts_Load(object sender, EventArgs e)
         {
 
         }
