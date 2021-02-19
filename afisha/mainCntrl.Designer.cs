@@ -92,6 +92,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(226, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button4
             // 
@@ -106,6 +107,7 @@
             this.button4.TabIndex = 27;
             this.button4.Text = "ПОИСК";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // comboBox2
             // 
@@ -184,6 +186,7 @@
             this.button3.TabIndex = 24;
             this.button3.Text = "ПОИСК";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // label2
             // 
@@ -263,6 +266,7 @@
             this.button7.TabIndex = 21;
             this.button7.Text = "ПОСМОТРЕТЬ ВСЕХ МУЗЫКАНТОВ";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button1
             // 
@@ -277,6 +281,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "ПОСМОТРЕТЬ ВСЕ ПЛОЩАДКИ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -291,6 +296,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "ПОИСК";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dateTimePicker1
             // 

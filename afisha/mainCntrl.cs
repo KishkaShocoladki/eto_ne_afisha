@@ -118,12 +118,40 @@ namespace AfishA
             }
 
         }
+        //ФОРМА СО ВСЕМИ ПЛОЩАДКАМИ
         private void button1_Click(object sender, EventArgs e)
         {
             plashadka fm = new plashadka();
             panel1.Controls.Clear();
             panel1.Controls.Add(fm);
         }
+        //ОТКРЫТИЕ СОБЫТИЙ
+        private void button3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < sobytia.Count; i = i + 1)//sobytia.Count
+            {
+                if (((PictureBox)sender).Image == sobytia[i].picB.Image)
+                {
+                    if (sobytia[i].type == "ФЕСТИВАЛЬ")
+                    {
+                        PictureBox pic = (PictureBox)sender;
+                        sobytie f = new sobytie(pic.Text);
+                        Program.panel1.Controls.Clear();
+                        Program.panel1.Controls.Add(f);
+                        break;
+                    }
+                    else if (sobytia[i].type == "СОЛО КОНЦЕРТ")
+                    {
+                        PictureBox pic = (PictureBox)sender;
+                        solo f = new solo(pic.Text);
+                        Program.panel1.Controls.Clear();
+                        Program.panel1.Controls.Add(f);
+                        break;
+                    }
+                }
+            }
+        }
+        //ТРИ ФИЛЬТРА СЛЕВА
         private void button2_Click(object sender, EventArgs e)
         {
             int x = 10;
@@ -166,45 +194,20 @@ namespace AfishA
                 }
             }
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < sobytia.Count; i = i + 1)//sobytia.Count
-            {
-                if (((PictureBox)sender).Image == sobytia[i].picB.Image)
-                {
-                    if (sobytia[i].type == "ФЕСТИВАЛЬ")
-                    {
-                        PictureBox pic = (PictureBox)sender;
-                        sobytie f = new sobytie(pic.Text);
-                        Program.panel1.Controls.Clear();
-                        Program.panel1.Controls.Add(f);
-                        break;
-                    }
-                    else if (sobytia[i].type == "СОЛО КОНЦЕРТ")
-                    {
-                        PictureBox pic = (PictureBox)sender;
-                        solo f = new solo(pic.Text);
-                        Program.panel1.Controls.Clear();
-                        Program.panel1.Controls.Add(f);
-                        break;
-                    }
-                }
-            }
-        }
-       
-
+        //ЗАМЕНА ЭЛЕМЕНТОВ КОМБОБОКСА С ПЛОЩАДКАМИ В ЗАВИСИМОСТИ ОТ ВЫБРАННОЙ СТРАНЫ
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<string> fillPlosh = Program.Select("SELECT DISTINCT area FROM ivents WHERE country ='" + Convert.ToString(comboBox1.SelectedItem) + "'");
             comboBox4.DataSource = fillPlosh;
         }
-
+        //ФОРМА СО ВСЕМИ УЧАСТНИКАМИ
         private void button7_Click(object sender, EventArgs e)
         {
             parts f = new parts();
             Program.panel1.Controls.Clear();
             Program.panel1.Controls.Add(f);
         }
+        //ФИЛЬТР ПО ЖАНРУ ИСПОЛНИТЕЛЕЙ
         private void button3_Click_1(object sender, EventArgs e)
         {
             if (comboBox3.Text != "")
@@ -256,6 +259,7 @@ namespace AfishA
 
             }
         }
+        //ФИЛЬТР ПО ДАТЕ
         private void button4_Click(object sender, EventArgs e)
         {
             string yMd = dateTimePicker1.Value.ToString("yyyy-MM-dd");
