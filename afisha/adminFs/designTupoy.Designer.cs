@@ -64,6 +64,7 @@
             tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             tabControl1.Font = new System.Drawing.Font("OCR A Extended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabControl1.Location = new System.Drawing.Point(0, 0);
+            tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new System.Drawing.Size(597, 377);
@@ -83,7 +84,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(589, 347);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "THEMES";
+            this.tabPage2.Text = "ТЕМЫ это кто(who)";
             // 
             // theme3
             // 
@@ -92,11 +93,11 @@
             this.theme3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.theme3.Font = new System.Drawing.Font("PerfectDOSVGA437", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.theme3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.theme3.Location = new System.Drawing.Point(8, 100);
+            this.theme3.Location = new System.Drawing.Point(3, 112);
             this.theme3.Name = "theme3";
-            this.theme3.Size = new System.Drawing.Size(145, 41);
+            this.theme3.Size = new System.Drawing.Size(277, 41);
             this.theme3.TabIndex = 24;
-            this.theme3.Text = "LIGHt";
+            this.theme3.Text = "светленькая";
             this.theme3.UseVisualStyleBackColor = false;
             this.theme3.CheckedChanged += new System.EventHandler(this.theme3_CheckedChanged);
             // 
@@ -108,9 +109,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(214, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 48);
+            this.label2.Size = new System.Drawing.Size(132, 48);
             this.label2.TabIndex = 22;
-            this.label2.Text = "THEMES";
+            this.label2.Text = "ТЕМЫ";
             // 
             // theme1
             // 
@@ -119,11 +120,11 @@
             this.theme1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.theme1.Font = new System.Drawing.Font("PerfectDOSVGA437", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.theme1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.theme1.Location = new System.Drawing.Point(8, 53);
+            this.theme1.Location = new System.Drawing.Point(8, 65);
             this.theme1.Name = "theme1";
-            this.theme1.Size = new System.Drawing.Size(123, 41);
+            this.theme1.Size = new System.Drawing.Size(255, 41);
             this.theme1.TabIndex = 13;
-            this.theme1.Text = "DArk";
+            this.theme1.Text = "темненькая";
             this.theme1.UseVisualStyleBackColor = false;
             this.theme1.CheckedChanged += new System.EventHandler(this.theme1_CheckedChanged);
             // 
@@ -145,7 +146,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(589, 347);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "BACKGROUNDS";
+            this.tabPage3.Text = "ФОНЫ СТРАНИЧЕК";
             // 
             // preButt
             // 
@@ -168,9 +169,9 @@
             this.backG2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backG2.Location = new System.Drawing.Point(8, 109);
             this.backG2.Name = "backG2";
-            this.backG2.Size = new System.Drawing.Size(211, 34);
+            this.backG2.Size = new System.Drawing.Size(197, 34);
             this.backG2.TabIndex = 26;
-            this.backG2.Text = "MAGIC MINT";
+            this.backG2.Text = "мэджик мент";
             this.backG2.UseVisualStyleBackColor = false;
             this.backG2.CheckedChanged += new System.EventHandler(this.backG2_CheckedChanged);
             // 
@@ -183,9 +184,9 @@
             this.backG4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backG4.Location = new System.Drawing.Point(8, 189);
             this.backG4.Name = "backG4";
-            this.backG4.Size = new System.Drawing.Size(175, 34);
+            this.backG4.Size = new System.Drawing.Size(147, 34);
             this.backG4.TabIndex = 25;
-            this.backG4.Text = "WINE RED";
+            this.backG4.Text = "вине ред";
             this.backG4.UseVisualStyleBackColor = false;
             this.backG4.CheckedChanged += new System.EventHandler(this.backG4_CheckedChanged);
             // 
@@ -198,9 +199,9 @@
             this.backG3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backG3.Location = new System.Drawing.Point(8, 149);
             this.backG3.Name = "backG3";
-            this.backG3.Size = new System.Drawing.Size(139, 34);
+            this.backG3.Size = new System.Drawing.Size(131, 34);
             this.backG3.TabIndex = 24;
-            this.backG3.Text = "SALMON";
+            this.backG3.Text = "сальмон";
             this.backG3.UseVisualStyleBackColor = false;
             this.backG3.CheckedChanged += new System.EventHandler(this.backG3_CheckedChanged);
             // 
@@ -213,9 +214,9 @@
             this.backG5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backG5.Location = new System.Drawing.Point(8, 229);
             this.backG5.Name = "backG5";
-            this.backG5.Size = new System.Drawing.Size(373, 34);
+            this.backG5.Size = new System.Drawing.Size(294, 34);
             this.backG5.TabIndex = 23;
-            this.backG5.Text = "MODERATE SLATE BLUE";
+            this.backG5.Text = "модерате слате блю";
             this.backG5.UseVisualStyleBackColor = false;
             this.backG5.CheckedChanged += new System.EventHandler(this.backG5_CheckedChanged);
             // 
@@ -229,10 +230,10 @@
             this.backG6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backG6.Location = new System.Drawing.Point(8, 269);
             this.backG6.Name = "backG6";
-            this.backG6.Size = new System.Drawing.Size(355, 34);
+            this.backG6.Size = new System.Drawing.Size(274, 34);
             this.backG6.TabIndex = 22;
             this.backG6.TabStop = true;
-            this.backG6.Text = "AQUAMARINE CRAYOLA";
+            this.backG6.Text = "аквамарин крайола";
             this.backG6.UseVisualStyleBackColor = false;
             this.backG6.CheckedChanged += new System.EventHandler(this.backG6_CheckedChanged);
             // 
@@ -240,13 +241,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("OCR A Extended", 26.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("PerfectDOSVGA437", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(171, 20);
+            this.label1.Location = new System.Drawing.Point(134, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 37);
+            this.label1.Size = new System.Drawing.Size(309, 35);
             this.label1.TabIndex = 21;
-            this.label1.Text = "BACKGROUNDS";
+            this.label1.Text = "ФОНЫ СТРАНИЧЕК";
             // 
             // backG1
             // 
@@ -257,9 +258,9 @@
             this.backG1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backG1.Location = new System.Drawing.Point(8, 69);
             this.backG1.Name = "backG1";
-            this.backG1.Size = new System.Drawing.Size(229, 34);
+            this.backG1.Size = new System.Drawing.Size(177, 34);
             this.backG1.TabIndex = 20;
-            this.backG1.Text = "BLACK AMBER";
+            this.backG1.Text = "блэк амбер";
             this.backG1.UseVisualStyleBackColor = false;
             this.backG1.CheckedChanged += new System.EventHandler(this.backG1_CheckedChanged);
             // 
@@ -275,32 +276,33 @@
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(589, 347);
             this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "FORECOLORS";
+            this.tabPage1.Text = "ЦВЕТА ШРИФТОВ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("OCR A Extended", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("PerfectDOSVGA437", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(178, 12);
+            this.label3.Location = new System.Drawing.Point(129, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(237, 37);
+            this.label3.Size = new System.Drawing.Size(288, 35);
             this.label3.TabIndex = 31;
-            this.label3.Text = "FORECOLORS";
+            this.label3.Text = "ЦВЕТА ШРИФТОВ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("OCR A Extended", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Font = new System.Drawing.Font("PerfectDOSVGA437", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton1.Location = new System.Drawing.Point(8, 105);
+            this.radioButton1.Location = new System.Drawing.Point(8, 116);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(145, 43);
+            this.radioButton1.Size = new System.Drawing.Size(233, 41);
             this.radioButton1.TabIndex = 30;
-            this.radioButton1.Text = "WHITe";
+            this.radioButton1.Text = "беленький";
             this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -309,13 +311,13 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.radioButton3.Font = new System.Drawing.Font("OCR A Extended", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Font = new System.Drawing.Font("PerfectDOSVGA437", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton3.Location = new System.Drawing.Point(8, 58);
+            this.radioButton3.Location = new System.Drawing.Point(8, 69);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(145, 43);
+            this.radioButton3.Size = new System.Drawing.Size(255, 41);
             this.radioButton3.TabIndex = 28;
-            this.radioButton3.Text = "BLAck";
+            this.radioButton3.Text = "черненький";
             this.radioButton3.UseVisualStyleBackColor = false;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 

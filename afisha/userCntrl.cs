@@ -19,7 +19,14 @@ namespace AfishA
             if (Program.user == "admin")
             {
                 button.Visible = true;
+                button1.Visible = true;
             }
+            try
+            {
+                pictureBox1.Image = Program.SelectImage("SELECT pict FROM users WHERE login = '" + Program.user + "'");
+            }
+            catch (Exception) { }
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -113,6 +120,11 @@ namespace AfishA
             f.ShowDialog();
 
             designTupoy.ApplyDesign(this);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

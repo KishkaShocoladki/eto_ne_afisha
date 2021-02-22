@@ -44,11 +44,15 @@ namespace AfishA
             panel = _panel1;         
             InitializeComponent();
             designTupoy.ApplyDesign(this);
+            /// <summary>
+            /// НАВИГАЦИЯ
+            /// <summary>
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
             Program.navigation.Add(this);
             Program.navigation_pos++;
 
+            //ЗАПОЛНЕНИЕ КОМБОБОКСОВ
             List<string> fillCountry = Program.Select("SELECT DISTINCT country FROM ivents");
             comboBox1.DataSource = fillCountry;
             List<string> genres = Program.Select("SELECT genre FROM participants");
@@ -66,8 +70,10 @@ namespace AfishA
             comboBox3.DataSource = genress.ToArray();
             List<string> fillType = Program.Select("SELECT DISTINCT type FROM ivents");
             comboBox2.DataSource = fillType;
-
-            List<string> results = Program.Select("SELECT `name`, `descript`, `city`, `country`, `type`, `area`, `dt` FROM `ivents`");//ts
+            
+            //ЗАПОЛНЕНИЕ СПИСКА
+            List<string> results = Program.Select("SELECT `name`, `descript`, `city`, `country`, `type`, `area`, `dt` FROM `ivents`");
+            sobytia.Clear();
             for (int i = 0; i < results.Count; i = i + 7)
             {
                 string name = results[i];
@@ -80,7 +86,8 @@ namespace AfishA
                 Ivent iv = new Ivent(name, descript, city, country, type, area, dt);
                 sobytia.Add(iv);
             }
-
+            
+            //ВЫВОД НА СОБЫТИЙ НА ФОРМУ
             int x = 10;
             int y = 140;
             for (int i = 0; i < sobytia.Count; i = i + 1)
