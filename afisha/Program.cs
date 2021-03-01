@@ -45,11 +45,15 @@ namespace AfishA
 
         public static void Insert(string Text)
         {
-            //Создать команду
-            MySqlCommand command = new MySqlCommand(Text, conn);
+            try
+            {
+                //Создать команду
+                MySqlCommand command = new MySqlCommand(Text, conn);
 
-            //Выполнить команду
-            command.ExecuteNonQuery();
+                //Выполнить команду
+                command.ExecuteNonQuery();
+            }
+            catch (Exception error) { }
         }
         public static Image SelectImage(String Text)
         {

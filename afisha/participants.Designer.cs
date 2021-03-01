@@ -150,12 +150,12 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(16, 307);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(440, 197);
+            this.panel2.Size = new System.Drawing.Size(392, 197);
             this.panel2.TabIndex = 7;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(97, 138);
+            this.button6.Location = new System.Drawing.Point(97, 140);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 8;
@@ -165,7 +165,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(16, 138);
+            this.button5.Location = new System.Drawing.Point(16, 140);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 7;
@@ -175,12 +175,11 @@
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(13, 119);
+            this.label8.Location = new System.Drawing.Point(13, 111);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(288, 16);
+            this.label8.Size = new System.Drawing.Size(288, 42);
             this.label8.TabIndex = 6;
             this.label8.Text = "YOU WILL SEE JUST WHAT I SEE";
             // 
@@ -258,16 +257,16 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(462, 307);
+            this.panel3.Location = new System.Drawing.Point(414, 307);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(339, 89);
+            this.panel3.Size = new System.Drawing.Size(387, 89);
             this.panel3.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(466, 290);
+            this.label10.Location = new System.Drawing.Point(415, 290);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(223, 14);
@@ -276,16 +275,16 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(462, 418);
+            this.panel4.Location = new System.Drawing.Point(414, 418);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(339, 86);
+            this.panel4.Size = new System.Drawing.Size(387, 86);
             this.panel4.TabIndex = 12;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(463, 401);
+            this.label9.Location = new System.Drawing.Point(415, 401);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(207, 14);

@@ -13,6 +13,7 @@ namespace AfishA
     public partial class solo : UserControl
     {
         string sbyt;
+        string plosh;
         public solo(string name)
         {
             sbyt = name;
@@ -56,6 +57,7 @@ namespace AfishA
             {
                 label1.Text = name;
                 label2.Text = info[0];
+                plosh = info[0];
                 //label3.Text = sob.agelimit;
                 pictureBox1.Image = Program.SelectImage("SELECT pic1 FROM ivents WHERE name = '" + name + "'");
                 pictureBox2.Image = Program.SelectImage("SELECT pic2 FROM ivents WHERE name = '" + name + "'");
@@ -99,7 +101,9 @@ namespace AfishA
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            ploshka f = new ploshka(plosh);
+            Program.panel1.Controls.Clear();
+            Program.panel1.Controls.Add(f);
         }
     }
 }
