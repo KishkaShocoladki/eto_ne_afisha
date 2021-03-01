@@ -55,7 +55,7 @@ namespace AfishA
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 8)
             {
                 string delete = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string delete1 = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -70,9 +70,9 @@ namespace AfishA
             string descript = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             string genre = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             string country = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            string mVmest = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            string tipgonorar = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            string neGo = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string mVmest = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            string tipgonorar = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            string neGo = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             if (e.ColumnIndex == 1)
             {
                 Program.Select("UPDATE participants SET name ='" + part + "' WHERE ident ='" + ident + "'");
