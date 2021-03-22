@@ -34,16 +34,46 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClientDependency.Core, Version=1.9.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ClientDependency.1.9.9\lib\net45\ClientDependency.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc, Version=1.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ClientDependency-Mvc5.1.9.3\lib\net45\ClientDependency.Core.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Interop.WMPLib">
       <HintPath>obj\Debug\Interop.WMPLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -232,6 +262,13 @@
     <Compile Include="solo.Designer.cs">
       <DependentUpon>solo.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLClass.cs" />
+    <Compile Include="tester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tester.Designer.cs">
+      <DependentUpon>tester.cs</DependentUpon>
+    </Compile>
     <Compile Include="user.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +280,12 @@
     </Compile>
     <Compile Include="userCntrl.Designer.cs">
       <DependentUpon>userCntrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="merch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="merch.Designer.cs">
+      <DependentUpon>merch.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="adminFs\adding.resx">
       <DependentUpon>adding.cs</DependentUpon>
@@ -304,6 +347,9 @@
     <EmbeddedResource Include="mainCntrl.resx">
       <DependentUpon>mainCntrl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="merch.resx">
+      <DependentUpon>merch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="notreg.resx">
       <DependentUpon>notreg.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,12 +387,16 @@
     <EmbeddedResource Include="solo.resx">
       <DependentUpon>solo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="tester.resx">
+      <DependentUpon>tester.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user.resx">
       <DependentUpon>user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userCntrl.resx">
       <DependentUpon>userCntrl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

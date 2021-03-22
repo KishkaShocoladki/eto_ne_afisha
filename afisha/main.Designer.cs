@@ -31,9 +31,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("главная");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("исполнители");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("площадки");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("главная");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("исполнители");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("площадки");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("мерч");
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.блин = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,6 +124,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button5);
@@ -163,16 +166,19 @@
             this.treeView1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.treeView1.Location = new System.Drawing.Point(4, 28);
             this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Узел0";
+            treeNode1.Text = "главная";
+            treeNode2.Name = "Узел1";
+            treeNode2.Text = "исполнители";
+            treeNode3.Name = "Узел2";
+            treeNode3.Text = "площадки";
             treeNode4.Name = "Узел0";
-            treeNode4.Text = "главная";
-            treeNode5.Name = "Узел1";
-            treeNode5.Text = "исполнители";
-            treeNode6.Name = "Узел2";
-            treeNode6.Text = "площадки";
+            treeNode4.Text = "мерч";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5,
-            treeNode6});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
             this.treeView1.Size = new System.Drawing.Size(238, 552);
             this.treeView1.TabIndex = 28;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -194,6 +200,20 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(477, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 22);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "click";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // main
             // 
@@ -237,6 +257,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ContextMenuStrip блин;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

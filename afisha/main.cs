@@ -31,6 +31,9 @@ namespace AfishA
             foreach (Control ctrl in panel1.Controls)
                 designTupoy.ApplyDesign(ctrl);
 
+            
+            //if (Program.navigation_pos < 0)
+              //  pictureBox1.Visible = false;
 
             Program.panel1 = panel1;
 
@@ -125,6 +128,12 @@ namespace AfishA
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
+            else if (e.Node.Text == "мерч")
+            {
+                f = new merch();
+                panel1.Controls.Clear();
+                panel1.Controls.Add(f);
+            }
             else if (e.Node.Level == 1 && e.Node.Parent.Text == "исполнители")
             {
                 f = new participants(e.Node.Text);
@@ -175,14 +184,11 @@ namespace AfishA
             designTupoy.ApplyDesign(panel2);
         }
 
-        /* private void toolStripMenuItem1_Click(object sender, EventArgs e)
-{
-    designTupoy f = new designTupoy();
-    f.ShowDialog();
-
-    BackColor = f.colour;
-    Font = f.font;
-}*/
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            tester f = new tester();
+            f.Show();
+        }
     }
 }
 

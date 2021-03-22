@@ -53,7 +53,18 @@ namespace AfishA
                 //Выполнить команду
                 command.ExecuteNonQuery();
             }
-            catch (Exception error) { }
+            catch (Exception error)
+            {
+                string address = Path.GetTempPath() + "AFSH.txt";
+                ERROR f = new ERROR("чет все сдохло извините~~");
+                f.ShowDialog();
+                if (!File.Exists(address))
+                {
+                    FileStream file = File.Create(address);
+                    file.Close();
+                }
+                File.AppendAllText(address, "ВРЕМЯ: " + DateTime.Now.ToString() + Environment.NewLine + "ТЕКСТ ОШИБКИ: " + error.Message + Environment.NewLine + "ЗАПРОС: " + Text + Environment.NewLine + Environment.NewLine);
+            }
         }
         public static Image SelectImage(String Text)
         {
