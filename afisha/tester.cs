@@ -29,30 +29,31 @@ namespace AfishA
             {
                 textBox3.Text = "";
                 textBox3.Clear();
-                WebRequest wr = WebRequest.Create("https://www.last.fm/ru/music/" + textBox2.Text + "/+wiki");
-                wr.Method = "GET";
-                WebResponse resp = wr.GetResponse();
 
-                Stream stream = resp.GetResponseStream();
-                HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-                doc.Load(stream);
-
+                HtmlWeb webGet = new HtmlWeb();
+                webGet.AutoDetectEncoding = false;
+                webGet.OverrideEncoding = Encoding.GetEncoding("utf-8");
+                HtmlAgilityPack.HtmlDocument doc = webGet.Load("https://www.last.fm/ru/music/" + textBox2.Text + "/+wiki");
                 var Nodes = doc.DocumentNode.SelectNodes("//div[contains(@class, 'wiki-content')]");
+                
+                string str = Nodes[0].InnerHtml;
                 var anchors = Nodes[0].SelectNodes("//a[starts-with(@href, '/')]");
                 foreach (var anchor in anchors.ToList())
-                    anchor.Remove();
-
-                string str = Nodes[0].InnerHtml;
+                {
+                    str = str.Replace(anchor.OuterHtml, anchor.InnerHtml);
+                }
+                str = str.Replace("<p>", Environment.NewLine + Environment.NewLine);
+                str = str.Replace("<strong>", Environment.NewLine);
+                str = str.Replace("</strong>", Environment.NewLine);
+                str = str.Replace("&quot", "''");
+                str = str.Replace("&#x27;", "'");
+                str = str.Replace("&amp", "&");
+                str = str.Replace("<em>", "");
+                str = str.Replace("</em>", "");
+                str = str.Replace("</a>", "");
                 str = str.Replace("</p>", "");
+                str = str.Replace("<br>", Environment.NewLine);
                 textBox3.Text = str;
-                /*byte[] b = Encoding.Default.GetBytes(str);
-                byte[] utf8Bytes = System.Text.Encoding.Convert(System.Text.Encoding.Unicode,
-                    System.Text.Encoding.UTF8, b);
-                System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
-                string outputString = encoder.GetString(utf8Bytes);
-                textBox3.Text = outputString;*/
-                
-                resp.Close();
             }
             else MessageBox.Show("mem");
 
