@@ -16,6 +16,7 @@ namespace AfishA
     public partial class main : Form
     {
         public static List<Ivent> sobytia = new List<Ivent>();
+        public static string fname;
         private void main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.color = designTupoy.colour;
@@ -23,6 +24,7 @@ namespace AfishA
         }
         public main()
         {
+            Text = fname;
             InitializeComponent();
 
             designTupoy.colour = Properties.Settings.Default.color;
@@ -31,12 +33,7 @@ namespace AfishA
             foreach (Control ctrl in panel1.Controls)
                 designTupoy.ApplyDesign(ctrl);
 
-            
-            //if (Program.navigation_pos < 0)
-              //  pictureBox1.Visible = false;
-
             Program.panel1 = panel1;
-
             List<string> prt = Program.Select("SELECT name FROM `participants`");
             for (int i = 0; i < prt.Count; i = i + 1)
             {
@@ -48,6 +45,12 @@ namespace AfishA
             {
                 TreeNode tt = new TreeNode(plk[i]);
                 treeView1.Nodes[2].Nodes.Add(tt);
+            }
+            List<string> mrch = Program.Select("SELECT DISTINCT band FROM `merch`");
+            for (int i = 0; i < mrch.Count; i = i + 1)
+            {
+                TreeNode tt = new TreeNode(mrch[i]);
+                treeView1.Nodes[3].Nodes.Add(tt);
             }
             mainCntrl f = new mainCntrl(panel1);
             panel1.Controls.Clear();
@@ -128,9 +131,9 @@ namespace AfishA
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Text == "мерч")
+            else if (e.Node.Level == 1 && e.Node.Text == "мерч")//а че а куда
             {
-                f = new merch();
+                f = new merch(e.Node.Text);
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }

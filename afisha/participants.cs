@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using HtmlAgilityPack;
 
 namespace AfishA
 {
@@ -33,15 +34,46 @@ namespace AfishA
             label1.ForeColor = SystemColors.ButtonFace;
             label1.Font = new Font("Lucida Console", 20F, FontStyle.Regular, GraphicsUnit.Point, (204));
             
-            List<string> info = Program.Select("SELECT descript, genre, country FROM participants WHERE name = '" + name + "'");
-            textBox1.Text = info[0];
-            label2.Text = info[1];
+            List<string> info = Program.Select("SELECT genre, country FROM participants WHERE name = '" + name + "'");
+            
+            label2.Text = info[0];
             label2.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
-            label5.Text = info[2];
+            label5.Text = info[1];
             label5.Location = new Point(16, 70);
             label5.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
-          
-            //
+
+            string str = name;
+            str = str.Replace(" ", "+");
+                HtmlWeb webGet = new HtmlWeb();
+                webGet.AutoDetectEncoding = false;
+                webGet.OverrideEncoding = Encoding.GetEncoding("utf-8");
+                HtmlAgilityPack.HtmlDocument doc = webGet.Load("https://www.last.fm/ru/music/" + str + "/+wiki");
+                var Nodes = doc.DocumentNode.SelectNodes("//div[contains(@class, 'wiki-content')]");
+                
+                if (Nodes != null)
+                {
+                string stroke = Nodes[0].InnerHtml;
+                var anchors = Nodes[0].SelectNodes("//a[starts-with(@href, '/')]");
+                    foreach (var anchor in anchors.ToList())
+                    {
+                        stroke = stroke.Replace(anchor.OuterHtml, anchor.InnerHtml);
+                    }
+                    stroke = stroke.Replace("<p>", Environment.NewLine + Environment.NewLine);
+                    stroke = stroke.Replace("<strong>", Environment.NewLine);
+                    stroke = stroke.Replace("</strong>", Environment.NewLine);
+                    stroke = stroke.Replace("&quot", "''");
+                    stroke = stroke.Replace("&#x27;", "'");
+                    stroke = stroke.Replace("<li>", "");
+                    stroke = stroke.Replace("</li>", "");
+                    stroke = stroke.Replace("&amp", "&");
+                    stroke = stroke.Replace("<em>", "");
+                    stroke = stroke.Replace("</em>", "");
+                    stroke = stroke.Replace("</a>", "");
+                    stroke = stroke.Replace("</p>", "");
+                    stroke = stroke.Replace("<br>", Environment.NewLine);
+                    textBox1.Text = stroke;
+                }
+                else MessageBox.Show("описание сказало про щяй");
 
             //ЗАПОЛНЕНИЕ ПАНЕЛЬКИ СНИЗУ (ПРЕДЫДУЩИЕ И БУДУЩИЕ(СОЛЬНЫЕ) ВЫСТУПЛЕНИЯ)
             int his = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `history` WHERE participant='" + name + "'")[0]);
@@ -235,6 +267,11 @@ namespace AfishA
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

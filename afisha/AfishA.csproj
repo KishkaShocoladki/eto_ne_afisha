@@ -272,6 +272,12 @@
     <Compile Include="tester.Designer.cs">
       <DependentUpon>tester.cs</DependentUpon>
     </Compile>
+    <Compile Include="updt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="updt.Designer.cs">
+      <DependentUpon>updt.cs</DependentUpon>
+    </Compile>
     <Compile Include="user.cs">
       <SubType>Form</SubType>
     </Compile>

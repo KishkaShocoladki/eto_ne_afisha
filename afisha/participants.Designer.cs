@@ -104,6 +104,7 @@
             this.textBox1.Size = new System.Drawing.Size(358, 169);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "кароч описание";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
