@@ -193,3 +193,6 @@ C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\System.Web.WebPages.Ra
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\HtmlAgilityPack.dll
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\HtmlAgilityPack.xml
+C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.merchh.resources
+C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.trash.resources
+C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.dedMerch.resources

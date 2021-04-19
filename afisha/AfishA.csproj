@@ -185,6 +185,12 @@
     <Compile Include="adminFs\designTupoy.Designer.cs">
       <DependentUpon>designTupoy.cs</DependentUpon>
     </Compile>
+    <Compile Include="dedMerch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dedMerch.Designer.cs">
+      <DependentUpon>dedMerch.cs</DependentUpon>
+    </Compile>
     <Compile Include="ERROR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminFs\designTupoy.resx">
       <DependentUpon>designTupoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dedMerch.resx">
+      <DependentUpon>dedMerch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ERROR.resx">
       <DependentUpon>ERROR.cs</DependentUpon>

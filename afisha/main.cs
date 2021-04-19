@@ -134,7 +134,7 @@ namespace AfishA
             }
             if (e.Node.Level == 1 && e.Node.Parent.Text == "мерч")//а че а куда
             {
-                f = new merch(e.Node.Text);
+                f = new merchh(e.Node.Text);
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }

@@ -143,6 +143,10 @@ namespace AfishA
             //string path = @Application.StartupPath + @"bin\\Debug";
             try 
             {
+                WebClient webCl = new WebClient();
+                string path = "sample.mp3";
+                webCl.DownloadFile("https://drive.google.com/uc?export=download&id=" + sourceUrl, path);
+              /*
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create(sourceUrl);
                 HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
                 Stream stream = resp.GetResponseStream();
@@ -158,7 +162,7 @@ namespace AfishA
                 write.Close();
                 file.Close();
                 //Console.WriteLine("***end***");
-               // Console.ReadKey();
+               // Console.ReadKey();*/
             }
             catch (Exception) { }
            

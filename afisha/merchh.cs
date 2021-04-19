@@ -28,7 +28,6 @@ namespace AfishA
 
         }
 
-
         private void BUTT_Click(object sender, EventArgs e)
         {
 
@@ -89,10 +88,10 @@ namespace AfishA
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+            private void button2_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            List<string> parts = Program.Select("SELECT name FROM `merch` WHERE type ='" + button1.Text + "' AND band ='" + band + "'");
+            List<string> parts = Program.Select("SELECT name FROM `merch` WHERE type ='" + button2.Text + "' AND band ='" + band + "'");
             int x = 5;
             int y = 5;
             for (int i = 0; i < parts.Count; i = i + 1)
@@ -139,11 +138,10 @@ namespace AfishA
             }
         }
 
-
         private void button3_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            List<string> parts = Program.Select("SELECT name FROM `merch` WHERE type ='" + button1.Text + "' AND band ='" + band + "'");
+            List<string> parts = Program.Select("SELECT name FROM `merch` WHERE type ='" + button3.Text + "' AND band ='" + band + "'");
             int x = 5;
             int y = 5;
             for (int i = 0; i < parts.Count; i = i + 1)
@@ -192,7 +190,7 @@ namespace AfishA
         private void button4_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            List<string> parts = Program.Select("SELECT name FROM `merch` WHERE type ='" + button1.Text + "' AND band ='" + band + "'");
+            List<string> parts = Program.Select("SELECT name FROM `merch` WHERE type ='" + button4.Text + "' AND band ='" + band + "'");
             int x = 5;
             int y = 5;
             for (int i = 0; i < parts.Count; i = i + 1)

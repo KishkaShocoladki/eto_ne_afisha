@@ -211,8 +211,9 @@ namespace AfishA
             #region
         private void button1_Click_1(object sender, EventArgs e)
         {
+            string track1 = Program.Select("SELECT track1 FROM `participants` WHERE name='" + name + "'")[0];
             wmp.URL = "_.mp3";
-            Program.SelectMusic("https://drive.google.com/uc?export=download&id=1ARrjB09yWBXYuW1091TFtZ22lJ752SbY");
+            Program.SelectMusic(track1);
             try 
             {
                 wmp.URL = "sample.mp3";
@@ -222,8 +223,9 @@ namespace AfishA
         }
         private void button1_Click_2(object sender, EventArgs e)
         {
+            string track2 = Program.Select("SELECT track2 FROM `participants` WHERE name='" + name + "'")[0];
             wmp.URL = "_.mp3";
-            Program.SelectMusic("SELECT song2 FROM participants WHERE name='" + name + "'");
+            Program.SelectMusic(track2);
             try
             {
                 wmp.URL = "sample.mp3";
@@ -233,8 +235,9 @@ namespace AfishA
         }
         private void button1_Click_3(object sender, EventArgs e)
         {
+            string track3 = Program.Select("SELECT track3 FROM `participants` WHERE name='" + name + "'")[0];
             wmp.URL = "_.mp3";
-            Program.SelectMusic("SELECT song3 FROM participants WHERE name='" + name + "'");
+            Program.SelectMusic(track3);
             try
             {
                 wmp.URL = "sample.mp3";

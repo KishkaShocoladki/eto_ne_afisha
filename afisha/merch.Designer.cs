@@ -72,7 +72,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(805, 330);
+            this.tabPage1.Size = new System.Drawing.Size(805, 0);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "CD";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -83,7 +83,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 324);
+            this.panel1.Size = new System.Drawing.Size(799, 0);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -115,7 +115,7 @@
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(805, 330);
+            this.tabPage3.Size = new System.Drawing.Size(805, 0);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "ПЛАКАТЫ";
             // 
@@ -125,7 +125,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(805, 330);
+            this.panel3.Size = new System.Drawing.Size(805, 0);
             this.panel3.TabIndex = 0;
             // 
             // tabPage4
@@ -135,7 +135,7 @@
             this.tabPage4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(805, 330);
+            this.tabPage4.Size = new System.Drawing.Size(805, 0);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "ВИНИЛ";
             // 
@@ -145,7 +145,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(805, 330);
+            this.panel4.Size = new System.Drawing.Size(805, 0);
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
