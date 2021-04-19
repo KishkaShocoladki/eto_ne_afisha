@@ -21,12 +21,7 @@ namespace AfishA
                 button.Visible = true;
                 button1.Visible = true;
             }
-            try
-            {
-                pictureBox1.Image = Program.SelectImage("SELECT pict FROM users WHERE login = '" + Program.user + "'");
-            }
-            catch (Exception) { }
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {

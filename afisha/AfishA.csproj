@@ -209,6 +209,12 @@
     <Compile Include="mainCntrl.Designer.cs">
       <DependentUpon>mainCntrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="merchh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="merchh.Designer.cs">
+      <DependentUpon>merchh.cs</DependentUpon>
+    </Compile>
     <Compile Include="notreg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,11 +278,11 @@
     <Compile Include="tester.Designer.cs">
       <DependentUpon>tester.cs</DependentUpon>
     </Compile>
-    <Compile Include="updt.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="trash.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="updt.Designer.cs">
-      <DependentUpon>updt.cs</DependentUpon>
+    <Compile Include="trash.Designer.cs">
+      <DependentUpon>trash.cs</DependentUpon>
     </Compile>
     <Compile Include="user.cs">
       <SubType>Form</SubType>
@@ -359,6 +365,9 @@
     <EmbeddedResource Include="merch.resx">
       <DependentUpon>merch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="merchh.resx">
+      <DependentUpon>merchh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="notreg.resx">
       <DependentUpon>notreg.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tester.resx">
       <DependentUpon>tester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trash.resx">
+      <DependentUpon>trash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user.resx">
       <DependentUpon>user.cs</DependentUpon>

@@ -36,16 +36,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel11
             // 
             this.panel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel11.BackgroundImage")));
             this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel11.Controls.Add(this.pictureBox1);
+            this.panel11.Controls.Add(this.button3);
             this.panel11.Controls.Add(this.button1);
             this.panel11.Controls.Add(this.button);
             this.panel11.Controls.Add(this.mybron);
@@ -80,7 +79,7 @@
             this.button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button.Location = new System.Drawing.Point(4, 112);
+            this.button.Location = new System.Drawing.Point(3, 146);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(120, 41);
             this.button.TabIndex = 12;
@@ -143,16 +142,18 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
+            // button3
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(403, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 150);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.button3.BackColor = System.Drawing.SystemColors.Info;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(3, 112);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 28);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "КОРЗИНА";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // userCntrl
             // 
@@ -163,7 +164,6 @@
             this.Size = new System.Drawing.Size(584, 347);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,6 +177,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

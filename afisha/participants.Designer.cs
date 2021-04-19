@@ -225,6 +225,7 @@
             this.label6.Size = new System.Drawing.Size(288, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "YOU WILL SEE JUST WHAT I SEE";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // button2
             // 

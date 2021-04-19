@@ -25,6 +25,7 @@ namespace AfishA
         public main()
         {
             Text = fname;
+           // fname = "АФИША";
             InitializeComponent();
 
             designTupoy.colour = Properties.Settings.Default.color;
@@ -125,25 +126,25 @@ namespace AfishA
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Text == "площадки")
+            if (e.Node.Text == "площадки")
             {
                 f = new plashadka();
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Level == 1 && e.Node.Text == "мерч")//а че а куда
+            if (e.Node.Level == 1 && e.Node.Parent.Text == "мерч")//а че а куда
             {
                 f = new merch(e.Node.Text);
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Level == 1 && e.Node.Parent.Text == "исполнители")
+            if (e.Node.Level == 1 && e.Node.Parent.Text == "исполнители")
             {
                 f = new participants(e.Node.Text);
                 panel1.Controls.Clear();
                 panel1.Controls.Add(f);
             }
-            else if (e.Node.Level == 1 && e.Node.Parent.Text == "площадки")
+            if (e.Node.Level == 1 && e.Node.Parent.Text == "площадки")
             {
                 f = new ploshka(e.Node.Text);
                 panel1.Controls.Clear();

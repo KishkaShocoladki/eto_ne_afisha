@@ -85,6 +85,7 @@
             this.tabPage2.Size = new System.Drawing.Size(589, 347);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ТЕМЫ это кто(who)";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // theme3
             // 

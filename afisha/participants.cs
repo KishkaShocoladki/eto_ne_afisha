@@ -42,7 +42,7 @@ namespace AfishA
             label5.Location = new Point(16, 70);
             label5.Font = new Font("Lucida Console", 13F, FontStyle.Regular, GraphicsUnit.Point, (204));
 
-            string str = name;
+            /*string str = name;
             str = str.Replace(" ", "+");
                 HtmlWeb webGet = new HtmlWeb();
                 webGet.AutoDetectEncoding = false;
@@ -73,7 +73,7 @@ namespace AfishA
                     stroke = stroke.Replace("<br>", Environment.NewLine);
                     textBox1.Text = stroke;
                 }
-                else MessageBox.Show("описание сказало про щяй");
+                else MessageBox.Show("описание сказало про щяй");*/
 
             //ЗАПОЛНЕНИЕ ПАНЕЛЬКИ СНИЗУ (ПРЕДЫДУЩИЕ И БУДУЩИЕ(СОЛЬНЫЕ) ВЫСТУПЛЕНИЯ)
             int his = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `history` WHERE participant='" + name + "'")[0]);
@@ -212,7 +212,7 @@ namespace AfishA
         private void button1_Click_1(object sender, EventArgs e)
         {
             wmp.URL = "_.mp3";
-            Program.SelectMusic("SELECT song1 FROM participants WHERE name='" + name + "'");
+            Program.SelectMusic("https://drive.google.com/uc?export=download&id=1ARrjB09yWBXYuW1091TFtZ22lJ752SbY");
             try 
             {
                 wmp.URL = "sample.mp3";
@@ -272,6 +272,11 @@ namespace AfishA
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
