@@ -185,12 +185,6 @@
     <Compile Include="adminFs\designTupoy.Designer.cs">
       <DependentUpon>designTupoy.cs</DependentUpon>
     </Compile>
-    <Compile Include="dedMerch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="dedMerch.Designer.cs">
-      <DependentUpon>dedMerch.cs</DependentUpon>
-    </Compile>
     <Compile Include="ERROR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +214,12 @@
     </Compile>
     <Compile Include="merchh.Designer.cs">
       <DependentUpon>merchh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="no.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="no.Designer.cs">
+      <DependentUpon>no.cs</DependentUpon>
     </Compile>
     <Compile Include="notreg.cs">
       <SubType>Form</SubType>
@@ -277,13 +277,6 @@
     <Compile Include="solo.Designer.cs">
       <DependentUpon>solo.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQLClass.cs" />
-    <Compile Include="tester.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tester.Designer.cs">
-      <DependentUpon>tester.cs</DependentUpon>
-    </Compile>
     <Compile Include="trash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,12 +294,6 @@
     </Compile>
     <Compile Include="userCntrl.Designer.cs">
       <DependentUpon>userCntrl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="merch.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="merch.Designer.cs">
-      <DependentUpon>merch.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="adminFs\adding.resx">
       <DependentUpon>adding.cs</DependentUpon>
@@ -356,9 +343,6 @@
     <EmbeddedResource Include="adminFs\designTupoy.resx">
       <DependentUpon>designTupoy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dedMerch.resx">
-      <DependentUpon>dedMerch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ERROR.resx">
       <DependentUpon>ERROR.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,11 +355,11 @@
     <EmbeddedResource Include="mainCntrl.resx">
       <DependentUpon>mainCntrl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="merch.resx">
-      <DependentUpon>merch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="merchh.resx">
       <DependentUpon>merchh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no.resx">
+      <DependentUpon>no.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="notreg.resx">
       <DependentUpon>notreg.cs</DependentUpon>
@@ -413,9 +397,6 @@
     </Compile>
     <EmbeddedResource Include="solo.resx">
       <DependentUpon>solo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tester.resx">
-      <DependentUpon>tester.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="trash.resx">
       <DependentUpon>trash.cs</DependentUpon>

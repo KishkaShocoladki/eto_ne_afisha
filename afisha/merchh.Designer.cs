@@ -121,6 +121,7 @@
             this.Controls.Add(this.button1);
             this.Name = "merchh";
             this.Size = new System.Drawing.Size(813, 549);
+            this.Load += new System.EventHandler(this.merchh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

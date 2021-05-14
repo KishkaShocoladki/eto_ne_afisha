@@ -30,9 +30,18 @@ namespace AfishA
 
         private void BUTT_Click(object sender, EventArgs e)
         {
-
+            Label pic = (Label)sender;
+            string id = Program.Select("SELECT id FROM `merch` WHERE name ='" + pic.Text + "'")[0];
+            if (Program.userid != "_")
+            {
+                Program.Insert("INSERT INTO trash (id_user, id_merch) VALUES ('" + Program.userid + "', '" + id + "')");
+                MessageBox.Show("мерч ДОБАВЛЕН");
+            }
+            else
+                MessageBox.Show("ДЛЯ ТОГО ЧТОБЫ ДОБАВИТЬ ТОВАР В КОРЗИНУ ВОЙДИТЕ В АККАУНТ(ﾒ｀ﾛ´)/");
+            
         }
-
+    
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -57,7 +66,8 @@ namespace AfishA
                 }
                 catch (Exception) { }
                 picB.SizeMode = PictureBoxSizeMode.Zoom;
-                picB.Click += new EventHandler(BUTT_Click);
+               // picB.Click += new EventHandler(BUTT_Click);
+                
 
                 Label lbl = new Label();
                 lbl.Location = new Point(x, y + 100);
@@ -66,7 +76,7 @@ namespace AfishA
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 lbl.ForeColor = SystemColors.ButtonFace;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
-                // lbl.Click += new EventHandler();
+                lbl.Click += new EventHandler(BUTT_Click);
 
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 140);
@@ -107,7 +117,7 @@ namespace AfishA
                 }
                 catch (Exception) { }
                 picB.SizeMode = PictureBoxSizeMode.Zoom;
-                picB.Click += new EventHandler(BUTT_Click);
+               // picB.Click += new EventHandler(BUTT_Click);
 
                 Label lbl = new Label();
                 lbl.Location = new Point(x, y + 100);
@@ -116,7 +126,7 @@ namespace AfishA
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 lbl.ForeColor = SystemColors.ButtonFace;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
-                // lbl.Click += new EventHandler();
+                lbl.Click += new EventHandler(BUTT_Click);
 
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 140);
@@ -157,7 +167,7 @@ namespace AfishA
                 }
                 catch (Exception) { }
                 picB.SizeMode = PictureBoxSizeMode.Zoom;
-                picB.Click += new EventHandler(BUTT_Click);
+                //picB.Click += new EventHandler(BUTT_Click);
 
                 Label lbl = new Label();
                 lbl.Location = new Point(x, y + 100);
@@ -166,7 +176,7 @@ namespace AfishA
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 lbl.ForeColor = SystemColors.ButtonFace;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
-                // lbl.Click += new EventHandler();
+                lbl.Click += new EventHandler(BUTT_Click);
 
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 140);
@@ -206,7 +216,7 @@ namespace AfishA
                 }
                 catch (Exception) { }
                 picB.SizeMode = PictureBoxSizeMode.Zoom;
-                picB.Click += new EventHandler(BUTT_Click);
+                //picB.Click += new EventHandler(BUTT_Click);
 
                 Label lbl = new Label();
                 lbl.Location = new Point(x, y + 100);
@@ -215,7 +225,7 @@ namespace AfishA
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 lbl.ForeColor = SystemColors.ButtonFace;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
-                // lbl.Click += new EventHandler();
+                lbl.Click += new EventHandler(BUTT_Click);
 
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 140);
@@ -235,6 +245,11 @@ namespace AfishA
                 panel1.Controls.Add(lbl);
                 panel1.Controls.Add(labl);
             }
+        }
+
+        private void merchh_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

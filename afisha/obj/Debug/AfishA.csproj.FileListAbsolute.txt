@@ -171,8 +171,6 @@ C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.designTupoy.res
 C:\Users\User\Source\Repos\eto_ne_afisha\afisha\obj\Debug\AfishA.userCntrl.resources
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\Newtonsoft.Json.xml
-C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.tester.resources
-C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.merch.resources
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\ClientDependency.Core.dll
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\ClientDependency.Core.Mvc.dll
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\Microsoft.Web.Infrastructure.dll
@@ -195,4 +193,4 @@ C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\HtmlAgilityPack.xml
 C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.merchh.resources
 C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.trash.resources
-C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.dedMerch.resources
+C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.no.resources

@@ -74,6 +74,11 @@ namespace AfishA
         {
 
         }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

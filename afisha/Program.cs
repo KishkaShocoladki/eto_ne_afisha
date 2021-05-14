@@ -146,57 +146,8 @@ namespace AfishA
                 WebClient webCl = new WebClient();
                 string path = "sample.mp3";
                 webCl.DownloadFile("https://drive.google.com/uc?export=download&id=" + sourceUrl, path);
-              /*
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create(sourceUrl);
-                HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
-                Stream stream = resp.GetResponseStream();
-                FileStream file = new FileStream("sample.mp3", FileMode.Create);
-                StreamWriter write = new StreamWriter(file);
-                int b;
-                for (int i = 0; ; i++)
-                {
-                    b = stream.ReadByte();
-                    if (b == -1) break;
-                    write.Write((char)b);
-                }
-                write.Close();
-                file.Close();
-                //Console.WriteLine("***end***");
-               // Console.ReadKey();*/
-            }
+                          }
             catch (Exception) { }
-           
-
-
-            /* public static void SelectMusic(String Text)
-             {
-                 MySqlCommand command = new MySqlCommand(Text, conn);
-                 try
-                 {
-                     MySqlDataReader reader = command.ExecuteReader();
-                     while (reader.Read())
-                     {
-                         byte[] data = (byte[])reader.GetValue(0);
-
-                         FileStream file = new FileStream("sample.mp3", FileMode.Create);//sample.wav
-                         file.Write(data, 0, data.Length);
-                         file.Close();
-                     }
-                     reader.Close();
-                 }
-                 catch (Exception error)
-                 {
-                     string address = Path.GetTempPath() + "AFSH.txt";
-                     ERROR f = new ERROR("НУ ЧО МУЗЫЧКА СДОХЛА ВСЁ КИНА НЕ БУДЕТ ヽ(´ー` )┌");
-                     f.ShowDialog();
-                     if (!File.Exists(address))
-                     {
-                         FileStream file = File.Create(address);
-                         file.Close();
-                     }
-                     File.AppendAllText(address, "ВРЕМЯ: " + DateTime.Now.ToString() + Environment.NewLine + "ТЕКСТ ОШИБКИ: " + error.Message + Environment.NewLine + "ЗАПРОС: " + Text + Environment.NewLine + Environment.NewLine);
-                 }
-             }*/
         }
     }
 }

@@ -170,7 +170,7 @@
             this.panel1.Location = new System.Drawing.Point(466, 296);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 121);
+            this.panel1.Size = new System.Drawing.Size(331, 241);
             this.panel1.TabIndex = 19;
             // 
             // label5
@@ -211,7 +211,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(446, 121);
+            this.textBox1.Size = new System.Drawing.Size(446, 241);
             this.textBox1.TabIndex = 22;
             this.textBox1.Text = "кароч описание";
             // 
@@ -237,7 +237,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "solo";
-            this.Size = new System.Drawing.Size(806, 428);
+            this.Size = new System.Drawing.Size(806, 540);
             this.Load += new System.EventHandler(this.solo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

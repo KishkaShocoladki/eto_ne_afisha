@@ -121,5 +121,11 @@ namespace AfishA
         {
 
         }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            trash f = new trash();
+            f.Show();
+        }
     }
 }
