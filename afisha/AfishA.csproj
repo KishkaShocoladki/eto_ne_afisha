@@ -89,6 +89,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminFs\allMerch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminFs\allMerch.Designer.cs">
+      <DependentUpon>allMerch.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminFs\adding.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +190,12 @@
     </Compile>
     <Compile Include="adminFs\designTupoy.Designer.cs">
       <DependentUpon>designTupoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detMerch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="detMerch.Designer.cs">
+      <DependentUpon>detMerch.cs</DependentUpon>
     </Compile>
     <Compile Include="ERROR.cs">
       <SubType>Form</SubType>
@@ -295,6 +307,9 @@
     <Compile Include="userCntrl.Designer.cs">
       <DependentUpon>userCntrl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adminFs\allMerch.resx">
+      <DependentUpon>allMerch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminFs\adding.resx">
       <DependentUpon>adding.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminFs\designTupoy.resx">
       <DependentUpon>designTupoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detMerch.resx">
+      <DependentUpon>detMerch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ERROR.resx">
       <DependentUpon>ERROR.cs</DependentUpon>

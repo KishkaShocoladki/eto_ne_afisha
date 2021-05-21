@@ -29,8 +29,14 @@ namespace AfishA
         }
 
         private void BUTT_Click(object sender, EventArgs e)
-        {
-            Label pic = (Label)sender;
+        { 
+            UserControl f = new UserControl();
+            Label lbl = (Label)sender;
+            f = new detMerch(lbl.Text);
+            Program.panel1.Controls.Clear();
+            Program.panel1.Controls.Add(f);
+
+            /*Label pic = (Label)sender;
             string id = Program.Select("SELECT id FROM `merch` WHERE name ='" + pic.Text + "'")[0];
             if (Program.userid != "_")
             {
@@ -38,8 +44,8 @@ namespace AfishA
                 MessageBox.Show("мерч ДОБАВЛЕН");
             }
             else
-                MessageBox.Show("ДЛЯ ТОГО ЧТОБЫ ДОБАВИТЬ ТОВАР В КОРЗИНУ ВОЙДИТЕ В АККАУНТ(ﾒ｀ﾛ´)/");
-            
+                MessageBox.Show("ДЛЯ ТОГО ЧТОБЫ ДОБАВИТЬ ТОВАР В КОРЗИНУ ВОЙДИТЕ В АККАУНТ(ﾒ｀ﾛ´)/");*/
+
         }
     
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -74,7 +80,7 @@ namespace AfishA
                 lbl.Size = new Size(150, 40);
                 lbl.Text = parts[i];
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                lbl.ForeColor = SystemColors.ButtonFace;
+                lbl.ForeColor = Color.Khaki;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 lbl.Click += new EventHandler(BUTT_Click);
 
@@ -83,7 +89,7 @@ namespace AfishA
                 labl.Size = new Size(155, 55);
                 labl.Text = description[0];
                 labl.Font = new Font("Lucida Console", 8F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                labl.ForeColor = SystemColors.ControlDark;
+                labl.ForeColor = Color.LemonChiffon;
                 labl.TextAlign = ContentAlignment.MiddleCenter;
 
                 x = x + 160;

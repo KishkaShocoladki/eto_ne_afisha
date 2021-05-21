@@ -60,5 +60,10 @@ namespace AfishA
                 dataGridView1.Rows.Add(row);
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

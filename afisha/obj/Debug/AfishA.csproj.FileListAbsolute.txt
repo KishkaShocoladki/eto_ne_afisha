@@ -194,3 +194,5 @@ C:\Users\User\source\repos\eto_ne_afisha\afisha\bin\Debug\HtmlAgilityPack.xml
 C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.merchh.resources
 C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.trash.resources
 C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.no.resources
+C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.allMerch.resources
+C:\Users\User\source\repos\eto_ne_afisha\afisha\obj\Debug\AfishA.detMerch.resources

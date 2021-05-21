@@ -32,6 +32,12 @@ namespace AfishA
                      panel11.Controls.Clear();
                      panel11.Controls.Add(f);
                 }
+                if (e.Node.Text == "мерч")
+                {
+                  f = new allMerch();
+                  panel11.Controls.Clear();
+                  panel11.Controls.Add(f);
+                }
                 if (e.Node.Text == "отзывы")
                 {
                     f = new allOtzvs();

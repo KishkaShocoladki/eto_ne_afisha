@@ -37,6 +37,7 @@
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("участники");
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("площадки");
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("добавление");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("мерч");
             this.panel11 = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
@@ -75,6 +76,8 @@
             treeNode7.Text = "площадки";
             treeNode8.Name = "Узел6";
             treeNode8.Text = "добавление";
+            treeNode9.Name = "Узел1";
+            treeNode9.Text = "мерч";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
@@ -83,7 +86,8 @@
             treeNode5,
             treeNode6,
             treeNode7,
-            treeNode8});
+            treeNode8,
+            treeNode9});
             this.treeView1.Size = new System.Drawing.Size(178, 349);
             this.treeView1.TabIndex = 13;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
