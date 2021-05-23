@@ -132,7 +132,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(116, 23);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -161,7 +160,6 @@
             this.MaximumSize = new System.Drawing.Size(654, 350);
             this.Name = "allBrons";
             this.Size = new System.Drawing.Size(582, 347);
-            this.Load += new System.EventHandler(this.allBrons_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

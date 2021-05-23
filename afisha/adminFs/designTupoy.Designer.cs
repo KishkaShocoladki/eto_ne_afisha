@@ -85,7 +85,6 @@
             this.tabPage2.Size = new System.Drawing.Size(589, 347);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ТЕМЫ это кто(who)";
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // theme3
             // 
@@ -290,7 +289,6 @@
             this.label3.Size = new System.Drawing.Size(288, 35);
             this.label3.TabIndex = 31;
             this.label3.Text = "ЦВЕТА ШРИФТОВ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // radioButton1
             // 
@@ -333,7 +331,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "designTupoy";
             this.Text = "designTupoy";
-            this.Load += new System.EventHandler(this.designTupoy_Load);
             tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();

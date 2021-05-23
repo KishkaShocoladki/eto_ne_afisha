@@ -65,15 +65,15 @@ namespace AfishA
                 lbl.Size = new Size(170, 40);
                 lbl.Text = ploshk[i];
                 lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                lbl.ForeColor = SystemColors.ButtonFace;
+                lbl.ForeColor = Color.Khaki;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 lbl.Click += new EventHandler(button3_Click);
 
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 160);
-                labl.Size = new Size(170, 40);
+                labl.Size = new Size(170, 25);
                 labl.Text = city;
-                labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                labl.Font = new Font("Lucida Console", 10F, FontStyle.Regular, GraphicsUnit.Point, (204));
                 labl.ForeColor = SystemColors.ControlDark;
                 labl.TextAlign = ContentAlignment.MiddleCenter;
                 x = x + 190;
@@ -86,11 +86,6 @@ namespace AfishA
                 panel1.Controls.Add(lbl);
                 panel1.Controls.Add(labl);               
             }
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            plashadka form2 = new plashadka();
-            form2.Show();
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -119,7 +114,7 @@ namespace AfishA
                     lbl.Size = new Size(170, 40);
                     lbl.Text = parts[i];
                     lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                    lbl.ForeColor = SystemColors.ButtonFace;
+                    lbl.ForeColor = Color.Khaki;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
                     lbl.Click += new EventHandler(button3_Click);
 
@@ -127,8 +122,8 @@ namespace AfishA
                     labl.Location = new Point(x, y + 160);
                     labl.Size = new Size(170, 40);
                     labl.Text = city[0];
-                    labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                    labl.ForeColor = SystemColors.ControlDark;
+                    labl.Font = new Font("Lucida Console", 10F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    labl.ForeColor = Color.Khaki;
                     labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 190;
                     if (x + 190 > panel1.Width)
@@ -154,16 +149,6 @@ namespace AfishA
         {
             List<string> fillPlosh = Program.Select("SELECT DISTINCT city FROM ivents WHERE country ='" + Convert.ToString(comboBox1.SelectedItem) + "'");
             comboBox2.DataSource = fillPlosh;
-        }
-
-        private void plashadka_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

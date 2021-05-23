@@ -45,10 +45,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Khaki;
             this.label1.Location = new System.Drawing.Point(348, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 21);
+            this.label1.Size = new System.Drawing.Size(173, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "ДОБАВИТЬ ОТЗЫВ";
             // 
@@ -60,14 +61,15 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(190, 202);
             this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(348, 256);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.Khaki;
+            this.button1.Location = new System.Drawing.Point(348, 254);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 23);
+            this.button1.Size = new System.Drawing.Size(190, 25);
             this.button1.TabIndex = 3;
             this.button1.Text = "ДОБАВИТЬ";
             this.button1.UseVisualStyleBackColor = true;
@@ -162,7 +164,6 @@
             this.Name = "rewievs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "куцшумы";
-            this.Load += new System.EventHandler(this.rewievs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

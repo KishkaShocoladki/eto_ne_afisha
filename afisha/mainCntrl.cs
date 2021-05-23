@@ -101,8 +101,8 @@ namespace AfishA
                 sobytia[i].labeI.Location = new Point(x, y + 210);
                 sobytia[i].labeI.Size = new Size(250, 60);
                 sobytia[i].labeI.Text = sobytia[i].name;
-                sobytia[i].labeI.Font = new Font("Lucida Console", 18F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                sobytia[i].labeI.ForeColor = SystemColors.ButtonFace;
+                sobytia[i].labeI.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                sobytia[i].labeI.ForeColor = Color.Khaki;
                 sobytia[i].labeI.TextAlign = ContentAlignment.MiddleCenter;
 
                 x = x + 260;
@@ -112,7 +112,6 @@ namespace AfishA
                     y = y + 300;
                 }
             }
-
             foreach (Ivent iv in sobytia)
             {
                 try
@@ -123,7 +122,6 @@ namespace AfishA
                 panel1.Controls.Add(iv.labeI);
                 panel1.Controls.Add(iv.picB);
             }
-
         }
         //ФОРМА СО ВСЕМИ ПЛОЩАДКАМИ
         private void button1_Click(object sender, EventArgs e)
@@ -190,6 +188,7 @@ namespace AfishA
                     sobytia[i].labeI.Visible = true;
                     sobytia[i].labeI.Location = new Point(x, y + 210);
                     sobytia[i].labeI.Size = new Size(250, 60);
+                    sobytia[i].labeI.ForeColor = Color.Khaki;
                     x = x + 260;
                     if (x + 260 > 855)
                     {
@@ -253,6 +252,7 @@ namespace AfishA
                         sobytia[i].labeI.Visible = true;
                         sobytia[i].labeI.Location = new Point(x, y + 210);
                         sobytia[i].labeI.Size = new Size(250, 60);
+                        sobytia[i].labeI.ForeColor = Color.Khaki;
                         x = x + 260;
                         if (x + 260 > 855)
                         {
@@ -300,6 +300,7 @@ namespace AfishA
                             sobytia[i].labeI.Visible = true;
                             sobytia[i].labeI.Location = new Point(x, y + 210);
                             sobytia[i].labeI.Size = new Size(250, 60);
+                            sobytia[i].labeI.ForeColor = Color.Khaki;
                             x = x + 260;
                             if (x + 260 > 1050)
                             {
@@ -333,6 +334,7 @@ namespace AfishA
                         sobytia[i].labeI.Visible = true;
                         sobytia[i].labeI.Location = new Point(x, y + 210);
                         sobytia[i].labeI.Size = new Size(250, 60);
+                        sobytia[i].labeI.ForeColor = Color.Khaki;
                         x = x + 260;
                         if (x + 260 > 855)
                         {
@@ -344,21 +346,6 @@ namespace AfishA
                     }
                 }
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -32,7 +32,6 @@ namespace AfishA
                 button1.Click += new EventHandler(BUT_Click);
             }
         }
-
         private void BUT_Click(object sender, EventArgs e)
         {
             int login = Convert.ToInt32(Program.Select("SELECT COUNT(login) FROM users WHERE login ='" + textBox1.Text + "' AND pass ='" + textBox2.Text + "'")[0]);
@@ -74,16 +73,6 @@ namespace AfishA
             {
                 MessageBox.Show("ЗАПОЛНИТЕ ОБА ПОЛЯ");
             }
-        }
-
-        private void reg_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

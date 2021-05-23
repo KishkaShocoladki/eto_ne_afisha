@@ -35,12 +35,6 @@ namespace AfishA
                 dataGridView1.Rows.Add(row);
             }
         }
-
-        private void allIvents_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 9)
@@ -104,7 +98,6 @@ namespace AfishA
                 MessageBox.Show("ОТРЕДАКТИРОВАНО");
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();

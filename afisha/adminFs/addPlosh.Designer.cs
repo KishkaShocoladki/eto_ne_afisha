@@ -186,7 +186,6 @@
             this.Name = "addPlosh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ДОБАВИТЬ ПЛОЩАДКУ";
-            this.Load += new System.EventHandler(this.addPlosh_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

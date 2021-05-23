@@ -16,7 +16,6 @@ namespace AfishA
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             addPart f = new addPart();
@@ -33,11 +32,6 @@ namespace AfishA
         {
             addSob f = new addSob();
             f.Show();
-        }
-
-        private void adding_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

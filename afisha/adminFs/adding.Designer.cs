@@ -94,7 +94,6 @@
             this.MaximumSize = new System.Drawing.Size(584, 347);
             this.Name = "adding";
             this.Size = new System.Drawing.Size(584, 350);
-            this.Load += new System.EventHandler(this.adding_Load);
             this.ResumeLayout(false);
 
         }

@@ -31,10 +31,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("главная");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("исполнители");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("площадки");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("мерч");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("главная");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("исполнители");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("площадки");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("мерч");
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -57,8 +57,8 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.ForeColor = System.Drawing.Color.Khaki;
             this.button5.Location = new System.Drawing.Point(85, 0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(47, 22);
@@ -71,8 +71,8 @@
             // 
             this.button6.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.ForeColor = System.Drawing.Color.Khaki;
             this.button6.Location = new System.Drawing.Point(138, 0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(108, 22);
@@ -85,9 +85,9 @@
             // 
             this.button8.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Location = new System.Drawing.Point(834, 1);
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.ForeColor = System.Drawing.Color.Khaki;
+            this.button8.Location = new System.Drawing.Point(832, 1);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(60, 22);
             this.button8.TabIndex = 19;
@@ -100,8 +100,8 @@
             // 
             this.button9.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.ForeColor = System.Drawing.Color.Khaki;
             this.button9.Location = new System.Drawing.Point(898, 1);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(161, 22);
@@ -119,7 +119,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 554);
             this.panel1.TabIndex = 28;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -161,23 +160,23 @@
             // 
             this.treeView1.BackColor = System.Drawing.SystemColors.InfoText;
             this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.treeView1.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.treeView1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.treeView1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeView1.ForeColor = System.Drawing.Color.Khaki;
             this.treeView1.Location = new System.Drawing.Point(4, 28);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Узел0";
-            treeNode1.Text = "главная";
-            treeNode2.Name = "Узел1";
-            treeNode2.Text = "исполнители";
-            treeNode3.Name = "Узел2";
-            treeNode3.Text = "площадки";
-            treeNode4.Name = "Узел0";
-            treeNode4.Text = "мерч";
+            treeNode5.Name = "Узел0";
+            treeNode5.Text = "главная";
+            treeNode6.Name = "Узел1";
+            treeNode6.Text = "исполнители";
+            treeNode7.Name = "Узел2";
+            treeNode7.Text = "площадки";
+            treeNode8.Name = "Узел0";
+            treeNode8.Text = "мерч";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
             this.treeView1.Size = new System.Drawing.Size(238, 552);
             this.treeView1.TabIndex = 28;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -220,7 +219,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АФИША";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_FormClosing);
-            this.Load += new System.EventHandler(this.main_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

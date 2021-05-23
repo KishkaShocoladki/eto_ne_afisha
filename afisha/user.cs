@@ -75,17 +75,6 @@ namespace AfishA
                     panel11.Controls.Add(f);
                 }
         }
-
-        private void user_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
-
 }
 

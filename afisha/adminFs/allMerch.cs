@@ -17,8 +17,6 @@ namespace AfishA
             InitializeComponent();
             List<string> fillBox1 = Program.Select("SELECT DISTINCT band FROM merch");
             comboBox1.DataSource = fillBox1;
-            List<string> fillBox2 = Program.Select("SELECT DISTINCT type FROM merch");
-            comboBox2.DataSource = fillBox2;
 
             List<string> merch = Program.Select("SELECT `name`, `type`, `description`, `tracklist`, `band`, `price`, id FROM merch");
             for (int i = 0; i < merch.Count; i = i + 7)
@@ -41,8 +39,6 @@ namespace AfishA
 
             if (comboBox1.Text != "")
                 com += " AND band = '" + comboBox1.Text + "'";
-            else if (comboBox2.Text != "")
-                com += " AND type '" + comboBox2.Text + "'";
             List<string> merch = Program.Select(com);
             for (int i = 0; i < merch.Count; i = i + 7)
             {

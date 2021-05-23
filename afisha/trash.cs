@@ -33,8 +33,6 @@ namespace AfishA
                 }
                 catch (Exception) { }
                 picB.SizeMode = PictureBoxSizeMode.Zoom;
-                // picB.Click += new EventHandler(BUTT_Click);
-
 
                 Label lbl = new Label();
                 lbl.Location = new Point(x, y + 100);
@@ -44,7 +42,6 @@ namespace AfishA
                 lbl.ForeColor = Color.Maroon;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 lbl.Click += new EventHandler(BUTT_Click);
-               
 
                 Label labl = new Label();
                 labl.Location = new Point(x, y + 140);
@@ -66,7 +63,6 @@ namespace AfishA
             }
             label2.Text = Convert.ToString(prise) + " руб.";
         }
-
         private void BUTT_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
@@ -79,16 +75,10 @@ namespace AfishA
                 MessageBox.Show("товар " + lbl.Text + " удален из корзины");
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             no f = new no();
             f.ShowDialog();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

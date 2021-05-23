@@ -60,7 +60,6 @@
             this.label1.Size = new System.Drawing.Size(93, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "НАЗВАНИЕ:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -247,7 +246,6 @@
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(303, 161);
             this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -275,7 +273,6 @@
             this.Name = "addSob";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ДОБАВИТЬ СОБЫТИЕ";
-            this.Load += new System.EventHandler(this.addSob_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

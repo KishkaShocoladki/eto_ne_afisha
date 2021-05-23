@@ -63,7 +63,6 @@
             this.label2.Size = new System.Drawing.Size(358, 211);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -73,7 +72,6 @@
             this.label3.Size = new System.Drawing.Size(261, 30);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 
@@ -83,7 +81,6 @@
             this.panel1.Size = new System.Drawing.Size(168, 504);
             this.panel1.TabIndex = 4;
             this.panel1.Visible = false;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -122,7 +119,6 @@
             this.ForeColor = System.Drawing.Color.Khaki;
             this.Name = "detMerch";
             this.Size = new System.Drawing.Size(810, 543);
-            this.Load += new System.EventHandler(this.detMerch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -37,7 +37,6 @@ namespace AfishA
 
             conn.Close();
         }
-
         /// <summary>
         /// Соединение
         /// </summary>
@@ -104,7 +103,6 @@ namespace AfishA
             }
             return img;
         }
-
         public static List<string> Select(string Text)
         {
             //Результат
@@ -135,7 +133,6 @@ namespace AfishA
 
                 File.AppendAllText(address, "ВРЕМЯ: " + DateTime.Now.ToString() + Environment.NewLine + "ТЕКСТ ОШИБКИ: " + error.Message + Environment.NewLine + "ЗАПРОС: " + Text + Environment.NewLine + Environment.NewLine);
             }
-
             return results;
         }
         public static void SelectMusic(string sourceUrl)

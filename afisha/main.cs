@@ -16,7 +16,7 @@ namespace AfishA
         public main()
         {
             Text = fname;
-           // fname = "АФИША";
+            // fname = "АФИША";
             InitializeComponent();
 
             designTupoy.colour = Properties.Settings.Default.color;
@@ -48,7 +48,6 @@ namespace AfishA
             panel1.Controls.Clear();
             panel1.Controls.Add(f);
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             Button lbl = (Button)sender;
@@ -62,7 +61,6 @@ namespace AfishA
                 button9.Visible = true;
             }
         }
-
         private void button5_Click_1(object sender, EventArgs e)
         {
             Button lbl = (Button)sender;
@@ -85,13 +83,12 @@ namespace AfishA
 
             Program.user = "_";
         }
-
         private void button9_Click(object sender, EventArgs e)
         {
             if (Program.user != "_")
             {
                 user f = new user();
-                if(Program.user != "admin")
+                if (Program.user != "admin")
                 {
                     f.Width = 596;
                 }
@@ -101,7 +98,6 @@ namespace AfishA
                 treeView1.BackColor = Properties.Settings.Default.color;
             }
         }
-
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             UserControl f = new UserControl();
@@ -142,7 +138,6 @@ namespace AfishA
                 panel1.Controls.Add(f);
             }
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Program.navigation_pos--;
@@ -150,7 +145,6 @@ namespace AfishA
             panel1.Controls.Clear();
             panel1.Controls.Add(rf);
         }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Program.navigation_pos++;
@@ -158,31 +152,12 @@ namespace AfishA
             panel1.Controls.Clear();
             panel1.Controls.Add(rf);
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             pictureBox1.Visible = (Program.navigation_pos > 1);
             pictureBox2.Visible = (Program.navigation_pos < Program.navigation.Count - 1);
         }
-
-        private void main_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            designTupoy f = new designTupoy();
-            f.ShowDialog();
-
-            designTupoy.ApplyDesign(panel1);
-            designTupoy.ApplyDesign(panel2);
-        }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
-
 

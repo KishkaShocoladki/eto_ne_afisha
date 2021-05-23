@@ -49,6 +49,8 @@ namespace AfishA
                 lbl.ForeColor = Color.White;
                 lbl.Text = hCountry[i];
                 lbl.Size = new Size(115, 30);
+                lbl.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                lbl.ForeColor = Color.Khaki;
                 lbl.AutoSize = false;
                 lbl.Location = new Point(5, 10 + 30 * i);
                 
@@ -56,12 +58,13 @@ namespace AfishA
                 labl.ForeColor = Color.White;
                 labl.Text = Convert.ToDateTime(history[i]).ToString("d.MM.yyyy");
                 labl.Size = new Size(61, 30);
+                labl.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                labl.ForeColor = Color.Khaki;
                 labl.AutoSize = false;
                 labl.Location = new Point(121, 10 + 30 * i);
                 panel2.Controls.Add(labl);
                 panel2.Controls.Add(lbl);
             }
-            
             List<string> parts = Program.Select("SELECT part FROM `tipasvyaznaverno` WHERE ivent='" + sob + "'");
             int x = 5;
             int y = 5;
@@ -78,11 +81,11 @@ namespace AfishA
                 picB.SizeMode = PictureBoxSizeMode.Zoom;
 
                 Label lbl = new Label();
-                lbl.Location = new Point(x, y + 120);
+                lbl.Location = new Point(x, y + 115);
                 lbl.Size = new Size(120, 30);
                 lbl.Text = parts[i];
-                lbl.Font = new Font("Lucida Console", 8F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                lbl.ForeColor = SystemColors.ButtonFace;
+                lbl.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                lbl.ForeColor = Color.Khaki;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 lbl.Click += new EventHandler(button2_Click);
                 x = x + 130;
@@ -127,7 +130,6 @@ namespace AfishA
             cacaгеo f = new cacaгеo();
             f.Show();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string dt = Program.Select("SELECT dt FROM ivents WHERE name='" + name + "'")[0];
@@ -149,37 +151,10 @@ namespace AfishA
                 MessageBox.Show("БИЛЕТОВ НЕТ, Т.К. СОБЫТИЕ УЖЕ ЗАКОНЧИЛОСЬ");
             }
         }
-
-        private void sobytie_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click_2(object sender, EventArgs e)
         {
             rewievs f = new rewievs(name);
             f.Show();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /*private void button3_Click(object sender, EventArgs e)
-        {
-            rewievs f = new rewievs();
-            f.Show();
-        }*/
     }
 }

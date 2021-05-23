@@ -16,12 +16,6 @@ namespace AfishA
         {
             InitializeComponent();
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
@@ -40,16 +34,6 @@ namespace AfishA
             }
             else
                 MessageBox.Show("ЗАПОЛНИТЕ ВСЕ ПОЛЯ!1111!!!");
-        }
-
-        private void addSob_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

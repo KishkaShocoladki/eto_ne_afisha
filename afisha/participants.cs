@@ -103,11 +103,9 @@ namespace AfishA
                     panel5.Controls.Add(lbl);
                 }
             }
-
             //ЗАПОЛНЕНИЕ ПАНЕЛЬКИ СНИЗУ (ПРЕДЫДУЩИЕ И БУДУЩИЕ(СОЛЬНЫЕ) ВЫСТУПЛЕНИЯ)
             int his = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `history` WHERE participant='" + name + "'")[0]);
             int fut = Convert.ToInt32(Program.Select("SELECT COUNT(dt) FROM `ivents` WHERE name='" + name + "'")[0]);
-
             if (his != 0)//ЕСЛИ УЖЕ ГДЕ-ТО ВЫСТУПАЛ
             {
                 List<string> part = Program.Select("SELECT dt FROM `history` WHERE participant='" + name + "'");
@@ -173,8 +171,6 @@ namespace AfishA
                     panel4.Controls.Add(label);
                 }
             }
-
-
             //ЗАПОЛНЕНИЕ ПАНЕЛИ СЛЕВА СНИЗУ(МУЗЫКА) 
             List<string> music = Program.Select("SELECT musicName1, musicName2, musicName3 FROM songs WHERE part_name = '" + name + "'");
             label6.Text = music[0];
@@ -281,34 +277,12 @@ namespace AfishA
             wmp.controls.stop();
             wmp.URL = "_.mp3";
         }
-
-        private void participants_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            wmp.controls.stop();
-            wmp.URL = "_.mp3";
-        }
-
         private void button_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
             participants f = new participants(lbl.Text);
             Program.panel1.Controls.Clear();
             Program.panel1.Controls.Add(f);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

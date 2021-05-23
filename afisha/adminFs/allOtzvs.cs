@@ -28,12 +28,6 @@ namespace AfishA
                 dataGridView1.Rows.Add(row);
             }
         }
-
-        private void allOtzvs_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 4)
@@ -45,7 +39,6 @@ namespace AfishA
                 MessageBox.Show("УДАЛЕНО");
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();

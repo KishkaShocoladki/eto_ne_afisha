@@ -17,11 +17,7 @@ namespace AfishA
             InitializeComponent();
             string adres = System.IO.Path.GetTempPath() + "AFSH.txt";
             textBox1.Text = System.IO.File.ReadAllText(adres);
-        }
-
-        private void ERRORFORM_Load(object sender, EventArgs e)
-        {
-
+            textBox1.ForeColor = Color.Khaki;
         }
     }
 }

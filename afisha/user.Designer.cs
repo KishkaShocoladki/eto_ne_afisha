@@ -52,7 +52,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(584, 349);
             this.panel11.TabIndex = 13;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // treeView1
             // 
@@ -107,7 +106,6 @@
             this.MaximumSize = new System.Drawing.Size(766, 387);
             this.Name = "user";
             this.Text = "user";
-            this.Load += new System.EventHandler(this.user_Load);
             this.ResumeLayout(false);
 
         }

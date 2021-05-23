@@ -27,12 +27,6 @@ namespace AfishA
                 dataGridView1.Rows.Add(row);
             }
         }
-
-        private void allBrons_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3)
@@ -43,7 +37,6 @@ namespace AfishA
                 MessageBox.Show("УДАЛЕНО");
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -59,11 +52,6 @@ namespace AfishA
                 row[2] = rews[i + 2];
                 dataGridView1.Rows.Add(row);
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -27,7 +27,6 @@ namespace AfishA
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 
         }
-
         private void BUTT_Click(object sender, EventArgs e)
         { 
             UserControl f = new UserControl();
@@ -35,24 +34,7 @@ namespace AfishA
             f = new detMerch(lbl.Text);
             Program.panel1.Controls.Clear();
             Program.panel1.Controls.Add(f);
-
-            /*Label pic = (Label)sender;
-            string id = Program.Select("SELECT id FROM `merch` WHERE name ='" + pic.Text + "'")[0];
-            if (Program.userid != "_")
-            {
-                Program.Insert("INSERT INTO trash (id_user, id_merch) VALUES ('" + Program.userid + "', '" + id + "')");
-                MessageBox.Show("мерч ДОБАВЛЕН");
-            }
-            else
-                MessageBox.Show("ДЛЯ ТОГО ЧТОБЫ ДОБАВИТЬ ТОВАР В КОРЗИНУ ВОЙДИТЕ В АККАУНТ(ﾒ｀ﾛ´)/");*/
-
         }
-    
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -72,8 +54,6 @@ namespace AfishA
                 }
                 catch (Exception) { }
                 picB.SizeMode = PictureBoxSizeMode.Zoom;
-               // picB.Click += new EventHandler(BUTT_Click);
-                
 
                 Label lbl = new Label();
                 lbl.Location = new Point(x, y + 100);
@@ -103,8 +83,7 @@ namespace AfishA
                 panel1.Controls.Add(labl);
             }
         }
-
-            private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             List<string> parts = Program.Select("SELECT name FROM `merch` WHERE type ='" + button2.Text + "' AND band ='" + band + "'");
@@ -152,8 +131,7 @@ namespace AfishA
                 panel1.Controls.Add(lbl);
                 panel1.Controls.Add(labl);
             }
-        }
-
+        }   
         private void button3_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -251,11 +229,6 @@ namespace AfishA
                 panel1.Controls.Add(lbl);
                 panel1.Controls.Add(labl);
             }
-        }
-
-        private void merchh_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

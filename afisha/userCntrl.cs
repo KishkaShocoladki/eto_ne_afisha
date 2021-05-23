@@ -21,7 +21,6 @@ namespace AfishA
                 button.Visible = true;
                 button1.Visible = true;
             }
-            
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -50,52 +49,9 @@ namespace AfishA
             }
 
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            allParts f = new allParts();
-            f.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            allPloshks f = new allPloshks();
-            f.Show();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            allIvents f = new allIvents();
-            f.Show();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            allBrons f = new allBrons();
-            f.Show();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            allUsers f = new allUsers();
-            f.Show();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            allOtzvs f = new allOtzvs();
-            f.Show();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             change f = new change();
-            f.Show();
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            adding f = new adding();
             f.Show();
         }
         private void button10_Click_1(object sender, EventArgs e)
@@ -103,12 +59,6 @@ namespace AfishA
             ERRORFORM f = new ERRORFORM();
             f.Show();
         }
-
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             designTupoy f = new designTupoy();
@@ -116,12 +66,6 @@ namespace AfishA
 
             designTupoy.ApplyDesign(this);
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click_2(object sender, EventArgs e)
         {
             trash f = new trash();

@@ -16,7 +16,6 @@ namespace AfishA
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
@@ -35,11 +34,6 @@ namespace AfishA
             }
             else
                 MessageBox.Show("ЗАПОЛНИТЕ ВСЕ ПОЛЯ!!!");
-        }
-
-        private void addPlosh_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -18,7 +18,6 @@ namespace AfishA
             InitializeComponent();
             designTupoy.ApplyDesign(this);
             panel1.BackColor = Properties.Settings.Default.color;
-            //MessageBox.Show(Convert.ToString(Program.navigation_pos));
             if (Program.navigation.Count > Program.navigation_pos)
                 Program.navigation.RemoveRange(Program.navigation_pos + 1, Program.navigation.Count - Program.navigation_pos - 1);
             Program.navigation.Add(this);
@@ -58,8 +57,8 @@ namespace AfishA
                 lbl.Location = new Point(x, y + 120);
                 lbl.Size = new Size(170, 40);
                 lbl.Text = parts[i];
-                lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                lbl.ForeColor = SystemColors.ButtonFace;
+                lbl.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                lbl.ForeColor = Color.Khaki;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 lbl.Click += new EventHandler(button2_Click);
 
@@ -67,8 +66,8 @@ namespace AfishA
                 labl.Location = new Point(x, y + 160);
                 labl.Size = new Size(170, 40);
                 labl.Text = genre[0];
-                labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                labl.ForeColor = SystemColors.ControlDark;
+                labl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                labl.ForeColor = Color.Khaki;
                 labl.TextAlign = ContentAlignment.MiddleCenter;
                 x = x + 190;
                 if (x + 190 > panel1.Width)
@@ -88,7 +87,6 @@ namespace AfishA
             Program.panel1.Controls.Clear();
             Program.panel1.Controls.Add(f);
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -115,8 +113,8 @@ namespace AfishA
                     lbl.Location = new Point(x, y + 120);
                     lbl.Size = new Size(170, 40);
                     lbl.Text = parts[i];
-                    lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                    lbl.ForeColor = SystemColors.ButtonFace;
+                    lbl.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    lbl.ForeColor = Color.Khaki;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
                     lbl.Click += new EventHandler(button2_Click);
 
@@ -124,8 +122,8 @@ namespace AfishA
                     labl.Location = new Point(x, y + 160);
                     labl.Size = new Size(170, 40);
                     labl.Text = genre[0];
-                    labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                    labl.ForeColor = SystemColors.ControlDark;
+                    labl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    labl.ForeColor = Color.Khaki;
                     labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 190;
                     if (x + 190 > panel1.Width)
@@ -160,8 +158,8 @@ namespace AfishA
                     lbl.Location = new Point(x, y + 120);
                     lbl.Size = new Size(170, 40);
                     lbl.Text = parts[i];
-                    lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                    lbl.ForeColor = SystemColors.ButtonFace;
+                    lbl.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    lbl.ForeColor = Color.Khaki;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
                     lbl.Click += new EventHandler(button2_Click);
 
@@ -169,8 +167,8 @@ namespace AfishA
                     labl.Location = new Point(x, y + 160);
                     labl.Size = new Size(170, 40);
                     labl.Text = genre[0];
-                    labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                    labl.ForeColor = SystemColors.ControlDark;
+                    labl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    labl.ForeColor = Color.Khaki;
                     labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 190;
                     if (x + 190 > panel1.Width)
@@ -205,8 +203,8 @@ namespace AfishA
                     lbl.Location = new Point(x, y + 120);
                     lbl.Size = new Size(170, 40);
                     lbl.Text = parts[i];
-                    lbl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                    lbl.ForeColor = SystemColors.ButtonFace;
+                    lbl.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    lbl.ForeColor = Color.Khaki;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
                     lbl.Click += new EventHandler(button2_Click);
 
@@ -214,8 +212,8 @@ namespace AfishA
                     labl.Location = new Point(x, y + 160);
                     labl.Size = new Size(170, 40);
                     labl.Text = genre;
-                    labl.Font = new Font("Lucida Console", 14F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                    labl.ForeColor = SystemColors.ControlDark;
+                    labl.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                    labl.ForeColor = Color.Khaki;
                     labl.TextAlign = ContentAlignment.MiddleCenter;
                     x = x + 190;
                     if (x + 190 > panel1.Width)
@@ -230,13 +228,7 @@ namespace AfishA
             }
             #endregion
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void parts_Load(object sender, EventArgs e)
         {
 
         }

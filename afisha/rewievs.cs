@@ -45,15 +45,5 @@ namespace AfishA
                 MessageBox.Show("ОТЗЫВ ДОБАВЛЕН");
             }
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rewievs_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

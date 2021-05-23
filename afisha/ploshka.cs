@@ -44,8 +44,8 @@ namespace AfishA
                 lbl.Location = new Point(x, y + 120);
                 lbl.Size = new Size(120, 30);
                 lbl.Text = parts[i];
-                lbl.Font = new Font("Lucida Console", 8F, FontStyle.Regular, GraphicsUnit.Point, (204));
-                lbl.ForeColor = SystemColors.ButtonFace;
+                lbl.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, (204));
+                lbl.ForeColor = Color.Khaki;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 lbl.Click += new EventHandler(button1_Click);
                 x = x + 130;
@@ -76,7 +76,6 @@ namespace AfishA
         {
             Label lbl = (Label)sender;
             string type = Program.Select("SELECT type FROM ivents WHERE name = '" + lbl.Text + "'")[0];
-           // MessageBox.Show(type);
             if (type == "ФЕСТИВАЛЬ")
             {
                 sobytie f = new sobytie(lbl.Text);
@@ -89,11 +88,6 @@ namespace AfishA
                 Program.panel1.Controls.Clear();
                 Program.panel1.Controls.Add(f);
             }
-        }
-
-        private void ploshka_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

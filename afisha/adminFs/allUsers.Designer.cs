@@ -108,7 +108,6 @@
             this.MaximumSize = new System.Drawing.Size(584, 350);
             this.Name = "allUsers";
             this.Size = new System.Drawing.Size(582, 347);
-            this.Load += new System.EventHandler(this.allUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

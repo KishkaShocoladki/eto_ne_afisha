@@ -155,22 +155,22 @@
     <Compile Include="adminFs\allOtzvs.Designer.cs">
       <DependentUpon>allOtzvs.cs</DependentUpon>
     </Compile>
-    <Compile Include="browseBron.cs">
+    <Compile Include="userForms\browseBron.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="browseBron.Designer.cs">
+    <Compile Include="userForms\browseBron.Designer.cs">
       <DependentUpon>browseBron.cs</DependentUpon>
     </Compile>
-    <Compile Include="browseOtzv.cs">
+    <Compile Include="userForms\browseOtzv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="browseOtzv.Designer.cs">
+    <Compile Include="userForms\browseOtzv.Designer.cs">
       <DependentUpon>browseOtzv.cs</DependentUpon>
     </Compile>
-    <Compile Include="cacaгеo.cs">
+    <Compile Include="sysForms\cacaгеo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cacaгеo.Designer.cs">
+    <Compile Include="sysForms\cacaгеo.Designer.cs">
       <DependentUpon>cacaгеo.cs</DependentUpon>
     </Compile>
     <Compile Include="buy.cs">
@@ -179,10 +179,10 @@
     <Compile Include="buy.Designer.cs">
       <DependentUpon>buy.cs</DependentUpon>
     </Compile>
-    <Compile Include="change.cs">
+    <Compile Include="userForms\change.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="change.Designer.cs">
+    <Compile Include="userForms\change.Designer.cs">
       <DependentUpon>change.cs</DependentUpon>
     </Compile>
     <Compile Include="adminFs\designTupoy.cs">
@@ -197,10 +197,10 @@
     <Compile Include="detMerch.Designer.cs">
       <DependentUpon>detMerch.cs</DependentUpon>
     </Compile>
-    <Compile Include="ERROR.cs">
+    <Compile Include="sysForms\ERROR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ERROR.Designer.cs">
+    <Compile Include="sysForms\ERROR.Designer.cs">
       <DependentUpon>ERROR.cs</DependentUpon>
     </Compile>
     <Compile Include="adminFs\ERRORFORM.cs">
@@ -227,16 +227,16 @@
     <Compile Include="merchh.Designer.cs">
       <DependentUpon>merchh.cs</DependentUpon>
     </Compile>
-    <Compile Include="no.cs">
+    <Compile Include="sysForms\no.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="no.Designer.cs">
+    <Compile Include="sysForms\no.Designer.cs">
       <DependentUpon>no.cs</DependentUpon>
     </Compile>
-    <Compile Include="notreg.cs">
+    <Compile Include="sysForms\notreg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="notreg.Designer.cs">
+    <Compile Include="sysForms\notreg.Designer.cs">
       <DependentUpon>notreg.cs</DependentUpon>
     </Compile>
     <Compile Include="participants.cs">
@@ -340,19 +340,19 @@
     <EmbeddedResource Include="adminFs\allUsers.resx">
       <DependentUpon>allUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="browseBron.resx">
+    <EmbeddedResource Include="userForms\browseBron.resx">
       <DependentUpon>browseBron.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="browseOtzv.resx">
+    <EmbeddedResource Include="userForms\browseOtzv.resx">
       <DependentUpon>browseOtzv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cacaгеo.resx">
+    <EmbeddedResource Include="sysForms\cacaгеo.resx">
       <DependentUpon>cacaгеo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buy.resx">
       <DependentUpon>buy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="change.resx">
+    <EmbeddedResource Include="userForms\change.resx">
       <DependentUpon>change.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminFs\designTupoy.resx">
@@ -361,7 +361,7 @@
     <EmbeddedResource Include="detMerch.resx">
       <DependentUpon>detMerch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ERROR.resx">
+    <EmbeddedResource Include="sysForms\ERROR.resx">
       <DependentUpon>ERROR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminFs\ERRORFORM.resx">
@@ -376,10 +376,10 @@
     <EmbeddedResource Include="merchh.resx">
       <DependentUpon>merchh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="no.resx">
+    <EmbeddedResource Include="sysForms\no.resx">
       <DependentUpon>no.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="notreg.resx">
+    <EmbeddedResource Include="sysForms\notreg.resx">
       <DependentUpon>notreg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="participants.resx">

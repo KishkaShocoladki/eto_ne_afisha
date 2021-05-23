@@ -164,10 +164,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Console", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Khaki;
             this.label1.Location = new System.Drawing.Point(603, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 17);
+            this.label1.Size = new System.Drawing.Size(172, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "ФИЛЬТР ПО СТРАНЕ";
             // 
@@ -183,7 +184,8 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.Khaki;
             this.button1.Location = new System.Drawing.Point(606, 104);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 29);
@@ -195,10 +197,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Console", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Khaki;
             this.label2.Location = new System.Drawing.Point(603, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 17);
+            this.label2.Size = new System.Drawing.Size(184, 23);
             this.label2.TabIndex = 9;
             this.label2.Text = "ФИЛЬТР ПО ЖАНРАМ";
             // 
@@ -213,10 +216,11 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(606, 265);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.Khaki;
+            this.button2.Location = new System.Drawing.Point(606, 257);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 50);
+            this.button2.Size = new System.Drawing.Size(175, 58);
             this.button2.TabIndex = 10;
             this.button2.Text = "обновить все описания";
             this.button2.UseVisualStyleBackColor = true;
@@ -240,7 +244,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "allParts";
             this.Size = new System.Drawing.Size(792, 332);
-            this.Load += new System.EventHandler(this.allParts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

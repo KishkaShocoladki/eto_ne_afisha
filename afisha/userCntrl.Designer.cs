@@ -56,15 +56,14 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(584, 347);
             this.panel11.TabIndex = 14;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Info;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(3, 112);
+            this.button3.Location = new System.Drawing.Point(3, 102);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 28);
             this.button3.TabIndex = 14;
@@ -76,7 +75,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(3, 280);
             this.button1.Name = "button1";
@@ -91,9 +90,9 @@
             // 
             this.button.BackColor = System.Drawing.SystemColors.Info;
             this.button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button.Location = new System.Drawing.Point(3, 146);
+            this.button.Location = new System.Drawing.Point(3, 136);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(120, 41);
             this.button.TabIndex = 12;
@@ -106,7 +105,7 @@
             // 
             this.mybron.BackColor = System.Drawing.SystemColors.Info;
             this.mybron.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.mybron.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mybron.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mybron.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.mybron.Location = new System.Drawing.Point(403, 280);
             this.mybron.Name = "mybron";
@@ -120,11 +119,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Info;
-            this.label1.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 27);
+            this.label1.Size = new System.Drawing.Size(286, 37);
             this.label1.TabIndex = 11;
             this.label1.Text = "ИМЯ ПОЛЬЗОВАТЕЛЯ";
             // 
@@ -132,7 +131,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Location = new System.Drawing.Point(429, 234);
             this.button2.Name = "button2";
@@ -146,9 +145,9 @@
             // 
             this.button11.BackColor = System.Drawing.SystemColors.Info;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button11.Location = new System.Drawing.Point(4, 50);
+            this.button11.Location = new System.Drawing.Point(3, 40);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(141, 56);
             this.button11.TabIndex = 10;

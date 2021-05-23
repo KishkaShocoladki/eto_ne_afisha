@@ -23,7 +23,6 @@ namespace AfishA
                 comboBox1.Items.Clear();
                 comboBox1.Items.Add(dt[i]);                
             }
-
             string area = Program.Select("SELECT area FROM ivents WHERE name ='" + ivent + "'")[0];
             int vmest = Convert.ToInt32(Program.Select("SELECT vmest FROM ploshki WHERE name ='" + area + "'")[0]);
 
@@ -49,9 +48,7 @@ namespace AfishA
                     y = y + 40;
                 }
             }
-
         }
-
         private void bronirovanie(object sender, EventArgs e)
         {
             string plosh = Program.Select("SELECT area FROM ivents WHERE name ='" + ivt + "'")[0];
@@ -59,16 +56,6 @@ namespace AfishA
             Program.Insert("INSERT INTO bron(ivent, ploshk, user, place) VALUES('" + ivt + "', '" + plosh  + "', '" + Program.user + "', '" + btn.Text + "')");
             btn.Enabled = false;
             MessageBox.Show("Вы забронировали место, поздравляю");
-        }
-
-        private void buy_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

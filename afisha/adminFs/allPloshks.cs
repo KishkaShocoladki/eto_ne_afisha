@@ -29,7 +29,6 @@ namespace AfishA
                 dataGridView1.Rows.Add(row);
             }
         }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 5)
@@ -38,11 +37,6 @@ namespace AfishA
                 Program.Insert("DELETE FROM ploshki WHERE ident ='" + delete + "'");
                 MessageBox.Show("УДАЛЕНО");
             }
-        }
-
-        private void allPloshks_Load(object sender, EventArgs e)
-        {
-
         }
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -72,7 +66,6 @@ namespace AfishA
                 MessageBox.Show("ОТРЕДАКТИРОВАНО");
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();

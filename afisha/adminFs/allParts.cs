@@ -44,12 +44,6 @@ namespace AfishA
                 dataGridView1.Rows.Add(row);
             }
         }
-
-        private void allParts_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 8)
@@ -106,7 +100,6 @@ namespace AfishA
                 MessageBox.Show("ОТРЕДАКТИРОВАНО");
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -131,7 +124,6 @@ namespace AfishA
                 dataGridView1.Rows.Add(row);
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             List<string> ivs = Program.Select("SELECT `name` FROM `participants`");

@@ -226,7 +226,6 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "allIvents";
             this.Size = new System.Drawing.Size(769, 332);
-            this.Load += new System.EventHandler(this.allIvents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

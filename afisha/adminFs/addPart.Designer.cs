@@ -90,7 +90,6 @@
             this.label4.Size = new System.Drawing.Size(70, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "ЖАНРЫ:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 
@@ -373,7 +372,6 @@
             this.Name = "addPart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ДОБАВИТЬ ИСПОЛНИТЕЛЯ";
-            this.Load += new System.EventHandler(this.addPart_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
